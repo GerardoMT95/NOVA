@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Theme override for a node edit form.
+ *
+ * Two column template for the node add/edit form.
+ *
+ * This template will be used when a node edit form specifies 'node_edit_form'
+ * as its #theme callback.  Otherwise, by default, node add/edit forms will be
+ * themed by form.html.twig.
+ *
+ * Available variables:
+ * - form: The node add/edit form.
+ *
+ * @see seven_form_node_form_alter()
+ */
+#}
+
+<div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+
+    <div class="content clearfix row">
+        <div class="layout-region layout-region-node-main">
+             {% if 'stakeholder' not in user.getroles %}
+            <div class="field-group-html-element text-center">
+                <h3>Informativa sulla privacy</h3>
+                <p>Autorizzazione al trattamento dei dati personali</p>
+            </div>
+            {% endif %}
+            {{ form.field_privacy_richiesta }}
+                <div class="field-group-html-element text-center">
+                <h3>Certificazione dei dati inseriti</h3>
+              
+            </div>
+            {{ form.field_cert_dati }}
+            <div>
+                {{ form|without('advanced', 'actions','field_privacy_richiesta','field_cert_dati') }}
+            </div>
+            {#  <div class="col-md-6 layout-region-node-secondary">
+                {{ form.advanced }}
+              </div>#}
+            <div class="col layout-region-node-footer">
+                {{ form.actions }}
+            </div>
+        </div>
+    </div>

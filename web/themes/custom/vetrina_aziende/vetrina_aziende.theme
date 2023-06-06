@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ */
+function vetrina_aziende_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+}
+
+function vetrina_aziende_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+     if ($form_id == 'views_exposed_form') {
+
+    $display_list = ['block_1','block_3','block_2'];
+
+    /** @var \Drupal\views\Entity\View $view */
+    $view = $form_state->getStorage('view');
+    if ($view['view']->id() == 'vetrina_imprese_search' && in_array($view['view']->current_display, $display_list)) {
+        
+              $form['actions']['submit']['#attributes']['class'] = array('fa icon');
+    $form['actions']['submit']['#value']  = html_entity_decode('&#xf002;');
+
+    }
+    
+    if ($view['view']->id() == 'catalogo' && in_array($view['view']->current_display, $display_list)) {
+        
+              $form['actions']['submit']['#attributes']['class'] = array('fa icon');
+  $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    }
+}
+
+}
+
+function vetrina_aziende_preprocess_html(&$variables) {
+  // The getRoles() method will return us the machine names, so there is no
+  // need to process roles names additionally. However, I suggest prefixing
+  // the names with "role-", so it's more obvious.
+  foreach ($variables['user']->getRoles() as $role) {
+    $variables['attributes']['class'][] = 'role-' . $role;
+  }
+}

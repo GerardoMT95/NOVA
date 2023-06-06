@@ -1,0 +1,18 @@
+palette:
+  top: '#2C1D4C'
+  bottom: '#18A095'
+  bg: '#ffffff'
+  sidebar: '#ffffff'
+  sidebarborders: '#cccccc'
+  footer: '#2C1D4C'
+  button: '#019dbf'
+  buttonhover: '#016c83'
+  titleslogan: '#000000'
+  text: '#4a4a4a'
+  link: '#019dbf'
+logo: 'public://color/novaliguria-6987a4aa/logo.svg'
+stylesheets:
+  - 'public://color/novaliguria-6987a4aa/colors.css'
+files:
+  - 'public://color/novaliguria-6987a4aa/logo.svg'
+  - 'public://color/novaliguria-6987a4aa/colors.css'

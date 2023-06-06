@@ -1,0 +1,319 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.servizio.body
+    - field.field.node.servizio.field_area_di_competenza
+    - field.field.node.servizio.field_categorie_del_servizio
+    - field.field.node.servizio.field_coordinata_x_servizio
+    - field.field.node.servizio.field_coordinata_y_servizio
+    - field.field.node.servizio.field_data_fine
+    - field.field.node.servizio.field_data_inizio_
+    - field.field.node.servizio.field_id_servizio
+    - field.field.node.servizio.field_indirizzo_luogo_servizio
+    - field.field.node.servizio.field_link_esterno_al_servizio
+    - field.field.node.servizio.field_macroarea
+    - field.field.node.servizio.field_modalita_di_erogazione
+    - field.field.node.servizio.field_n_civico_ind_erogazione_de
+    - field.field.node.servizio.field_orari
+    - field.field.node.servizio.field_pacchetto
+    - field.field.node.servizio.field_riferimenti
+    - field.field.node.servizio.field_stakeholder
+    - field.field.node.servizio.field_tipo_servizio
+    - field.field.node.servizio.field_tipologia_di_erogazione
+    - field.field.node.servizio.field_tipologia_di_servizio
+    - node.type.servizio
+  module:
+    - datetime
+    - field_group
+    - path
+    - shs
+    - text
+third_party_settings:
+  field_group:
+    group_impostazioni_generali:
+      children:
+        - field_id_servizio
+        - title
+        - langcode
+        - uid
+        - created
+        - promote
+        - sticky
+        - path
+        - status
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Impostazioni generali'
+    group_indirizzo_servizio:
+      children:
+        - field_indirizzo_luogo_servizio
+        - field_n_civico_ind_erogazione_de
+        - field_coordinata_x_servizio
+        - field_coordinata_y_servizio
+      parent_name: ''
+      weight: 14
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Indirizzo servizio'
+    group_informazioni_servizio:
+      children:
+        - field_categorie_del_servizio
+        - field_stakeholder
+        - body
+        - field_data_inizio_
+        - field_data_fine
+        - field_orari
+        - field_macroarea
+        - field_area_di_competenza
+        - field_tipo_servizio
+        - field_tipologia_di_erogazione
+        - field_modalita_di_erogazione
+        - field_link_esterno_al_servizio
+        - field_riferimenti
+        - field_pacchetto
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Informazioni servizio'
+id: node.servizio.default
+targetEntityType: node
+bundle: servizio
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 39
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_area_di_competenza:
+    weight: 44
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_categorie_del_servizio:
+    weight: 37
+    settings:
+      force_deepest: true
+      create_new_items: false
+      create_new_levels: false
+      display_node_count: false
+    third_party_settings: {  }
+    type: options_shs
+    region: content
+  field_coordinata_x_servizio:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_coordinata_y_servizio:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_data_fine:
+    weight: 41
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_data_inizio_:
+    weight: 40
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_id_servizio:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_indirizzo_luogo_servizio:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_link_esterno_al_servizio:
+    weight: 48
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_macroarea:
+    weight: 43
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_modalita_di_erogazione:
+    weight: 47
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_n_civico_ind_erogazione_de:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_orari:
+    weight: 42
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_pacchetto:
+    weight: 50
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_riferimenti:
+    weight: 49
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_stakeholder:
+    weight: 38
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tipo_servizio:
+    weight: 45
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tipologia_di_erogazione:
+    weight: 46
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tipologia_di_servizio:
+    weight: 51
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 30
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 33
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 36
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 34
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

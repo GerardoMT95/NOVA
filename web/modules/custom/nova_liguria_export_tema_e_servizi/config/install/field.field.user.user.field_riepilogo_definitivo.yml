@@ -1,0 +1,30 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_riepilogo_definitivo
+    - node.type.servizio
+    - node.type.spazio_di_lavoro
+  module:
+    - user
+id: user.user.field_riepilogo_definitivo
+field_name: field_riepilogo_definitivo
+entity_type: user
+bundle: user
+label: 'Riepilogo definitivo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      servizio: servizio
+      spazio_di_lavoro: spazio_di_lavoro
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: servizio
+field_type: entity_reference

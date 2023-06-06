@@ -1,0 +1,22 @@
+
+home_liguria_digitale.home_controller_buildHome:
+  path: '/liguria-home/build'
+  defaults:
+    _controller: '\Drupal\home_liguria_digitale\Controller\HomeController::buildHome'
+    _title: 'Home page'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'true'
+    _custom_theme: 'home_liguria_digitale'
+
+home_liguria_digitale.home_controller_findServizi:
+  path: '/trova-il-tuo-servizio'
+  defaults:
+    _controller: '\Drupal\home_liguria_digitale\Controller\HomeController::findServizi'
+    _title: 'Trova il tuo servizio'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'true'
+    _custom_theme: 'home_liguria_digitale'

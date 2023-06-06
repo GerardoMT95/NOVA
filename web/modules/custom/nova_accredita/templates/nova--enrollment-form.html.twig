@@ -1,0 +1,137 @@
+<div class="page-richiesta accreditamento">
+    <div class="main-content">
+        <header class="text-center header-form">
+            <h2 class="node_title_form">
+                <span>
+                    Compila la richiesta di accreditamento
+                </span>
+            </h2>
+        </header>
+        <!--Template nova--enrollment-form.html.twig -->
+        <div class="content">
+            {{ form.form_build_id }}
+            {{ form.form_token }}
+            {{ form.form_id }}
+
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="field-group-html-element text-center">
+                        <h3>Informativa sulla privacy</h3>
+                        <p>Autorizzazione al trattamento dei dati personali</p>
+                    </div>
+                    {{ form.field_privacy_policy }}
+                    {{ form.field_privacy_policy_acceptance }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="field-group-html-element text-center">
+                        <h3>Certificazione dei dati inseriti</h3>
+                        <p></p>
+                    </div>
+                    {{ form.field_certificazione_dati }}
+                    {{ form.field_certificazione_dati_acceptance }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="field-group-html-element text-center">
+                        <h3>Richiedente</h3>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_user_nome }}
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_user_cognome }}
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_user_mail }}
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_user_telefono }}
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_user_cf }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="field-group-html-element text-center">
+                        <h3>Organizzazione di Riferimento</h3>
+{#                        <p>TEST: 03456150105 (Campo richiesta accreditamento NON valorizzata) - 02798440992 (Campo richiesta accreditamento validata) - 02366440994 (Campo richiesta accreditamento non validata) - 02468830993 (Campo richiesta accreditamento attesa validazione)</p>#}
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_ragione_sociale_ }}
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_partita_iva }}
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_codice_fiscale_impresa }}
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_user_legale_rappresentante }}
+                </div>
+
+                <div class="col-6">
+                    {{ form.field_tipo_di_impresa }}
+                </div>
+
+                <div class="col-6">
+
+                    {{ form.field_nazione }}
+
+                    <div class="ita_field">
+                        {{ form.field_comune }}
+                    </div>
+                </div>
+            </div>
+
+            {# la variabile form contiene tutto il form completo #}
+            {# {{ form }} #}
+            <div class="row">
+                <div class="col-12">
+                    {{ form.actions.submit }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<style>
+    legend{
+        color:#032675;
+    }
+    
+    .form-control:disabled,
+    .form-control[readonly]{
+        background-color: #fff;
+    }
+
+    .page-richiesta .btn-primary{
+        float: right;
+        background: #1BA4AF;
+        border-radius: 4px !important;
+        color: white;
+        border-color: #1BA4AF;
+    }
+
+    .hidden_field{
+        display: none;
+    }
+</style>

@@ -1,0 +1,233 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix','node__content',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+    <div class="row">
+        <div class="col-sm-5 box-info-wrapper d-flex align-items-center">
+            <div class="box box-info">
+              {#  {% if node.field_tipo_di_impresa is not empty %}
+                    <div class="tip mb-2">   
+                        {{ content.field_tipo_di_impresa }}
+                    </div>
+                {% endif %}#}
+                <h1 class="node_title_impresa mb-2 d-none"> {{ label }}</h1>
+                <div class="logo-impresa line">
+                    {% if node.field_logo_impresa is not empty %}
+                        <img src="{{ node.field_logo_impresa|file_uri|image_style('vetrina_imprese') }}" />
+                    {% endif %}   
+                </div>
+                <div class="address-impresa block-impresa d-inline-flex line">
+                    {% if node.field_codice_comune is not empty %}
+                        <span class="ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#1BA4AF" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                        </span>
+                        <span>{{ content.field_codice_comune.0}},&#160</span> 
+                    {% endif %}
+                    {% if node.field_indirizzo_della_sede is not empty %}
+{{ content.field_indirizzo_della_sede.0}}&nbsp; 
+                    {% endif %}
+                    {% if node.field_numero_civico is not empty %}
+                        {{ content.field_numero_civico.0}} 
+                    {% endif %}
+                </div>
+                {% if node.field_descrizione_breve is not empty %}
+                    <div class="line big">
+                        {{ content.field_descrizione_breve}} 
+                    </div>
+                {% endif %}
+
+                {% if node.field_sito_web is not empty %}
+                    <div class="line">
+                       <a href="{{ content.field_sito_web.0}}" target="_blank">{{ content.field_sito_web.0}} </a>
+                    </div>
+                {% endif %}
+
+                {% if node.field_cognome_legale_rappresenta is not empty %}
+                    <div class="line">
+                        <b> LEGALE RAPPRESENTANTE:</b> {{ content.field_nome_legale_rappresentante.0 }} {{ content.field_cognome_legale_rappresenta.0 }}
+                    </div>
+                {% endif %}
+                {% if node.field_settori_dell_impresa is not empty %}
+                    <div class="line">
+                        <b>  SETTORE PRINCIPALE DELL' IMPRESA: </b>{{ content.field_settori_dell_impresa.0 }}
+                    </div>
+                {% endif %}
+                {% if node.field_ragione_sociale_ is not empty %}
+                    <div class="line">
+                        <b>  RAGIONE SOCIALE: </b>{{ content.field_ragione_sociale_.0 }}
+                    </div>
+                {% endif %}
+                <span class="line-bg"></span>
+                {% if node.field_contatto_di_riferimento is not empty %}
+                    <div class="line">
+                        <b>   CONTATTO DI RIFERIMENTO:</b> {{ content.field_contatto_di_riferimento.0 }}
+                    </div>
+                {% endif %}
+                {% if node.field_email_contatto_riferimento is not empty %}
+                    <div class="line line-mail">
+                        <i class="far fa-envelope fa-custom"></i> {{ content.field_email_contatto_riferimento.0 }}
+                    </div>
+                {% endif %}
+                {% if node.field_telefono_aienda is not empty %}
+                    <div class="line line-tel">
+                        <i class="fas fa-phone-alt"></i>&nbsp;{{ content.field_telefono_aienda.0 }}
+                    </div>
+                {% endif %}
+                <span class="line-bg"></span>
+                <ul class="list-unstyled list-custom">
+              <li><i class="fas fa-check"></i> <a href="/servizi-stakeholder/{{ node.getOwnerId() }}" >Servizi</a> </li>
+              <li><i class="fas fa-check"></i> <a href="/spazi-stakeholder/{{ node.getOwnerId() }}" >Spazi</a> </li>
+               <li><i class="fas fa-check"></i> <a href="/formazione-stakeholder/{{ node.getOwnerId() }}" >Proposta formativa</a> </li>
+ 
+                </ul>
+
+            </div>
+        </div>
+        <div{{ content_attributes.addClass('col-sm-7') }}>
+            <div class="ms-5 me-5">
+                {# social #}  
+                <div class="social-impresa text-end">
+                    {% if node.field_indirizzo_linkedin is not empty %}
+                        <a href="{{ content.field_indirizzo_linkedin.0 }}" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
+                        {% endif %} 
+                        {% if node.field_indirizzo_youtube is not empty %}
+                        <a href="{{ content.field_indirizzo_youtube.0 }}" target="_blank"><i class="fab fa-youtube"></i></a>
+                        {% endif %}
+                        {% if node.field_indirizzo_facebook is not empty %}
+                        <a href="{{ content.field_indirizzo_facebook.0 }}" target="_blank" class="round"><i class="fab fa-facebook-f"></i></a>
+                        {% endif %} 
+                        {% if node.field_indirizzo_twitter is not empty %}
+                        <a href="{{ content.field_indirizzo_twitter.0 }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                        {% endif %} 
+                        {% if node.field_indirizzo_instagram is not empty %}
+                        <a href="{{ content.field_indirizzo_instagram.0 }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                        {% endif %}
+                      {% if node.field_indirizzo_vimeo is not empty %}
+                        <a href="{{ content.field_indirizzo_vimeo.0 }}" target="_blank"><i class="fab fa-vimeo"></i></a>
+                        {% endif %} 
+                </div>
+                {# fine social #} 
+                {# tab content #} 
+                <div class="col-sm-10">
+                <ul class="nav nav-tabs" id="TabImpresa" role="tablist">
+                            {% if node.field_mission is not empty %}
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="missi-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button" role="tab" aria-controls="mission" aria-selected="false">Mission</button>
+                        </li>
+                    {% endif %}
+                    {% if node.field_descrizione_delle_attivita is not empty %}
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="atti-tab" data-bs-toggle="tab" data-bs-target="#attivita" type="button" role="tab" aria-controls="attivita" aria-selected="true">Attività</button>
+                        </li>
+                    {% endif %}
+            
+                    {% if node.field_descrizione_dell_impresa is not empty %}
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="brevi-tab" data-bs-toggle="tab" data-bs-target="#brevetti" type="button" role="tab" aria-controls="brevetti" aria-selected="false">Descrizione</button>
+                        </li> 
+                    {% endif %}
+                </ul>
+                <div class="tab-content" id="TabContentImpresa">
+                    <div class="tab-pane fade active show" id="attivita" role="tabpanel" aria-labelledby="atti-tab">
+                        {% if node.field_descrizione_delle_attivita is not empty %}
+                            {{ content.field_descrizione_delle_attivita }}
+                        {% endif %}
+                    </div>
+
+                    <div class="tab-pane fade" id="mission" role="tabpanel" aria-labelledby="missi-tab">
+                        {% if node.field_mission is not empty %}
+                            {{ content.field_mission }}
+                        </div>
+                    {% endif %}
+             <div class="tab-pane fade" id="brevetti" role="tabpanel" aria-labelledby="brevi-tab">
+                        {% if node.field_descrizione_dell_impresa is not empty %}
+                            {{ content.field_descrizione_dell_impresa }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-11 slide-node clearfix">
+            {% if node.field_galleria_immagini is not empty %}
+                {{ content.field_galleria_immagini }}
+            {% endif %}
+        </div>
+    </div>
+</article>

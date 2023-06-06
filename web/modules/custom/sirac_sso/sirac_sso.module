@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains sirac_sso.module.
+ */
+
+use Drupal\user\UserInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\sirac_sso\SiracService;
+use \Drupal\Core\Session\AccountInterface;
+
+/**
+ * Implements hook_help().
+ */
+function sirac_sso_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sirac_sso module.
+    case 'help.page.sirac_sso':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Integrazione con Sirac SSO modalità reverse proxy') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_user_presave().
+ */
+function sirac_sso_user_presave(UserInterface $account) {
+  // Hook into the user creation process from ExternalAuth::register() so that
+  // we don't need to save the new user a second time to add our SSO attribute
+  // values into the new user object. The way externalauth prefixes account
+  // names acts as a recursion stop, in case any called code (e.g. event) saves
+  // the account.
+  $auth_provider = 'sirac_sso';
+  if ($account->isNew() && strpos($account->getAccountName(), $auth_provider.'_') === 0) {
+    /** @var \Drupal\sirac_sso\SiracServiceInterface $service */
+    $service = \Drupal::service('sirac');
+    $service->synchronizeUserAttributes($account, TRUE);
+  }
+}
+
+function sirac_sso_user_logout(AccountInterface $account) {
+  /** @var \Drupal\sirac_sso\SiracServiceInterface $service */
+  $service = \Drupal::service('sirac');
+  if($service->isAuthenticated()){
+    $service->logout();
+
+  }
+}

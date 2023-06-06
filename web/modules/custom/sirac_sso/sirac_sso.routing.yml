@@ -1,0 +1,9 @@
+sirac_sso.s_s_o_controller_samlLogin:
+  path: '/samllogin'
+  defaults:
+    _controller: '\Drupal\sirac_sso\Controller\SSOController::samlLogin'
+    _title: 'Sirac SSO Reverse Proxy Login'
+  requirements:
+    _role: 'anonymous'
+  options:
+    no_cache: 'TRUE'

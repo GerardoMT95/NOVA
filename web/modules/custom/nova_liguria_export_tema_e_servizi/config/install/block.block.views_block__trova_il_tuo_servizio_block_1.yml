@@ -1,0 +1,29 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - views.view.trova_il_tuo_servizio
+  module:
+    - system
+    - views
+  theme:
+    - novaliguria
+id: views_block__trova_il_tuo_servizio_block_1
+theme: novaliguria
+region: content
+weight: -12
+provider: null
+plugin: 'views_block:trova_il_tuo_servizio-block_1'
+settings:
+  id: 'views_block:trova_il_tuo_servizio-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /trova-il-tuo-servizio
+    negate: false
+    context_mapping: {  }

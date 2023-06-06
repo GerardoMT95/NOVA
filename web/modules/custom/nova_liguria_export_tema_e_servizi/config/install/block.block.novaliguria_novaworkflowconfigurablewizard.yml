@@ -1,0 +1,26 @@
+langcode: it
+status: false
+dependencies:
+  module:
+    - nova_workflow
+    - system
+  theme:
+    - novaliguria
+id: novaliguria_novaworkflowconfigurablewizard
+theme: novaliguria
+region: content
+weight: -11
+provider: null
+plugin: nova_wizard
+settings:
+  id: nova_wizard
+  label: 'Hai un''idea? Crea una start up'
+  provider: nova_workflow
+  label_display: visible
+  nova_workflow_tax_start_tid: '1'
+visibility:
+  request_path:
+    id: request_path
+    pages: /trova-il-tuo-servizio
+    negate: false
+    context_mapping: {  }

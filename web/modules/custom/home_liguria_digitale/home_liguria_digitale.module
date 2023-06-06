@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains home_liguria_digitale.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function home_liguria_digitale_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the home_liguria_digitale module.
+    case 'help.page.home_liguria_digitale':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('modulo per gestione home page') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function home_liguria_digitale_theme() {
+  return [
+    'home_liguria_digitale' => [
+      'render element' => 'children',
+    ],
+    'sezionePPT' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+function home_liguria_digitale_query_sort_by_random_alter(\Drupal\Core\Database\Query\AlterableInterface $query) {
+  $query->orderRandom();
+}

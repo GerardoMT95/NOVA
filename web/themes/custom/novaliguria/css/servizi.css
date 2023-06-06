@@ -1,0 +1,3012 @@
+
+/**
+ * @file
+ * Novaliguria theme specific CSS.
+ */
+
+/*General stuff*/
+img {max-width: 100%}
+.box_tax {
+    background-color: #18a095;
+}
+a, li {word-break: break-all;}
+body.node--type-servizio #page ,body.node--type-servizio #main-wrapper, .page-node-5046 #main-wrapper,
+.page-node-5046 #page, .path-trova-il-tuo-servizio #main-wrapper, .path-carrello #page, .path-carrello #main-wrapper {
+    background: #18A095;
+}
+.path-trova-il-tuo-servizio #main-wrapper, body.node--type-servizio #main-wrapper,.path-spazi-stakeholder #main-wrapper,.page-node-5046 #main-wrapper {
+    background-image: url(../img/bg/bg_servizi-green.png);
+    background-repeat: no-repeat;
+    background-position: bottom left -30px;
+    padding-bottom: 100px;
+}
+.path-spazi-stakeholder #main-wrapper {
+    margin-bottom: -100px;
+}
+body.node--type-servizio #main-wrapper {
+    padding-bottom: 300px;
+    margin-bottom: -100px;
+}
+.path-trova-il-tuo-servizio .site-footer,.page-node-5046 .site-footer {
+    margin-top: -80px;
+}
+.btn {border-radius: 0!important;}
+.box {box-shadow: 0 30px 60px rgba(44, 29, 76, 0.34);}
+.box-shadow {box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);}
+.box-wrapper {filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));}
+.alert-wrapper .alert { bottom: 6rem; max-width: 800px; margin: 0 auto;}
+.btn a {text-decoration: none}
+.btn.btn-contact {
+    background-color: #2c1d4c;
+    text-align: center;
+    color: #fff;
+}
+.btn.btn-contact:hover {
+    color: #fff;
+}
+.btn.btn-primary:hover {
+    background: #18A095;
+    border-color: #18A095;
+}
+.box-select {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    background-color: #2c1d4c;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 48px;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem 0.2rem 0;
+}
+.box-search {
+    background-color: #f3cd00;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    color: #2c1d4c;
+    font-family: Poppins;
+}
+h1.big { /*dinamic font-size*/
+    font-size: calc(25px + 15 * ((100vw - 600px) / 600));
+    display: inline-block;
+    background-color: #f3cd00;
+    transform: skewY(1deg);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px 10%;
+}
+h1.big span {
+    transform: skewY(-1deg);
+    display:block;
+    font-weight: 900;
+    color: #2c1d4c;
+}
+h1.big span a {
+    color: inherit;
+    text-decoration: none;
+}
+#area--wrapper--description {
+    font-size: 0.800em;
+}
+.node--type-servizio.node--unpublished {
+    padding: 0;
+}
+.node--type-servizio .main-content .content, .node--type-bando .main-content .content,
+.node--type-spazio  .main-content .content, .main-content .content {
+    padding-top: 40px;position: relative;
+    font-family: 'Poppins', sans-serif;
+    color: #2C1D4C;
+}
+#block-novaliguria-content .content, .block-views .content {
+    padding-top: 0;
+}
+article.node--type-servizio header {
+    position: relative;
+    top: -55px;
+    margin-bottom: 0;
+}
+article.node--type-servizio {
+    background: white;
+    margin-bottom: 5rem;
+}
+.node--type-avviso .info-detail .field-rif-content {
+    margin-left: 0;
+}
+.wrapper-breadcrumb {
+    margin: 0;
+    display: flex;
+}
+/*bread servizi*/
+.wrapper-breadcrumb span.content-breadcrumb {
+    padding:20px;
+    background-color: #2c1d4c;
+    color: #fff;
+    display: inline-block;
+}
+.wrapper-breadcrumb span.content-breadcrumb span {
+    padding: 0 3px;
+    vertical-align: middle;
+}
+/*bread other pages*/
+.wrapper-breadcrumb li.breadcrumb-item {
+    padding: 10px;
+    background-color: #2C1D4C;
+    color: #fff;
+    display: inline-block;
+}
+
+.wrapper-breadcrumb li.breadcrumb-item a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 3px;
+    vertical-align: middle;
+}
+.node--type-servizio .wrapper-breadcrumb nav, .node--type-bando .wrapper-breadcrumb nav,
+.node--type-spazio  .wrapper-breadcrumb nav {
+    margin-bottom: 10px;
+}
+.box-info-wrapper {
+    background: url(../img/bg/bg_column_servizi.png)no-repeat top -10px right -8px;
+    background-size: contain;
+    height: fit-content;
+    padding: 3rem 0;
+}
+article.node--type-servizio .node__content{
+    margin-top: 0;  padding-left: 55px;
+}
+article.node--type-servizio .node__content .field--name-body {
+    margin: 50px 0 30px;
+}
+article.node--type-servizio .node__content .field--name-body ul li a {color: #3f2863}
+h2.node_title_servizi, h1.node_title_servizi {
+    font-size: 35px;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+h2.node_title_servizi a, h1.node_title_servizi a {
+    text-decoration: none; color: #2C1D4C;
+}
+h2.node_title_servizi span, h1.node_title_servizi span {
+    color: #3f2863;
+    word-break: break-all;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    display: inline-block;
+    word-break: break-word;
+}
+header h2.node_title_servizi, header h1.node_title_servizi {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    padding: 30px 20px;
+    display:inline-block;
+}
+
+article.node--type-servizio h3 {
+    font-size: 25px;
+    color: #2a1f50;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+.info {
+    margin: 40px 0 118px;
+}
+.node-avviso .node__content .info-detail a,
+.node--type-servizio .node__content .info-detail a { color:#003eff;}
+.info-detail {
+    font-size: 18px;
+    color:#3F2863;
+    margin-bottom: 20px;
+}
+.info-detail a {
+    color:#3F2863;
+    text-decoration: underline;
+}
+.info-detail i {
+    color: #18a095;
+    font-size: 25px;
+}
+.info-detail img {
+    vertical-align: top;
+}
+.info-detail .field-rif-content {
+    margin-left: 28px;
+}
+.box_tax_service {
+    display: inline-block;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    padding: 5px 15px;
+    margin-bottom: 0.5rem;
+}
+.box-info {
+    padding: 66px 25px 66px 66px;
+    background: white;
+    margin-right: 10px;
+    width: 100%;
+}
+.box-info .list-custom {
+    margin-top: 1rem;
+}
+i.fas.fa-check {
+    color: #4bffa5;
+    width: 41px;
+    height: 41px;
+    border-radius: 9px;
+    background-color: rgba(75, 255, 165, 0.15);
+    padding: 10px 0;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.list-custom li {
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+.list-custom li a {
+    word-break: break-word;
+}
+.list-custom li span i{
+    font-size: 0.8em;
+}
+.fa-check:before {font-size: 20px;}
+.list-custom li span {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 0.3rem;
+    margin-left: 0.5rem;
+}
+.site_name a {
+    text-decoration: underline;
+}
+button.btn.flag-wishlist-servizi {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    text-align: center;
+}
+button.btn.flag-wishlist-servizi a{
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    color: #3f2863;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+button[id^="edit-next--"], button#edit-next {
+    background: #2c1d4c;
+    border-color: #2c1d4c;
+}
+button#edit-next:hover, button[id^="edit-next--"]:hover{
+    filter: brightness(85%);
+}
+button[id^="edit-previous--"], a#edit-previous-- {
+    background: #18A095;
+    border-color: #18A095;
+    margin-bottom: 3rem;
+    margin-right: 1rem;
+}
+button[id^="edit-previous--"]:hover, a#edit-previous--:hover {color:#2c1d4c}
+button[id^="edit-finish--"] {
+    background-color: #2c1d4c;
+    border-color:#2c1d4c;
+    text-align: center;
+    color: #fff;
+    vertical-align: top;
+}
+.block-nova-workflow button[id^="edit-finish--"] {
+    float: right;
+    padding: 0.3rem 1rem;
+}
+.block-nova-workflow button[id^="edit-finish--"]:after {
+    content: '\f054';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    margin-left: 0.2rem;
+}
+.block-nova-workflow #edit-actions {
+    text-align: right;
+}
+.block-nova-workflow legend span.js-form-required::after {
+    display: none;
+}
+.view-footer .btn {
+    vertical-align: top;
+}
+@media (min-width: 1200px) {
+    h3, .h3 {font-size: 30px;}
+}
+.box-bottom {
+    /*    background: white;*/
+    margin-top: 155px;
+    padding: 0 55px 55px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.box-bottom:before {
+    left: 0;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    content: '';
+    position: absolute;
+    top: -0px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+.box-bottom-content {
+    z-index: 9;
+    position: relative;
+}
+.box-bottom h3 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    padding: 30px 20px;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    top: -55px;
+    display: inline-block;
+}
+.btn.flag-richiedi-servizio {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    background-color: #09b5a9;
+    color: #fff;
+    font-weight: 600;
+    line-height: 50px;
+}
+.flag-richiedi-servizio a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.flag-richiedi-servizio a:hover {
+    color: #f3cd00;
+}
+.box-bottom p {
+    font-size: 25px;;
+    font-family: 'Poppins', sans-serif;
+    margin-top: -20px;
+}
+
+/*trova il tuo servizio*/
+.nav-content {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+.nav.nav-servizi {
+    margin: 50px auto;
+    padding: 100px 20px;
+    clip-path: polygon(0 5%, 100% 0, 98% 97%, 2% 100%);
+    background: #fff;
+}
+.nav-servizi li .box-wrapper {position: relative;}
+.nav-servizi li .box-1:before {
+    position: absolute;
+    content: '';
+    position: absolute;
+    /*    top: -50px;*/
+    top: -35px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 40px);
+    /*    height: calc(100% + 100px);*/
+
+    clip-path: polygon(0 0, 100% 3%, 100% 96%, 0% 100%);
+    background-color: #18a095;
+}
+.nav-servizi .box-1, .nav-servizi .box-4 {color: white;}
+.nav-servizi .box-2, .nav-servizi .box-3,
+.nav-servizi .box-2, .nav-servizi .box-3.active {color: #2c1d4c!important;}
+.nav-servizi .box-content {
+    z-index:9;
+    position: relative;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    height: 100%;
+    word-break: break-word;
+}
+.nav-servizi .nav-link.box-wrapper {
+    border-radius: 0;
+    background: transparent;
+    padding:0;
+    transition: background 0.5s ease;
+    height: 100%;
+}
+
+.box-2:before {
+    background-color: #f3cd00;
+    position: absolute;
+    content: '';
+    /*    top: -50px;*/
+    top: -35px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 40px);
+    /*    height: calc(100% + 100px);*/
+    clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 97%);
+
+}
+
+.box-3:before {
+    clip-path: polygon(0 4%, 100% 0, 100% 94%, 0 99%);
+    background-color: white;
+    position: absolute;
+    content: '';
+    /*    top: -50px;*/
+    top: -35px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 40px);
+    /*    height: calc(100% + 100px);*/
+}
+.box-4:before {
+    background-color: #2c1d4c;
+    position: absolute;
+    content: '';
+    /*    top: -50px;*/
+    top: -35px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 40px);
+    /*    height: calc(100% + 100px);*/
+    clip-path: polygon(0 0, 100% 3%, 100% 96%, 0% 100%);
+}
+.nav-servizi h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Poppins;
+    line-height: 30px;
+    font-weight: 900;
+}
+.nav-servizi .nav-link .box-content p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+.block-nov-wizard p, .block-nova-workflow .fieldgroup {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: #2b1c4b;
+}
+.block-nova-workflow p,.block-nova-workflow .js-form-wrapper, .title-workflow{
+    color: #2b1c4b;
+    font-weight: 300;
+}
+.block-nova-workflow .js-form-wrapper {
+    font-size: 25px;
+}
+.block-nova-workflow [id^="edit-actions--"]  button {
+    margin-top: 1.5rem;
+}
+.block-nova-workflow .js-form-wrapper .button-contact {
+    display: inline-block;
+}
+.block-nova-workflow .selected_area {
+    font-family: 'graphiesemibold', sans-serif;
+    text-transform: uppercase;
+    display: inline-flex;
+    margin: 0.5rem 0.5rem 0 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #18a095;
+    color: white;
+    padding: 0.5rem 1rem;
+    line-height: 35px;
+}
+.block-nova-workflow h2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    padding: 30px 20px;
+    color: #432c65;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #2b1c4b;
+}
+.block-nova-workflow #edit-next,.block-nova-workflow #edit-next--2,
+.block-nova-workflow #edit-next--2, .block-nova-workflow #edit-next--3,
+.block-nova-workflow #edit-next--4 {
+    vertical-align: top;
+    float: right;
+}
+/*step 1*/
+#area--wrapper #area--wrapper--description span, .icon-robot {
+    height: 42px;
+    width: 42px;
+    background: url(../img/ico-robot.png)no-repeat center center;
+    display: inline-block;
+    vertical-align: bottom;
+}
+button.btn-start {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    font-size: 25px;
+    font-weight: 900;
+    padding: .375rem 2.5rem;
+    visibility: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.box-content-bottom {
+    position: relative;
+    bottom: 50px;
+    height: inherit;
+}
+.box-image {
+    width: 108px;
+    height: 108px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.box-1 .box-image {
+    background: #2c1d4c url(../img/bg/bg_servizio.png)no-repeat center center;
+}
+.box-2 .box-image {
+    background: #18a095 url(../img/bg/bg_servizio2.png)no-repeat center center;
+}
+.box-3 .box-image {
+    background: #f3cd00 url(../img/bg/bg_servizio3.png)no-repeat center center;
+}
+.box-4 .box-image {
+    background: #fff url(../img/bg/bg_servizio4.png)no-repeat center center;
+}
+.box-1 .btn-start {
+    background-color: #2c1d4c;
+    color: #fff;
+}
+.box-2 .btn-start {
+    background-color: #18a095;
+    color: #fff;
+}
+.box-3 .btn-start {
+    background-color: #f3cd00;
+    color: #2c1d4c;
+}
+.box-4 .btn-start {
+    background-color: #fff;
+    color: #2c1d4c;
+}
+.box-1 .btn-start:hover, .box-2 .btn-start:hover {
+    color: #fff;
+}
+/*step 2*/
+.form-wrapper.step-2 .icon-robot {
+    background: url(../img/ico-robot-2.png)no-repeat center center;
+    vertical-align: bottom;
+    margin-left: 4px;
+}
+/*zoomOut*/
+@media (min-width: 360px) {
+    .zoomOut {
+        -webkit-animation-name: zoomOut;
+        animation-name: zoomOut;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    @-webkit-keyframes zoomOut {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+            -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes zoomOut {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+            -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+.nav-servizi .box-wrapper:hover:before {
+    transition: background 1s ease;
+    -webkit-animation-name: zoomOut;
+    animation-name: zoomOut;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.nav-servizi .box-wrapper.box-3:hover:before {
+    background-color:black;
+}
+.nav-servizi a.box-wrapper:hover, .nav-pills .nav-link.active, .nav-servizi a.box-wrapper:active {
+    box-shadow: none;
+    color: #2c1d4c;
+    background-color: transparent!important;
+    filter: none;
+}
+.nav-servizi a.box-wrapper:hover .box-content:before {
+    content: url(../img/bg/element.png);
+    top: -40px;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(50deg);
+    left: -20px;
+}
+.nav-servizi a.box-wrapper:hover .box-image {
+    display: none;
+}
+
+.nav-servizi a.box-wrapper:hover .btn-start {
+    display: inline-block;
+    z-index:9;
+    visibility: visible;
+}
+
+/* box active state*/
+.nav-servizi a.box-wrapper.active .box-image {
+    display: none;
+}
+.nav-servizi a.box-wrapper.active .btn-start {
+    display: inline-block;
+    z-index:9;
+    visibility: visible;
+}
+/*workflow, step 1 2 3*/
+.block-nova-workflow .js-form-required, fieldset.step-2 legend > span, .title-workflow {
+    color: #ffffff;
+    font-family: 'graphiesemibold', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    /*    line-height: 30px;*/
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #2c1d4c;
+    padding: 1rem 2rem;
+    margin: 30px 0 40px;
+    display: inline-block;
+}
+/* fieldset.step-2 legend {width: auto;} */
+.block-nova-workflow .js-form-required span, fieldset.step-2 legend > .fieldset-legend span,
+.title-workflow span {
+    text-transform: none;
+}
+.block-nova-workflow .form-wrapper
+.view-trova-il-tuo-servizio {margin-top: 50px;}
+.view-trova-il-tuo-servizio .tab-pane.container {
+    padding:0;position: relative;
+    position: relative;
+}
+.view-trova-il-tuo-servizio .tab-content .block-nova-wizard {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+.block-nova-wizard .form-checkbox {
+    display: none;
+}
+.block-nova-wizard  .form-content {position: relative}
+.block-nova-wizard .js-form-type-checkbox {
+    text-align: center;
+    padding: 0;
+    height: 90%;
+}
+.block-nova-wizard label {
+    width: 100%;
+    box-shadow: 0 0 59px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+    position: relative;
+    height: 100%;
+}
+.block-nova-workflow #area label {
+    background-color: #18a095;
+}
+
+.block-nova-wizard .js-form-type-checkbox p {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 45px;
+    margin: 1.2rem 0 1rem 0;
+}
+.block-nova-wizard .views-field-description__value p {
+    padding: 0 10px;
+}
+.block-nova-wizard .js-form-type-checkbox .ico {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 7;
+}
+.modal-custom .view-help-wizard .views-field-description__value p {font-weight: 300;}
+.block-nova-workflow #area .btn.btn-success {
+    color: #2c1d4c;
+}
+.btn.btn-success {
+    color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    border-color: #f3cd00;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn.btn-success:hover, .btn.btn-success:active, .btn.btn-success:focus  {
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+}
+.btn-info {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn-info label {
+    font-size: 18px;
+    font-weight: 700;
+    top: 2px;
+    position: relative;
+}
+#area .js-form-type-checkbox label:checked {
+    background-color: #f3cd00;
+}
+#area .js-form-type-checkbox .btn-success:hover, #area .js-form-type-checkbox:focus-within .btn-success,
+#area .js-form-type-checkbox .btn-success:focus-within, #area .js-form-type-checkbox .btn-success:focus,
+#area .js-form-type-checkbox .btn-success:active {
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+    color: #fff;
+}
+#area .checkbox > input[type="checkbox"]:checked + label > div.btn-success {
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+    color: #fff;
+}
+.block-nova-wizard .js-form-type-checkbox .btn-success {
+    width: 212px;
+    bottom: -15px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+/*seconda selezione servizi*/
+div[id^="edit-cluster--"] {margin-top: 3rem;}
+div[id^="edit-cluster--"] .checkbox label {
+    background-color: #2c1d4c!important;
+    padding-top: 1rem;
+}
+div[id^="edit-cluster--"] .checkbox .ico {
+    display: none;
+}
+div[id^="edit-cluster--"] .btn-success {
+    color: #2c1d4c;
+}
+.block-nova-wizard div[class^="form-item-cluster-"] label p,.block-nova-wizard div[class*=' form-item-cluster-'] label p {
+    font-size: 20px;
+}
+
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label {
+    background-color: #f3cd00!important;
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label > p{
+    color: #2c1d4c;
+}
+.step-2 .checkbox > input[type="checkbox"]+ label > div.btn-success:hover {
+    background-color: #18a095;
+    border-color: #18a095;
+}
+.step-2 .checkbox > input[type="checkbox"]:checked + label > div.btn-success {
+    background-color: #2c1d4c;
+    border-color: #2c1d4c; color: #fff;
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select {
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select span {
+    display: none;
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select:before {
+    content: 'DESELEZIONA';
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select span {
+    display: none;
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select:before {
+    content: 'DESELEZIONA';
+}
+#nova-workflow-wizard-form1--2 .checkbox > input[type="checkbox"]:checked + label #btn-select:before {
+    content: 'DESELEZIONA';
+}
+/*Nova worflow final step*/
+
+.box-search-service {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.5rem 1rem 1.5rem 2.5rem;
+    position: relative;
+    margin-bottom: 40px;
+}
+.box-search-service .field_title a {
+    color: #2c1d4c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    word-break: break-word;
+}
+
+.box-search-service .field_title {
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.box-search-service .field_nome {
+    line-height: 33px;
+}
+.box-search-service .field_cat, .field_tip {
+    font-size: 15px;
+}
+.box-search-service .fa-clock {
+    font-size: 20px;
+}
+.tip_erogazione {text-transform: capitalize;}
+.step-flow {
+    font-style: italic;
+}
+.first-step {
+    font-weight: 700;
+}
+.box-search-service .field_logo {
+    float: left;
+    padding: 0 1rem 1.5rem 0em;
+}
+.box-search-service .field_group {
+    margin-bottom: 0;
+}
+.view-nova-workflow  .views-row {
+    margin-bottom: 50px;
+}
+.view-nova-workflow  .views-row .views-field {
+    height: 100%;
+}
+.view-nova-workflow  .views-row .views-field .box-search-service {
+    height: 100%;
+}
+.field_tip {
+    text-transform: uppercase;
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    background-color: #18a095;
+    color: #fff;
+    padding: 4px;
+    font-weight: 500;
+    line-height: inherit;
+}
+.checkbox .checkbox .field_tip {
+    margin-right: 15px;
+    top: -20px;
+    color: #2c1d4c;
+}
+.view-nova-workflow .box-search-service .field_tip {
+      color: #2c1d4c;
+}
+.box-link {
+    width: 225px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    background-color: #2c1d4c;
+    text-align: center;
+    margin-top: 15px;
+    position: absolute;
+}
+.box-link a {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.box-link a:hover {
+    color: #18a095;
+}
+/* Modal ico-robot */
+.icon-robot-yellow {
+    height: 47px;
+    width: 48px;
+    background: url(../img/ico-robot-yellow.png)no-repeat center center;
+    display: inline-block;
+    vertical-align: bottom;
+}
+/*2 path per la stessa pagina*/
+.path-trova-il-tuo-servizio .modal-backdrop.show, .path-trova-il-tuo-servizio .modal-backdrop.fade,.path-node-5046 .modal-backdrop.show, .path-node-5046 .modal-backdrop.fade,
+.path-node .modal-backdrop.show, .path-node .modal-backdrop.fade {
+    opacity: 0;
+    z-index: -1;
+}
+.path-trova-il-tuo-servizio .modal,.path-node .modal,.path-node-5046 .modal {
+    max-width: 1320px;
+    left: auto;
+
+}
+.path-trova-il-tuo-servizio .modal-custom,.path-node .modal-custom,.path-node-5046 .modal-custom {
+    position: absolute;
+    top:-50%;
+    left:0;
+    width: 100%;
+    z-index: -1;
+
+}
+.path-trova-il-tuo-servizio .modal-custom.show,.path-node .modal-custom.show,.path-node-5046 .modal-custom.show {z-index: 9;}
+.path-trova-il-tuo-servizio .modal-custom.fade,.path-node-5046 .modal-custom.fade  {z-index: -1;}
+.path-trova-il-tuo-servizio .modal-custom.show,.path-node-5046 .modal-custom.show   {z-index: 9;}
+.path-trova-il-tuo-servizio .modal.show .modal-dialog,.path-node .modal.show .modal-dialog,.path-node-5046 .modal.show .modal-dialog  {
+    /*    float: right;*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+    /*    bottom: 5rem;*/
+    /*    right:0;*/
+    position: fixed;
+    z-index: 9;
+    position: fixed;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.path-trova-il-tuo-servizio .modal-dialog,.path-node-5046 .modal-dialog  {
+    position: absolute;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+}
+.path-trova-il-tuo-servizio .modal.show .modal-content, .path-trova-il-tuo-servizio .modal-content .modal-header,.path-node-5046 .modal.show .modal-content,.path-node-5046 .modal-content .modal-header,
+.path-node .modal.show .modal-content, .path-node  .modal-content .modal-header{
+    border-radius: 0;
+    border-color: transparent;
+}
+.path-trova-il-tuo-servizio .modal-content .modal-header,.path-node-5046 .modal-content .modal-header,
+.path-node .modal-content .modal-header{
+    background-color: #3f2863;
+    color: white;
+    padding: 5px 30px;
+}
+.path-trova-il-tuo-servizio .modal-content .modal-header .modal-title,.path-node-5046 .modal-content .modal-header .modal-title
+.path-node .modal-content .modal-header .modal-title {
+    font-family: 'graphiesemibold', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+.path-trova-il-tuo-servizio .modal-content .modal-header .btn-close-custom,.path-node-5046 .modal-content .modal-header .btn-close-custom,
+.path-node .modal-content .modal-header .btn-close-custom{
+    background-color: #3f2863;
+    border-color: #3f2863;
+    color: white;
+}
+.modal-body-content {
+    background-color: #3f2863;
+    border-radius: 18px;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    padding: 15px;
+}
+.modal-body-content p,.modal-body-content .field-content  {
+    color: #fff;
+}
+
+/*Carrello*/
+.popover {
+    border-radius:0!important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.popover.show {z-index:9999;}
+.popover .popover-header {display: none;}
+.popover.show .popover-body {
+    max-height: 700px;
+    overflow-y: scroll;
+}
+.popover-body .info-contact, .popover-body .info-contact a {width: 100%}
+.service-cart {
+    padding-bottom: 15px;
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 15px;
+}
+.service-cart .field_logo img { height: auto;}
+.service-cart .field_name {
+    font-family: 'graphiesemibold', sans-serif;
+    text-transform: uppercase;
+    color:#3f2863;
+    word-break: break-word;
+}
+.service-cart .field_dati  {
+    color: #2c1d4c;
+}
+.service-cart .field_dati div {
+    margin-bottom: 4px;
+}
+.service-cart i {
+    font-size: 18px;
+    color: #18a095;
+}
+.service-cart .flag-wishlist-servizi {
+    padding: 0 0.4rem;
+}
+.service-cart .flag a {
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+    color:#2c1d4c;
+    transition: all 0.4s ease;
+}
+.service-cart .flag:hover a {
+    color:#18a095;
+}
+/*form nova workflow e viste servizi*/
+.nova-workflow-wizard-form1, #block-novaliguria-novaworkflowconfigurablewizard {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    margin-bottom: 2rem;
+
+}
+.block-nova-workflow .content {
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 97%);
+    background: white;
+    padding: 6rem  0 9rem;
+    margin-top: 40px;
+}
+.block-nova-workflow h2 {
+    z-index: 1;
+    position: absolute;
+    top: -30px;
+    left: 15px;
+}
+.btn-cart.btn-primary {
+    width: 100%!important;
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+}
+.btn-cart.btn-primary:hover {
+    width: 100%;
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+}
+
+.nova-list .view-content {
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
+    background: white;
+    padding: 3.5rem 0;
+}
+.nova-list-spazi .view-content {
+    padding-top: 1.5rem;
+}
+.nova-list .view-header h1 {
+    position: relative;
+    z-index:1;
+    bottom: -2rem;
+}
+.bg-green #page, #page {
+    background-color: #18A095;
+}
+.node-page #page #main-wrapper {
+    background-image: url(../img/bg/bg_left-nova.png);
+    background-repeat: no-repeat;
+    background-position: bottom -50px left -50px;
+    margin-bottom: -90px;
+    padding-bottom: 80px;
+}
+
+/*#page .main-content .{
+    background: white;
+}*/
+.path-trova-il-tuo-servizio #page .main-content, .page-node-13 #page .main-content,
+.page-node-6747 #page .main-content, .path-user #page .main-content,.path-node-5046 #page .main-content {
+    background: none;
+}
+.node-servizio #page .main-content, .path-carrello #page .main-content,.node-avviso #page .main-content,
+.node--type-bando #page .main-content, .node--type-servizio #page .main-content {
+    background: none;
+}
+.path-user .text-muted {color: black!important;}
+#node-avviso-edit-form .layout-region-node-main {
+    background: #fff;
+    padding-top: 1rem;
+}
+
+/*
+* Spazi search api widget and node, Slider spazi homepage
+*/
+.view-catalog ul.item-list__checkbox {
+    list-style-type: none;
+    display: flex;
+    margin-right: 1rem;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+}
+.view-catalog ul.item-list__checkbox li {
+    margin: 0 1rem 1rem 0;
+}
+.view-catalog ul.item-list__checkbox .facet-item--expanded .facets-widget- {display: none;}
+.view-catalog input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.view-catalog .facets-checkbox {
+    border: 1px solid white;
+    border-radius: 4px;
+    background: #18a095;
+    vertical-align: top;
+}
+.view-catalog .block-facets-ajax input[type="checkbox"]:checked {
+    background: white;
+}
+.view-catalog input[type="checkbox"]:checked::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: -4px;
+    right: 0;
+    font-weight: 600;
+    color: #18a095;
+}
+.view-catalog ul.item-list__checkbox label {
+    margin: 0 0.5rem; font-weight: 600;
+}
+.view-catalog .facet-item__value {
+    color: white;
+    margin-right: 0.5rem;
+}
+.view-catalog .view-content-wrapper{  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));}
+.view-spazi-search-api ul.pagination {margin-top: 1rem;}
+.view-spazi-search-api .field_nome a {
+    color: #432C65; font-style: italic;
+    margin-top: 0.5rem; font-weight: 300;
+}
+.view-spazi-search-api .field_title {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.view-spazi-search-api .field_group {color: #432C65;}
+.view-spazi-search-api .filed_nome_spazio {
+    font-style: italic;text-transform: uppercase;
+    font-weight: 500;
+}
+.view-spazi-search-api .field_tip { left: 35px;}
+.view-spazi-search-api .field_cat {font-weight: 500;}
+.view-spazi-search-api .field_cat img {
+    height: 22px;width: auto;
+    vertical-align: initial;
+}
+.view-search  .block-facets-ajax h2, .list-opportunity .views-exposed-form label,
+.view-search  .block-facets-ajax h2, .list-opportunity .views-exposed-form .fieldset-legend {
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+.view-spazi-search-api .block-nova-workflow, .view-formazione .block-nova-workflow {
+    margin-top: 4rem;position: relative;
+}
+.view-spazi-search-api .view-content, .view-formazione .view-content {
+    padding-top: 4rem;
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
+    margin-bottom: 3rem;
+}
+.view-spazi-search-api .block-nova-workflow h2 {
+    top: 0; margin-top: -20px;
+}
+.view-display-id-page_2.view-id-servizi_stakeholder .field_group {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2C1D4C;
+}
+.view-display-id-page_2.view-id-servizi_stakeholder .view-header h1 {
+    bottom: -4rem;
+}
+.row-spazi {clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);}
+.content-wrapper {
+    background: #fff;padding-top: 6rem;
+    color: #2B1C4B;
+    font-family: 'Poppins', sans-serif;
+}
+.view-display-id-page_2.view-id-servizi_stakeholder  .view-content {
+    padding-top: 1rem;
+    margin-bottom: 5rem;
+}
+/*spazi homepage*/
+.view-spazi-homepage .views-field-nothing {
+    padding: 1rem 2rem 1rem 2rem;
+    color: white;
+}
+.view-spazi-homepage .slide__description {
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    position: relative;
+}
+.view-spazi-homepage h3 a {font-weight: 300;}
+.view-spazi-homepage .btn {
+    border-color: white;color: white;  margin: 0 auto;
+}
+.view-spazi-homepage .btn:hover {
+    color: white;
+}
+.view-spazi-homepage .logo-user{
+    background: white;
+    display: inline-block;
+}
+.view-spazi-homepage .field_tip{
+    position: relative;
+    text-transform: none;
+    display: inline-block;
+    left: 0;
+    top: -5px;
+}
+.view-spazi-homepage .logo-user-wrapper {height: 100px}
+.view-spazi-homepage .slick-dots {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.view-spazi-homepage .slick-dots li button {
+    height: 8px;
+    margin: 0px 2px;
+    font-size: 0;
+    width: 8px;
+    border-radius: 50%;
+    padding: 0;
+    background: #F3CD00;
+    opacity: 0.7;
+}
+.view-spazi-homepage .slick-dots li {margin: 0;font-size: 0;}
+.view-spazi-homepage .slick-dots li.slick-active button {
+    background: #F3CD00;
+    height: 12px; width: 12px;
+    opacity:1;
+}
+.view-spazi-homepage .spazi-content .wrapper-link a:hover {
+    color: #F3CD00!important;
+}
+/*blocco comune homepage*/
+/*blocco comune homepage*/
+#row-comune-genova {  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));}
+#row-comune .views-element-container {
+    margin-bottom: 100px;
+}
+#row-news .views-element-container, #row-content-formazione .views-element-container,
+#views-bootstrap-formazione-homepage-block-1 {
+    margin-bottom: 10px;
+}
+#row-content-finanziamenti .views-element-container {margin-bottom: 50px;}
+#row-comune-genova .row-content-block{
+    background-color: #fff;
+clip-path: polygon(3% 0, 96% 0, 100% 100%, 0 97%);
+    padding: 3rem 4rem 4rem 4rem;
+}
+#row-comune-genova .titolo {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    filter: none;
+    width: auto;
+    display: inline-block;
+    background: #2C1D4C;
+    padding: 20px 50px;
+    font-weight: bold;
+    min-width: 60%;
+}
+#row-comune-genova .btn-liguria a {
+    text-decoration: none;
+    text-transform:uppercase;
+}
+#row-comune-genova .titolo-row {
+    text-align: center!important;
+    margin-bottom: -30px;
+    z-index: 9999999;
+    position: relative;
+}
+#row-comune-genova img {
+    max-width: 100%;
+    height: auto;
+}
+
+#row-comune-genova .wrapper-content .btn-liguria {
+    position: absolute; right: 9%;
+    bottom: 10%;
+}
+.color-purple a {
+    color: #2C1D4C;
+}
+
+/* carrello page */
+.cart-wrapper {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+.cart-page {
+    background: #fff;
+
+}
+.view-whishlist-servizi {
+    color: #2c1d4c;
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+.view-whishlist-servizi .view-content {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+}
+.view-whishlist-servizi .view-content .views-row .cart-wrapper .cart-page {
+    padding-top: 50px;
+}
+.view-whishlist-servizi .view-content .views-row:first-of-type .cart-wrapper .cart-page {
+    padding-top: 100px;
+}
+.view-whishlist-servizi .info-service {
+    border-bottom: 1px solid rgba(67,44,101,0.4);
+    padding-bottom: 50px;
+}
+.view-whishlist-servizi .view-content .views-row:last-of-type .info-service {
+    padding-bottom: 100px;
+}
+.view-whishlist-servizi .views-row:last-of-type .info-service,
+.popover .field-content:last-of-type .service-cart{
+    border-bottom: none;
+}
+.view-whishlist-servizi  .address-service {
+    letter-spacing: 1.43px;
+    text-decoration: underline;
+}
+.view-whishlist-servizi .flag.btn-success a {
+    font-family: 'Poppins', sans-serif;
+    color: #2c1d4c;
+    text-transform: uppercase;
+}
+.view-whishlist-servizi .flag.btn-success:hover a {
+    color: #18A095;
+}
+.view-whishlist-servizi .title a {
+    text-decoration: none;
+    color: #2c1d4c;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.view-whishlist-servizi i {
+    color:#18A095;
+    font-size: 20px;
+}
+.info-cart {
+    margin: 10px 0;
+}
+.info-contact {margin: 10px 0 0 0; display:inline-block;box-shadow:0 3px 6px rgb(0 0 0 / 30%)}
+.info-contact a {
+    color: white;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: #2c1d4c;
+    padding: .375rem .75rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+       font-size: 22px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+}
+.info-contact a:hover {
+    color: #18A095;
+}
+/*Contatti su carrello page*/
+#block-contattisucarrello {
+    display: block;
+    max-width: 900px;
+    margin: 50px auto;
+    filter: drop-shadow(0 -1px 24px rgba(0, 43, 85, 0.22)) ;
+    color: #fff;
+}
+#block-contattisucarrello .contatti-content {
+    clip-path: polygon(2% 2%, 98% 0, 100% 98%, 0% 100%);
+    background-color: #2c1d4c;
+    padding: 1.5rem 0 2rem;
+}
+#block-contattisucarrello .content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+
+}
+#block-contattisucarrello button {
+    margin-top: -30px;
+    z-index: 9;
+    position: relative;
+    text-transform: uppercase;
+}
+.view-nova-workflow .view-footer {padding-top: 100px;}
+.view-nova-workflow  button {
+    margin: 0 10px 0 0;
+}
+.view-nova-workflow .view-footer button {
+    display: inline-block;
+}
+
+/* Form cerca */
+#views-exposed-form-ricerca-servizi-page-1 {
+    position: relative;
+}
+#views-exposed-form-ricerca-servizi-page-1 p {
+    position: relative;
+}
+#views-exposed-form-ricerca-servizi-page-1 .form-row .form-actions,
+#views-exposed-form-ricerca-servizi-page-1 .row .form-actions {
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+#block-formespostoricerca-servizipage-1 h2 {
+    left: 8.33333333%;
+}
+#views-exposed-form-ricerca-servizi-page-1 button {
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+    margin-top: 0;
+    font-family: 'Font Awesome 5 Free';
+    color: white;
+    font-weight: 600;
+    padding: 0.14rem 0.5rem;
+}
+
+input#edit-search-api-fulltext {
+    padding:5px 0;
+    border-radius: 0;
+}
+#views-exposed-form-ricerca-servizi-page-1 input.form-autocomplete {
+    background-position: 93% center;
+    padding-bottom: 0;
+    border-radius: 0;
+    border-color: #2c1d4c;
+}
+#block-formespostoricerca-servizipage-1 {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    margin-bottom: 100px;
+}
+#block-formespostoricerca-servizipage-1 .content{
+    clip-path: polygon(0 2%, 100% 0, 99% 100%, 2% 100%);
+    padding-bottom: 5rem;
+}
+#block-formespostoricerca-servizipage-1 label, #block-formespostoricerca-servizipage-1 .description {display: none;}
+#block-formespostoricerca-servizipage-1 legend{
+    margin-bottom: 0;
+}
+#block-formespostoricerca-servizipage-1 {
+    font-size: 25px;
+}
+#block-formespostoricerca-servizipage-1 p {
+    font-size: 0.800em;
+}
+/*last chance*/
+.js-form-wrapper.form-wrapper fieldset .radio {
+    display: inline-table;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.js-form-wrapper.form-wrapper fieldset .radio label {
+    box-shadow: none;
+}
+.js-form-wrapper.form-wrapper fieldset .radio form-check {
+    font-size: 20px;
+    margin-right: 20px;
+}
+.form-check-input[type=radio] {
+    border-color:#2c1d4c;
+}
+/*page search*/
+.page-view-ricerca-servizi #main-wrapper.layout-main-wrapper,.page-view-ricerca-servizi #page {
+    background: #18a095;
+}
+.page-view-ricerca-servizi #main {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+.page-view-ricerca-servizi .view-ricerca-servizi .view-content {
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+    background: white;
+    padding: 6rem 0;
+    margin-top: 40px;
+}
+.view-ricerca-servizi h2 {top: 0;}
+.view-ricerca-servizi .search {height: 80%}
+.view-ricerca-servizi .search .box-search-service {height: 100%}
+
+/*
+* Management workflow e admin
+*/
+
+.block .area-utenti {
+    background: white;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+.block .area-utenti .btn a {
+    color: black;
+    font-weight: 600;
+    transition: none;
+}
+.block .area-utenti .btn:hover a {
+    color: #18A095;
+}
+/*.block .area-utenti .btn a:hover {
+    color: white;
+}*/
+.view-management-workflow a.tabledrag-handle .handle {
+    padding: 0.9em;
+}
+.view-management-workflow tr td,.view-management-workflow tr th {
+    padding: 4px 9px;
+    border: 1px solid lightgrey;
+    text-align: left;
+    background: white;
+}
+th.views-field-view, th.views-field-operations, th.views-field-name {
+    background: #2c1d4c!important;
+}
+#draggableviews-table-management-workflow-page-1 td.views-field-name.indent-1 {
+    padding-left: 2rem;
+    background: #EEDDDF;
+}
+#draggableviews-table-management-workflow-page-1
+td.views-field-name.indent-1 .indent-1 { margin-top: .25rem}
+#draggableviews-table-management-workflow-page-1 td.views-field-name.indent-0 {
+    background: #e4ddee;
+}
+.view-management-workflow #edit-actions {
+    text-align: right;
+}
+.view-management-workflow.view-display-id-page_1 #edit-submit-management-workflow {
+    margin-top: -20px;
+}
+.view-management-workflow #edit-actions #edit-save-order {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    background-color: #2c1d4c;
+    border-color:#2c1d4c;
+}
+.view-management-workflow #edit-actions #edit-save-order:hover {
+    background: #18A095;
+    border-color: #18A095;
+}
+.view-management-workflow th#view-name-table-column {
+    min-width: 300px;
+}
+.view-management-workflow .views-field-name.indent-2 {
+    padding-left: 3.5rem;
+    background: #E7EEDD;
+}
+.view-management-workflow .views-field-operations .op-indent-0 {display: none;}
+.view-management-workflow thead {
+    background: #2c1d4c;
+    color: #fff;
+}
+.view-management-workflow .draggable a.tabledrag-handle {
+    margin-top: 8px;
+    padding-left: 5px;
+}
+.view-management-workflow .views-field-name.indent-2 .indent-2 a {
+    /*    background: white;*/
+    padding: 5px;
+    display: block;
+}
+.view-management-workflow .tabledrag-toggle-weight-wrapper,
+.view-management-workflow .field-multiple-drag,
+.view-management-workflow .btn-info > input[type="checkbox"]:checked + label span {
+    display: none;
+}
+.view-management-workflow .btn-info > input[type="checkbox"]:checked + label:before {
+    content: 'Vedi Servizi';display: block;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    background: white;
+}
+td.views-field-operations, td.views-field.views-field-view {
+    background: white;
+}
+.view-management-workflow a, .view-page-service a, .view-page-service .views-field-title {
+    font-size: 16px;
+    color: #2c1d4c;
+    text-decoration: none;
+    word-break: break-word;
+}
+.view-page-service .views-field {font-size: 16px}
+.view-display-id-block_1 .views-field.views-field-title {padding: 4px 9px;}
+.view-button .views-field-operations .dropbutton-multiple {
+    padding-right: 0;
+    margin-right: 0;
+}
+.view-button .views-field-operations .dropbutton-multiple .dropbutton {
+    background: #e7d72a;
+    padding: 0.3rem;
+    text-transform: uppercase;
+}
+.view-button .views-field-operations .dropbutton-multiple .dropbutton a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'graphiesemibold', sans-serif;
+    background: none;
+}
+.view.view-button .dropbutton-wrapper .dropbutton-widget,
+.view .views-field-operations .dropbutton-wrapper .dropbutton-widget {position: relative;}
+.view #edit-actions button {margin-bottom:0}
+.view-filters .views-exposed-form .form-row .js-form-item {padding-right: 0.5rem;}
+.view-button  .dropbutton-multiple .dropbutton-widget .dropbutton-action:hover {background: none!important;}
+#draggableviews-table-management-workflow-page-1 li.dropbutton-toggle  button,
+.views-field-operations li.dropbutton-toggle  button {
+    background-color: #e7d72a!important;
+    background-image: none;
+    background-image: none;
+    background: #e7d72a;
+}
+.view-management-workflow .views-field-operations .dropbutton-multiple .dropbutton-widget {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    position: relative;
+}
+.view-management-servizi .view-content.row {
+    margin-left: 0;
+}
+.view-management-workflow tr td.views-field.views-field-view, .col-serv.views-field-title,
+.view-management-servizi.view-display-id-block_1  td.views-field-title {
+    background: #ddefee!important;
+}
+.view-management-servizi .views-field-title {
+    background: white;
+    padding: 0 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.view-management-servizi .views-field-title.views-field,
+.view-management-servizi.view-display-id-block_1 th.views-field-field-nome,
+.view-management-workflow th.views-field-draggableviews {
+    background: #2c1d4c;color: white;
+}
+
+.view-management-servizi .hidden, .view-management-workflow .hidden {display: none;}
+.view-management-servizi .btn-success { margin-bottom: 1em;}
+.view-management-servizi th a {color: white}
+
+td.area, td.area-tree.indent-1 {background: #EEDDDF!important;}
+td.ambito {background: #E7EEDD!important;}
+td.area-tree.indent-1 {padding-left: 2rem;}
+.view-track-servizi .list-group-item {
+    background: none;
+    border: none;
+}
+/* management-servizi e aziende*/
+.view-page-service thead > tr,.view-page-service #view-title-table-column {
+    background: #2c1d4c;
+    color: white;
+    padding: .5rem .5rem;
+}
+.view-page-service thead > tr th.views-field {color: white;}
+.view-page-service .views-field-node-bulk-form label {
+    display: none;
+}
+.view-page-service  td.views-field.views-field-parent-target-id-1, .view-page-service .views-field-name,
+.view-page-service  .table-striped>tbody>tr:nth-of-type(odd)> .views-field-name {
+    background: #e4ddee;
+}
+.view-page-service .views-field-title {
+    padding: .5rem .5rem;
+}
+#views-exposed-form-management-servizi-page-3 .form-row, #views-exposed-form-management-servizi-page-3 .row  {
+    display: flex;
+}
+.view-gestione-imprese .view-filters .views-exposed-form .form-row, .view-gestione-imprese .view-filters .views-exposed-form .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.view-track-servizi .views-field-revision-uid, .view-track-servizi  .list-group-item {
+    word-break: break-all;
+}
+.view-track-servizi  .views-field-revision-uid {width: 200px;}
+/* page form richiesta azienda*/
+.page-richiesta, body.add-richiesta #page {
+    background: #18A095;
+}
+.page-richiesta .main-content {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    margin-bottom: 2rem;
+}
+.page-richiesta .layout-region-node-footer {width:100%}
+.page-richiesta .layout-region-node-footer #edit-actions button {
+    float: right;
+    background: #1BA4AF;
+    border-radius: 4px !important;
+    color: white;
+    border-color:#1BA4AF;
+}
+.page-richiesta .main-content .content {
+    clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
+    background: #fff;
+    padding: 30px 35px 70px 35px;
+}
+.page-richiesta {
+    font-family: 'graphieregular';
+}
+.page-richiesta .node_title_form {
+    font-size: calc(25px + 5 * ((100vw - 600px) / 600));
+    margin-bottom: 0;
+    font-family: 'graphiesemibold', sans-serif;
+    font-weight: 700;
+    padding: 30px 20px;
+    display: inline-block;
+    transform: skewY(-1deg);
+    background: #032675;
+    z-index: 9;
+    position: relative;
+}
+.page-richiesta header.header-form {
+    margin-bottom: -30px;
+}
+.page-richiesta .node_title_form span {
+    transform: skewY(1deg);
+    display: block;
+    color: white;
+    word-break: break-all;
+}
+.page-richiesta p {
+    font-family: 'graphieregular';
+    font-size: 18px;
+    color: #032675;
+}
+.page-richiesta .privacy-text {
+    width: 100%;
+    display: block;
+    color: #032675!important;
+    font-size: 18px;
+    border: 1px solid #1DA5B0;
+    border-radius: 4px;
+    padding: 1rem;
+    height: 150px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+.page-richiesta .js-form-item-field-cert-dati-value {
+    padding-left: 0;
+}
+#edit-field-cert-dati-value--description {
+    height: auto;
+}
+.page-richiesta #edit-field-privacy-richiesta-value--description ::-webkit-scrollbar {
+    scrollbar-color: #4D4D4D #4D4D4D;
+}
+.page-richiesta .field-group-html-element h3 {
+    font-family: graphiesemibold;
+    text-align: center;
+    color: #032675;
+    margin: 40px 0 20px;
+}
+.page-richiesta label {
+    color: #09447C;
+    font-size: 18px;
+    font-family: graphieregular;
+    text-transform: uppercase;
+}
+.page-richiesta .js-form-item-field-aut-modifica-dati-value label {
+    text-transform: none;
+}
+.page-richiesta span.js-form-required {color: #032675;}
+.page-richiesta .js-form-item-field-privacy-richiesta-value label,
+.page-richiesta  .js-form-item-field-cert-dati-value label {
+    text-transform: none;
+}
+.page-richesta details.form-wrapper {
+    font-size: 20px; margin-bottom: 0.5rem;
+}
+.content-field {
+    display: flex;
+}
+.content-field .js-form-wrapper, #edit-field-libero-professionista-wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.content-field #edit-field-ragione-sociale-wrapper {width: 30%;}
+#edit-field-numero-partecipanti-wrapper input#edit-field-numero-partecipanti-0-value {margin-left: 25px;width: auto}
+#edit-field-numero-partecipanti-wrapper label { margin-left: 25px;}
+/*.content-field #edit-field-comune-wrapper {margin-left:0;}*/
+#edit-field-libero-professionista-wrapper .js-form-item-field-libero-professionista-value {
+    margin-left: -25px;
+}
+.page-richiesta .form-email {
+    max-width: 528px;
+}
+.page-richiesta input, .page-richiesta .form-select, .page-richiesta .form-textarea{
+    border: 1px solid #1DA5B0;
+    color: #032675;
+}
+.page-richiesta #edit-field-note-aggiuntive-wrapper,
+.page-richiesta #edit-field-cert-dati-wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.page-richiesta #edit-field-cert-dati-wrapper {
+    margin-right: 0;
+}
+.page-richiesta .form-check-input[type="checkbox"] {
+    border-radius: 50%;
+    padding: 8px;
+    position: relative;
+    border: 2px solid #5C72A8;
+    margin: 5px;
+}
+.page-richiesta input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+}
+.page-richiesta input[type="checkbox"]:checked::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    color: #cb0a3d;
+    position: absolute;
+    top: -4px;
+    right: 0;
+    font-weight: 600;
+    color: #18A095;
+}
+.add-richiesta .js-form-item-field-privacy-richiesta-value label:after,
+.add-richiesta .field--name-field-cert-dati label:after,
+.add-richiesta .field--name-field-aut-modifica-dati label:after{
+    content: '';
+    vertical-align: super;
+    display: inline-block;
+    background-image: url(/themes/contrib/bootstrap_barrio/images/required.svg);
+    background-repeat: no-repeat;
+    background-size: 7px 7px;
+    width: 7px;
+    height: 7px;
+}
+.page-richiesta .node-richiesta-nuovi-servizi-form .layout-region-node-main > .field-group-html-element{
+    margin-top: 3.5rem;
+}
+/* list opportunity */
+.list-opportunity .views-field-field-immagine-url img {
+    height: 250px;
+    object-fit: cover;
+}
+.list-opportunity .views-field-field-categoria {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.list-opportunity .views-field-title a {
+    color: #3F2863;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    word-break: break-word;
+}
+.list-opportunity .views-field-title a:hover {
+    color: #18A095;
+}
+.list-opportunity .info-text {
+    display: flex;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 12px;
+    color: grey;
+}
+.list-opportunity .views-row {margin-bottom: 30px;}
+.list-opportunity .op-box {height: 100%; background: white;}
+.list-opportunity .op-box-text {padding: 2rem 1rem 3rem; background: white;}
+.list-opportunity  .edit-field-superficie-wrapper {width: 50%}
+.list-opportunity form.views-exposed-form .form-row>fieldset, .list-opportunity form.views-exposed-form fieldset {
+    display: inline-block;width: 45%;
+}
+.list-opportunity form.views-exposed-form .form-actions {display: inline-block;width: auto;}
+.list-opportunity form.views-exposed-form .js-form-item-field-superficie-max label {display: none;}
+.list-opportunity  .views-exposed-form .form-control {
+    background: #18a095;
+    color: white;
+    border-color: #18a095;
+    border-bottom-color: white;
+    border-radius: 0;
+}
+.list-opportunity .view-filters {
+    margin-left: 2rem;
+}
+/*Avvisi Annuci*/
+.view-catalog .field-wrapper {
+    margin-bottom: 30px;
+}
+.view-catalog .col-list {
+    padding: 30px;
+}
+.view-catalog .field-wrapper {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 1rem;
+    min-height: 300px;
+    color: white;
+}
+.view-pagina-lista-annunci .field-wrapper {background:#18a095}
+.view-pagina-lista-annunci .view-header .block-richiesta {margin-top:-3.5rem;}
+.label-impresa {
+    border: 1px solid white;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 2px 1rem;
+    margin-bottom: 20px;
+    color: white;
+}
+.box-header {
+    display: flex;
+    justify-content: space-between;
+}
+.view-catalog h3 {
+    margin: 40px 0 35px 0;
+}
+.view-catalog h3 a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    word-break: break-word;
+}
+.view-catalog.view-magazine h3 {
+    margin: 20px 0 15px 0;
+}
+
+#views-bootstrap-bacheca-block-1 h3 {
+    margin: 0 0 10px 0;
+}
+#views-bootstrap-bacheca-block-1 h3 a {
+    font-weight: 800;
+}
+
+/*link view*/
+#main-wrapper .view-pagina-lista-annunci h3 a:hover {
+    color: #2C1D4C;
+}
+/*home block*/
+#bacheca-aziende-3 #bacheca-aziede-button-richiesta {
+    position: absolute;
+    bottom: 40px;
+    font-size: 25px;
+}
+
+#bacheca-aziende-2 #bacheca-aziede-button {
+    background: #F3CD00;
+    border-color: #F3CD00;
+    display: inline-block;
+    width: auto;
+}
+#bacheca-aziende-3 {
+    background-color: #2C1D4C;padding: 40px;
+    color: white;
+    position: relative;
+}
+#bacheca-aziende-3 h3 {
+    margin-top: 0;
+}
+#bacheca-aziende-3 a.btn {
+    background: white;
+    font-weight: 900;
+    width: 100%;
+    word-break: break-word;
+}
+.button {display: inline-block;}
+.path-frontpage .row-finanziamenti .titolo {
+    font-size: 49px; text-transform: uppercase;
+}
+.view-pagina-lista-annunci .view-filters {
+    padding-top: 1.5rem;
+}
+.view-catalog-home h3 a {
+    text-transform: none;
+}
+.view-catalog-home .field-wrapper-home, .view-catalog-home {
+    color:white;border: none;
+    padding:0;
+    min-height: 1px;
+}
+#bacheca-aziende-new .views-element-container .slide__caption {padding-top: 0}
+#bacheca-aziende-new .views-element-container .view-footer {
+    background: #2C1D4C;
+    position: relative;
+}
+#bacheca-aziende-2 .view-catalog .field-wrapper {
+    margin-bottom: 22px;
+}
+
+
+/***********************************************/
+/*
+/* 2022-06-21 MOD.
+/*
+/***********************************************/
+
+/* Custom user dashboard /user */
+
+#block-areautenteimpresa h2, #block-titoloareautente h2 {
+    font-size: 1.8rem;
+    color: #FFF;
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+#block-areautenteimpresa h2::after, #block-titoloareautente h2::after  {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+/* Admin /user */
+
+#block-areautenteadmin h2, #block-areautentestakeholder h2 {
+    font-size: 1.8rem;
+    color: #FFF;
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+#block-areautenteadmin h2::after, #block-areautentestakeholder h2::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+/* User field */
+
+.path-user .profile {
+    background: #FFF;
+    padding: 1rem;
+}
+
+/* Custom table /management-richieste-nuovi-servizi */
+
+.view-management-richieste-nuovi-servizi .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-richieste-nuovi-servizi .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-richieste-nuovi-servizi .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-richieste-nuovi-servizi table {
+    font-family: 'graphieregular';
+    table-layout: fixed;
+}
+
+.view-management-richieste-nuovi-servizi table a {
+    color: #18A095;
+}
+
+.view-management-richieste-nuovi-servizi table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-richieste-nuovi-servizi table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-richieste-nuovi-servizi table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+
+/* Custom table /richieste-servizi-impresa */
+
+.view-management-richieste-servizi  .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-richieste-servizi .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-richieste-servizi  .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-richieste-servizi .view-filters {
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-richieste-servizi .view-filters label {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-richieste-servizi .view-filters label::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-richieste-servizi  table {
+    font-family: 'graphieregular';
+    table-layout: fixed;
+}
+
+.view-management-richieste-servizi  table a {
+    color: #18A095;word-break: break-word;
+}
+
+.view-management-richieste-servizi  table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+    padding: .5rem .3rem;
+}
+.view-management-richieste-servizi  table th a {
+    font-size: 15px;
+}
+.view-management-richieste-servizi  table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-richieste-servizi  table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+.view-management.table-responsive {padding: 1rem;}
+.view-management .view-empty .bg-white  {
+    padding: 1rem;
+}
+/* Custom table /richieste-spazi-impresa */
+
+.view-management-richieste-spazi  .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-richieste-spazi .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-richieste-spazi  .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-richieste-spazi  table {
+    font-family: 'graphieregular';
+    table-layout: fixed;
+}
+
+.view-management-richieste-spazi  table a {
+    color: #18A095;
+}
+
+.view-management-richieste-spazi  table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-richieste-spazi  table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-richieste-spazi  table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+
+/* Custom table /annunci-impresa */
+
+.view-management-annunci  .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-annunci .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-annunci  .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-annunci  table {
+    font-family: 'graphieregular';
+}
+
+.view-management-annunci  table a {
+    color: #18A095;
+}
+
+.view-management-annunci  table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-annunci  table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-annunci  table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+
+/* Custom table /management-servizi-admin */
+
+.view-management-servizi .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-servizi .view-header h2 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-servizi  .view-header h2::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-servizi .view-header p {
+    font-size: 1.2rem;
+    color: #FFF;
+}
+
+.view-management-servizi .view-filters {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-servizi .js-form-wrapper:first-child {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-servizi  table {
+    font-family: 'graphieregular';
+}
+
+.view-management-servizi table a {
+    color: #18A095;
+}
+
+.view-management-servizi table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-servizi table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-servizi table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+
+/* Custom table and filter /management-workflow */
+
+.view-management-workflow .view-header h2 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-workflow .view-header h2::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+/* Custom table and filter /ricerca-workflow */
+
+.view-management-workflow .view-header h2 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-workflow .view-header h2::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-workflow .filter {
+    background: #FFF;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Custom table /management-spazi */
+
+.view-management-spazi .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-spazi .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-spazi .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-spazi .view-filters {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-spazi table {
+    font-family: 'graphieregular';
+}
+
+.view-management-spazi table a {
+    color: #18A095;
+}
+
+.view-management-spazi table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-spazi table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-spazi table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+
+/* Custom table /management-bandi */
+
+.view-management-bandi .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-bandi .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-bandi .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-bandi .view-filters {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-bandi table {
+    font-family: 'graphieregular';
+}
+
+.view-management-bandi table a {
+    color: #18A095;
+}
+
+.view-management-bandi table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-bandi table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-bandi table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+
+/* Custom table /management-opportunity */
+
+.view-management-opportunity .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-opportunity .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-opportunity .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-opportunity .view-filters {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-opportunity .js-form-wrapper:first-child {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-opportunity table {
+    font-family: 'graphieregular';
+}
+
+.view-management-opportunity table a {
+    color: #18A095;
+}
+
+.view-management-opportunity table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-opportunity table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-opportunity table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+/* Custom table /management-formazione */
+
+.view-management-formazione .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-formazione .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-formazione .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-formazione .view-filters {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-formazione .js-form-wrapper:first-child {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-formazione table {
+    font-family: 'graphieregular';
+}
+
+.view-management-formazione table a {
+    color: #18A095;
+}
+
+.view-management-formazione table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-formazione table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-formazione table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+/* Custom table /management-formazione */
+
+.view-management-magazine .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-magazine .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-magazine .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-magazine .view-filters {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-magazine .js-form-wrapper:first-child {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-magazine table {
+    font-family: 'graphieregular';
+}
+
+.view-management-magazine table a {
+    color: #18A095;
+}
+
+.view-management-magazine table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-magazine table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-magazine table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+/* Custom table /management-catalogo */
+
+.view-management-catalogo .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-catalogo .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-catalogo .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-catalogo .view-filters {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-catalogo table {
+    font-family: 'graphieregular';
+}
+
+.view-management-catalogo table a {
+    color: #18A095;
+}
+
+.view-management-catalogo table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-catalogo table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-catalogo table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+#user-form{background-color: white;padding: 20px}
+/* /finanziamenti */
+
+.data-chiusura-finanziamento {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #vetrina-imprese .titolo a {
+        word-break: break-word;
+    }
+    /* For mobile phones: */
+    .region-primary-menu {
+        background: #18a095;
+    }
+    #block-novaliguria-main-menu {
+        background: #18a095;
+    }
+    #row-comune-genova .wrapper-content .btn-liguria {
+        position: relative;
+        right: 0;
+    }
+    #row-comune-genova .row-content-block {
+        padding: 1rem;
+    }
+      #row-comune-genova .btn-liguria {
+    padding: 5px 20px;
+     }
+     #row-comune-genova .titolo {font-size: 30px;}
+    #block-novaliguria-main-menu .navbar-nav li a {
+        color: #fff;
+    }
+    .nav.nav-servizi {
+        padding: 120px 5px 0;
+    }
+    .nav-servizi li {
+        margin-bottom: 8rem;
+    }
+    .box-info {
+        padding: 33px 38px;
+    }
+    .info-detail .field-rif-content {
+        margin-left: 0;
+    }
+    .block-nova-workflow h2 {
+        left:0;    word-break: break-word;
+    }
+    h2 {word-break: break-all;}
+    h2.node_title_servizi, h1.node_title_servizi {
+        font-size: 30px;
+    }
+    .block-nova-workflow h2 {font-size: 28px;}
+
+    .block-nova-workflow .js-form-required {
+        font-size: 25px;
+    }
+    #nova-workflow-wizard-form1--2 {
+        margin-bottom: 3rem;
+    }
+    .box-search-service {
+        margin-bottom: 30px;
+    }
+    .block-nova-workflow .js-form-wrapper {
+        margin-top: 4rem;
+    }
+    #views-exposed-form-ricerca-servizi-page-1 .js-form-wrapper {
+        margin-top: 0;
+    }
+    .view-page-service #view-title-table-column {
+        min-width: 100px;
+    }
+    .view-management-servizi .views-form {
+        padding-left:0;
+    }
+    .view-management .view-content {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    .view-management-richieste-nuovi-servizi table,.view-management-richieste-spazi table {
+        table-layout: auto;
+    }
+    .page-richiesta form #edit-actions {
+        padding-bottom: 2rem;
+        overflow: hidden;
+    }
+    .page-richiesta form #edit-actions button {
+        width: 100%
+    }
+    /*cerca*/
+    .block-views-exposed-filter-blockricerca-servizi-page-1 button.form-submit{
+        margin-top: 0;
+    }
+    /*carrello*/
+    .cart-wrapper {background: #fff;}
+    .view-whishlist-servizi .view-header h2 {
+        left: 0;
+    }
+    .popover.show .popover-body {
+        max-height: 600px;
+        overflow-y: scroll;
+    }
+    .view-whishlist-servizi .view-content {
+        margin: 0 5px;
+    }
+    view-whishlist-servizi .view-content .views-row:first-of-type .cart-wrapper .cart-page {
+        padding-top: 50px;
+    }
+    .view-whishlist-servizi .view-content .views-row .cart-wrapper .cart-page {
+        padding-bottom: 50px;
+        padding-top: 0;
+    }
+    .view-whishlist-servizi .cart-wrapper:last-of-type .info-service {
+        border: none;
+    }
+    .site-footer {
+        clip-path: polygon( 0 4%, 100% 0, 100% 100%, 0 100%);
+    }
+    .site_footer_mid .list-inline-item:not(:last-child) {
+        border: none;
+        padding-bottom: 5px;
+    }
+    /*cerca*/
+    #block-formespostoricerca-servizipage-1 .content {
+        padding-right: 0.8rem;
+    }
+    .page-view-ricerca-servizi .view-ricerca-servizi .view-content {
+        clip-path: none;
+    }
+    .page-view-ricerca-servizi .view-ricerca-servizi h2 {
+        top: -40px;
+        font-size: 27px;
+    }
+    /*servizio*/
+    .node-servizio.user-logged-in .nav-tabs .nav-item .nav-link {
+        background-color: #fff;
+        border-color: #dee2e6 #dee2e6 #fff;
+        margin-bottom: -1px;
+        background: 0 0;
+        border: 1px solid transparent;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+    }
+    article.node--type-servizio header {
+        margin-left: -44px;
+    }
+    button.btn.flag-wishlist-servizi a {
+        font-size: 18px;
+    }
+    .box-info-wrapper {
+        background-position-x:0;
+        background-size: cover;
+    }
+    .page-richiesta .main-content .content {
+        padding: 5px 5px 50px 5px;
+    }
+    .content-field {
+        display: block;
+    }
+    /*servizi logged*/
+    .view-management-richieste-servizi table {
+        table-layout: auto;
+    }
+    .view-management table th {
+        min-width: 100px;
+    }
+    /*bacheca e view search*/
+    .view-search .form-row>fieldset {
+        width: 80%;
+    }
+    .view-search  .block-richiesta {margin-bottom: 1rem;}
+    .view-catalog .views-row {margin-bottom: 1rem;padding: 5px;}
+    .view-pagina-lista-annunci .view-filters {margin-bottom: 0;}
+    #bacheca-aziende-3 #bacheca-aziede-button {
+        left: 10px;
+    }
+    .view-catalog h3 {
+        margin: 25px 0;
+    }
+    .content-field #edit-field-ragione-sociale-wrapper {width: 80%}
+    #bacheca-aziende-new .bacheca-aziende-2 {
+
+        margin: 10px 15px;
+    }
+    .view-pagina-lista-annunci .view-header .block-richiesta {margin-top:0;}
+    .block .area-utenti .btn a {
+        word-break: break-word;
+    }
+    .list-opportunity form.views-exposed-form .form-row>fieldset,
+    .list-opportunity form.views-exposed-form fieldset {
+        width: 40%;
+    }
+    .list-opportunity .view-filters {
+        margin-left: 0;
+    }
+    .list-opportunity form.views-exposed-form .form-row >fieldset.js-form-item-field-citta {width: auto}
+   .list-opportunity .js-form-item-field-superficie-min label, .list-opportunity .js-form-item-field-citta label {margin-left:0;}
+    .pulse_next_arrow span.bounce-i {font-size: 20px}
+      #row-opportunita .views-element-container {
+        margin-bottom: 5px;
+    }
+}
+@media only screen
+and (max-width: 850px)
+and (orientation: landscape) {
+    .view-page-service #view-title-table-column, .view-management-spazi table th {
+        min-width: 100px;
+    }
+}
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 40%;
+    left: 0px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+body.path-trova-il-tuo-servizio form div[id^=form-wrapper] button[id^=edit-next], body.path-trova-il-tuo-servizio form div[id^=form-wrapper] button[id^=edit-finish] {
+    margin-top: 0px;
+}
+
+@media only screen
+and (min-width: 1200px)
+and (orientation: landscape) {
+    body.path-trova-il-tuo-servizio form div[id^=form-wrapper] button[id^=edit-next] {
+        margin-top: 55px;
+    }
+}
+
+@media only screen
+and (min-width: 992px)
+and (orientation: landscape) {
+    body.path-trova-il-tuo-servizio form div[id^=form-wrapper] fieldset.step-2 button[id^=edit-finish] {
+        margin-top: 55px;
+    }
+}
+
+body.path-trova-il-tuo-servizio form div[id^=form-wrapper] button[id^=edit-previous] {
+    margin-top: 0px;
+    margin-bottom: 0px !important;
+        text-transform: uppercase;
+}
+body.path-trova-il-tuo-servizio form div[id^=form-wrapper] div[id^=edit-actions] {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}

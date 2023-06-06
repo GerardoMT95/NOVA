@@ -1,0 +1,129 @@
+
+{#{{ kint(node) }}#}
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+    'box',
+    'node--type-servizio','node--type-avviso',
+  ]
+%}
+
+{#    <div class="wrapper-breadcrumb text-center">
+        {{ content.field_pseudobreadcrumbs }}
+    </div>#}
+<article{{ attributes.addClass(classes) }}>
+    <div class="row">
+        <div{{ content_attributes.addClass('node__content', 'clearfix',' col-sm-7') }}>
+            <header>
+                {#        {{ title_prefix }}#}
+
+                <h2{{ title_attributes.addClass('node__title','node_title_servizi') }}>
+                    {{ label }}
+                </h2>
+            </header>
+            <div class="pe-5 content_service">
+                {#   {% if node.field_categoria_avviso is not empty %}#}
+                <div class="box_tax box_tax_service">
+                    Richiesta Servizio
+
+                </div>
+                {#       {% endif %}#}
+                <div class="info">
+
+                    {% if node.field_note_aggiuntive is not empty %}
+                        {{ content.field_note_aggiuntive }}
+                    {% endif %}
+          <br/>
+                      {% if node.field_nota_per_impresa is not empty %}
+                          <h5>Nota:</h5>
+                                {{ content.field_nota_per_impresa.0 }}
+                                {% endif %}
+                </div>
+            </div>
+        </div>
+        {#RIQUADRO AZIENDA #}
+        <div class="col-sm-5  box-info-wrapper d-flex align-items-center">
+            <div class="box box-info">
+                <div class="info-detail">
+                    <h4>RIFERIMENTI:</h4>
+                    <div class="field-rif-content-new">
+                        {% if node.field_tipo_richiedente is not empty %}
+                            <div class="mb-1">
+                                {{ content.field_tipo_richiedente.0 }}
+                            </div>
+                        {% endif %}
+                        {% if node.field_ragione_sociale is not empty %}
+                            <div class="mb-1">
+                                {{ content.field_ragione_sociale.0 }}
+                            </div>
+                        {% endif %} 
+                        {% if node.field_denominazione is not empty %}
+                            <div class="mb-1">
+                                {{ content.field_denominazione.0 }}
+                            </div>
+                        {% endif %}   
+
+                        {% if node.field_codice_fiscale_p_iv is not empty %}
+                            <div class="mb-1">
+                                Partiva Iva/CF: {{ content.field_codice_fiscale_p_iva.0 }}
+                            </div>
+                        {% endif %}
+
+                        {% if node.field_nome_user is not empty %}
+                            <div class="mb-1">
+                                {{ content.field_nome_user.0 }} {{ content.field_cognome_user.0 }}
+                            </div>
+                        {% endif %}
+                        {% if node.field_email_user is not empty %}
+                            <div class="mb-1">
+                                <i class="fas fa-envelope"></i>&nbsp; {{ content.field_email_user.0 }}
+                            </div>
+                        {% endif %}
+
+                        {% if node.field_telefono_user is not empty %}
+                            <div class="mb-1">
+                                <i class="fas fa-phone-alt"></i>&nbsp; {{ content.field_telefono_user.0 }}
+                            </div>
+                        {% endif %}   
+                        <div class="mb-1">
+                            {% if node.field_comune is not empty %}
+
+                                <i class="fas fa-map-marker-alt"></i>&nbsp;{{ content.field_comune.0 }},
+
+                            {% endif %} {{ content.field_comune['#items'][0].entity.parent.entity.label }}
+
+                            {% if node.field_regione is not empty %}
+                                {{ content.field_regione.0 }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled list-custom">
+
+                    <!--nuovi campi-->
+
+                    {% if node.field_workflow_richiesta_nuovi_s is not empty %}
+                        <li><i class="fas fa-check"></i>Stato:  {{ content.field_workflow_richiesta_nuovi_s }}</li>
+                        {% endif %}
+                        {% if node.field_workflow_richiesta_nuovi_s is empty %}
+                        <li><i class="fas fa-check"></i>Stato: IN ATTESA</li>
+                        {% endif %}
+                </ul>
+            </div><!--/box-info-->
+        </div>
+    </div>
+</div><!--/row-->
+
+</article>
+
+{{ content.field_commenti }}
+

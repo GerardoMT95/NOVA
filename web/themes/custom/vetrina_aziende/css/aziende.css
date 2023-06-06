@@ -1,0 +1,2239 @@
+
+/**
+ * @file
+ * Vetrina aziende theme specific CSS.
+ */
+
+/*General stuff*/
+img {max-width: 100%}
+.box_tax {
+    background-color: #18a095;
+}
+a, li {word-break: break-all;}
+
+.box {box-shadow: 0 30px 60px rgba(44, 29, 76, 0.34);}
+.box-shadow {box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);}
+.box-wrapper {filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));}
+.alert-wrapper .alert { bottom: .2rem;}
+.btn a {text-decoration: none}
+.btn.btn-success {
+    color: #fff;
+    background-color: #FAB72B;
+    border-color: #FAB72B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border-radius: 4px;
+}
+a {transition: all 0.5s ease}
+.fa-custom {font-size: 1.5em;color:#1DA5B0;}
+.btn.btn-success a {
+    color: #fff;
+}
+.btn.btn-success:hover, .btn.btn-success:active, .btn.btn-success:focus  {
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+}
+.btn.btn-contact {
+    background-color: #2c1d4c;
+    text-align: center;
+    color: #fff;
+}
+.btn.btn-contact:hover {
+    color: #fff;
+}
+.btn.btn-primary:hover {
+    background: #18A095;
+    border-color: #18A095;
+}
+.box-select {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    background-color: #2c1d4c;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 48px;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem 0.2rem 0;
+}
+.box-search {
+    background-color: #f3cd00;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    color: #2c1d4c;
+    font-family: Poppins;
+}
+/*
+***** aziende css
+*/
+
+.brand-imprese {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    background: #032675;
+    padding: 0.1rem 1.5rem;
+}
+.brand-imprese h1 {
+    text-transform: uppercase;
+    color: white;
+}
+.node--type-impresa #block-vetrina-aziende-content,
+.node--type-catalogo-prodotti-progetti-tecno #block-vetrina-aziende-content {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+.node--type-impresa .node__content, .node--type-catalogo-prodotti-progetti-tecno .node__content {
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    background: white;
+    padding-bottom: 6rem;
+    margin-bottom: 4rem;
+}
+/*.node--type-impresa nav.tabs .nav-item a {color: white}*/
+.nav-tabs .nav-item.active a.active {color: #495057}
+.node--type-catalogo-prodotti-progetti-tecno .nav-tabs .nav-item a {
+    background: #fff;
+    border-color: #dee2e6 #dee2e6 #fff
+}
+.social-impresa a {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background:#032675;
+    border-radius: 50%;
+    text-align: center;
+}
+.social-impresa {
+    margin-top: 60px;
+}
+.social-impresa a i {
+    font-size: 22px;
+    line-height: 40px;
+    color: white;
+}
+.social-impresa a:hover i {
+    color: #1BA4AF;
+}
+.tip {display: inline-block;}
+.tip .field__item {
+    display: inline;
+    background: #FAB715;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #032675;
+    padding: 0.5rem;
+}
+.node_title_impresa {
+    font-size: 35px;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.node_title_progetto {
+    font-size: 35px;
+    font-weight: 300;
+    margin: 1rem 0.5rem 0 0;
+    padding-bottom: 1rem;
+}
+.node_title_progetto span {
+    color: white;
+}
+.node_title_impresa span {
+    color: #032675;
+    word-break: break-all;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    display: inline-block;
+    word-break: break-word;
+}
+.big {font-weight:600}
+/*dati aziende*/
+#block-inostridatititlesupaginaazienda h3 {
+    font-size: calc(20px + 10 * ((100vw - 600px) / 600));
+    color: #032675;
+    background: white;
+    display: inline-block;
+    transform: skewY(-1deg);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem 5rem;
+}
+/*i nostri dati*/
+#block-inostridatititlesupaginaazienda h3 span {
+    transform: skewY(1deg);
+    display: block;
+}
+.block-impresa-dati .views-field-nid, .block-impresa-dati .view-empty {
+    color: white;
+    font-size: 50px;
+}
+.block-impresa-dati .view-footer span {
+    background: white;
+    padding: 0.5rem 1rem;
+    color:#032675;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.page-node-6739 .block-impresa-dati .view-footer span {
+    height: 55px;
+}
+.view-display-id-block_7 .view-footer span {
+    display: block;
+}
+.catalog-1 .view-footer span {
+    clip-path: polygon(0 4%, 100% 0, 100% 100%, 3% 100%);
+
+}
+.catalog-2 span {
+    clip-path: polygon(0 4%, 100% 0, 98% 100%, 3% 100%);
+}
+.line {
+    color: #032675;
+    margin-bottom: 15px;
+}
+.line-progetto, .line.line-progetto a {
+    color: white; word-break: break-word;
+}
+.line a {color: #1BA4AF;}
+.line-mail a {color: #032675;}
+.line-bg {
+    height: 1px;
+    background: #1E94A4;
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+.line.logo-impresa { margin-top: 0.5rem;}
+.address-impresa ico svg {
+    vertical-align: top;
+}
+.box-info-wrapper {
+    background: url(../img/bg/bg_column_imprese.png)no-repeat top -15px left -25px;
+    background-size: contain;
+    margin-left: -15px;
+    height: fit-content;
+}
+.box-info-wrapper-progetti {
+    /*    background: url(../img/bg/bg_column_progetti.png)no-repeat top -15px left -25px;*/
+    /*    background-size: cover;*/
+    /*        padding-bottom: 3rem;*/
+    clip-path: polygon(0 0, 87% 15%, 100% 90%, 0% 100%);
+    background: #5E75AB;
+    height: min-content;
+}
+.box-info {
+    padding: 40px 25px 30px 40px;
+    background: white;
+    margin: 5rem 0;
+}
+.box-info-progetti {
+    background: none;
+    margin: 2rem 0 0.5rem 0;
+}
+.box-info-progetti a:hover {color: #032675}
+#TabImpresa {
+    margin-top: 50px;
+    border: none;
+    justify-content: space-between;
+}
+#TabImpresa li button.active.nav-link {
+    color: #032675;
+    font-weight: 600;
+    border-bottom: 2px solid #032675;
+    font-size: 20px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+#TabImpresa li button.nav-link {
+    color: #c0c9dc;
+    border-bottom: 2px solid #c0c9dc;
+    font-size: 20px;
+    font-weight: 600;
+}
+#TabImpresa li.nav-item:last-of-type {
+    margin-right: 1.5rem;
+}
+.tab-content .field__label {
+    display:none;
+}
+#TabContentImpresa .tab-pane {
+    margin-top: 1rem;
+}
+.vetrina .slick .media--slick img.media__element {
+    margin: 0 auto;
+}
+/*slide*/
+.slide-node {margin: 0 auto}
+.slide-node .slick {
+    position: relative;
+}
+.slide-node .slick--field-galleria-immagini .slick-list {
+    max-height: 300px;
+}
+.slide-node .slick__arrow {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 28%;
+    width: 100%;
+    z-index: 1;
+}
+.side-node .slick-list {
+    margin-left: -10px;
+}
+.slide-node .slick-prev {
+    left: -30px;
+    position: relative;
+}
+.slide-node .slick-next {
+    right: -20px;
+    position: relative;
+}
+.slide-node button.slick-arrow {
+    color:#5E75AB;
+    background: none;
+    border: none;
+    font-size: 30px;
+
+}
+.slick-dots {
+    list-style-type: none;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+.slick-dots button{
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 3px;
+    background: lightgrey;
+}
+.slick-dots .slick-active button {
+    background: white;
+    border-color: white;
+}
+.slide-node .slick--view--catalogo-impresa .slick-arrow {
+    color: white;font-size: 0;
+}
+.slide-node .slick--view--catalogo-impresa button.slick-prev:before {
+    content: '\f104';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 800;
+    font-size: 25px;
+}
+.slide-node .slick--view--catalogo-impresa button.slick-next:before {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 800;
+    font-size: 25px;
+}
+.label-tip {
+    display: inline;
+    background: #FAB715;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #032675;
+    padding: 0.5rem;
+    font-family: 'graphiesemibold', sans-serif;
+    text-decoration: none;
+}
+.label-tip-list .list-group {display: inherit;}
+.label-tip-list li  {
+    background: #FAB715;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #032675;
+    padding: 0.2rem!important;
+    font-family: 'graphiesemibold', sans-serif;
+    text-decoration: none;
+    margin: 1px 3px!important;
+    display: inline-block;
+}
+
+.label-impresa {
+    border: 1px solid white;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 2px 1rem;
+    margin-bottom: 20px;
+    color: white;
+}
+.label-impresa a {
+    color: white;
+    text-decoration: none;
+    word-break: break-word;
+}
+.view-catalog .field-wrapper {
+
+    border-radius: 20px;
+    padding: 1rem;
+    min-height: 300px;
+    color: white;
+}
+.view-catalog .field-wrapper {
+    border: 1px solid white;
+}
+.view-catalog .unslick .views-field {
+    max-width: 392px;
+    margin: 0 auto;
+}
+.view-catalog.slide-node {
+    color: white;
+    height: auto;
+}
+.view-catalog h3 {
+    margin: 20px 0;
+}
+.view-catalog h3 a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    word-break: break-word;
+}
+.view-catalog h3 a:hover {color: #032675}
+.view-catalog .form-checkboxes {
+    display: flex;
+}
+.view-catalog .form-checkboxes .form-check {
+    display: flex;
+    margin-right: 1rem;
+}
+.view-catalog .form-checkboxes .form-check label {
+    margin-left: 0.5rem;
+    line-height: 30px;
+}
+.view-catalogo .field-wrapper {
+    margin-bottom: 30px;
+}
+.view-catalog ul.item-list__checkbox {
+    list-style-type: none;
+    display: flex;
+    margin-right: 1rem;
+    justify-content: center;
+}
+.view-catalog ul.item-list__checkbox label{
+    margin: 0 0.5rem;
+}
+.view-catalog-imprese .block-facets-ajax input[type="checkbox"]:checked {
+    background: white!important;
+}
+.view-catalog-imprese .facet-item__value {
+    color: white;
+    margin-right: 0.5rem;
+}
+.view-catalog-imprese .block-facets-ajax input[type="checkbox"]:checked::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: -2px;
+    right: 1px;
+    font-weight: 600;
+    color: #5E75AB!important;
+}
+.view-catalog-imprese .facets-checkbox {
+    border: 1px solid white;
+    border-radius: 4px;
+    background: #5E75AB!important;
+    vertical-align: top;
+}
+.view-catalog-imprese img.image-style-vetrina-imprese {
+    height:auto;
+}
+.block-imprese {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    margin-bottom: 100px;
+}
+.block-imprese h2 {
+    z-index: 1;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.block-imprese .content {
+    clip-path: polygon(0 15%, 100% 0, 97% 100%, 2% 100%);
+    background: white;
+    padding: 100px 20px;
+}
+.block-progetti .content {
+    clip-path: polygon(0 5%, 100% 0, 97% 100%, 2% 100%);
+}
+.block-imprese h2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #FAB72B;
+    padding: 30px 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: white;
+}
+.box-allegati {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #1BA4AF;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 5px 5px 5px 20px;
+    color: #032675;
+}
+/*select and search*/
+.vetrina  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    position: relative;
+    border-color: white;
+    width: 20px;
+    height: 20px;
+}
+.vetrina input[type="checkbox"]:checked::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: -4px;
+    right: 0;
+    font-weight: 600;
+    color: #1DA5B0;
+}
+.view-search .js-form-item input {
+    background:#5E75AB;
+    border: none;
+    color: white;
+    border-bottom: 1px solid white;
+    position: relative;
+}
+
+.view-search .js-form-item input {
+    background: transparent;
+}
+.view-search .bef-exposed-form {
+    margin-bottom: 3rem;
+}
+.view-search .bef-exposed-form label, .view-search .bef-exposed-form .description {
+    display: none;
+}
+input::placeholder, .view-catalog .js-form-item .form-control::-moz-placeholder, .form-control::placeholder,
+.views-exposed-form .js-form-item input::placeholder {
+    opacity: 1;
+    color: #FFF !important;
+}
+/*button search*/
+.view-search [id^=edit-submit-vetrina-imprese-search-], .view-search [id^=edit-submit-catalogo-] {
+    font-size: 0;
+    background: #032675;
+    border-color: #032675;
+}
+.view-search [id^=edit-submit-vetrina-imprese-search-]:before,
+.view-search [id^=edit-submit-catalogo-]:before {
+    content: "\f002";
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.view-search .form-row>fieldset {
+    display: inline-flex;
+    width: 90%
+}
+.view-search .form-row .form-actions {
+    align-self: flex-end;
+    display: inline-flex;
+    width: 5%;
+    margin-bottom: 0!important;
+}
+.view-search .views-exposed-form .form-row {
+    text-align: center;
+}
+.view-search ::-webkit-input-placeholder {
+    color: white!important;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.block-facets-ajax h2 {display: none;}
+.slide-node .slick--view--vetrina-imprese button.slick-arrow {
+    color: white;
+}
+button.icon {
+    background: #18A095;
+    border-color: #18A095;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    font-family: 'Font Awesome 5 Free';
+}
+button.icon:hover {
+    background: #032675;
+    border-color: #032675;
+    color: white;
+}
+/* page prodotti */
+body.vetrina-prodotti-tec #page {
+    background: #1DA5B0;
+}
+/* Page Vetrina imprese */
+.view-catalog-imprese .views-row  {
+    padding: 30px;
+}
+.catalog-1 .views-row  {padding: 0;}
+.view-catalog-imprese .views-field-nothing {
+    background: white;
+    border-radius: 3px;
+    height: 100%;
+    padding: 1rem;
+    margin-bottom: -22px;
+}
+
+.view-catalog-imprese h3 {
+    padding: 0 2rem;
+}
+.view-catalog-imprese .views-field-nothing h3 a {
+    color: #032675;
+    font-weight: 900;
+    word-break: normal;
+}
+.view-catalog-imprese .views-field-nothing h3 a:hover {color: #FAB715}
+.view-catalog-imprese .views-field-nothing .text-tipo {height: 52px;}
+
+/*node page*/
+article.node .brand-imprese {
+    display: inline-block;
+}
+article.node .brand-imprese h1 {
+    font-weight:900;
+    font-size: 3rem;
+}
+/*box link su vetrina aziende*/
+.block-vetrina { margin-bottom: 5rem;padding-top: 5rem;}
+.box-page {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.3));
+}
+.box-page h3 {
+    padding: 5px 2.5rem 10px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+    position: relative;
+    bottom: -25px;
+}
+.box-bacheca-wrapper h3 {
+    background: #5E75AB;
+}
+.box-servizi-wrapper h3 {
+    background: #032675;
+}
+.box-bacheca, .box-servizi {
+    background: white;
+    color: #032675;
+    height: 100%;
+    position: relative;
+}
+.box-bacheca .field--name-body, .box-servizi .field--name-body {margin-bottom: 3rem;}
+.box-bacheca {
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
+}
+.box-servizi {
+    clip-path: polygon(0 0, 100% 0, 98% 98%, 2% 100%);
+}
+
+.box-bacheca h3 {
+    background: #5E75AB;
+}
+.box-servizi h3 {
+    background: #032675;
+}
+button.nova-link {
+    border-radius: 5px;
+    background: #1DA5B0;
+    padding: 0.6rem 0.9rem 0 0.9rem;
+    position: absolute;
+    border-color: #1DA5B0;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
+button.nova-link a {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+button.nova-link a:hover {color: #032675}
+.logo-link {
+    background-image: url("data:image/svg+xml,%3Csvg id='logo-hover' data-name='Raggruppa 37058' xmlns='http://www.w3.org/2000/svg' width='44.847' height='38.568' viewBox='0 0 72.951 62.366'%3E%3Cpath id='Tracciato_37728' data-name='Tracciato 37728' d='M616.6 71.669c0-18.385 14.906-30.557 31.428-30.557s31.552 12.172 31.552 30.557c0 18.261-15.03 30.433-31.552 30.433S616.6 89.93 616.6 71.669m44.22 0c0-7.95-5.712-13.539-12.792-13.539s-12.8 5.59-12.8 13.539 5.715 13.415 12.8 13.415S660.82 79.62 660.82 71.669' transform='translate(-616.6 -39.736)' fill='%232c1d4c'%3E%3C/path%3E%3Cpath id='Tracciato_37731' data-name='Tracciato 37731' d='M653.424 71.116a11.2 11.2 0 1 0-11.2 11.195 11.2 11.2 0 0 0 11.2-11.195m-25.6.008a14.421 14.421 0 0 1 22.459-11.945c4.072 2.755 15.842-3.7 15.842-10.308a8.638 8.638 0 1 1 5.854 8.182c-5.119-1.743-17 4.527-15.638 11.168a14.57 14.57 0 0 1 0 5.806c-1.333 6.5 10.639 12.871 15.638 11.168a8.646 8.646 0 1 1-5.854 8.182c0-6.34-11.266-13.4-15.842-10.308a14.4 14.4 0 0 1-22.459-11.945' transform='translate(-610.464 -40.222)' fill='%23f3cd00' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    margin-right: 0.5rem;
+}
+/***********************************************/
+#area--wrapper--description {
+    font-size: 0.800em;
+}
+.node--type-servizio.node--unpublished {
+    padding: 0;
+}
+.node--type-servizio .main-content .content {
+    padding-top: 55px;position: relative;
+    font-family: 'Poppins', sans-serif;
+    color: #2C1D4C;
+}
+article.node--type-servizio header {
+    position: relative;
+    top: -55px;
+    margin-bottom: 0;
+}
+article.node--type-servizio {
+    background: white;
+}
+.wrapper-breadcrumb {
+    margin: 0 0 100px;
+}
+.wrapper-breadcrumb span.content-breadcrumb {
+    padding:20px;
+    background-color: #2c1d4c;
+    color: #fff;
+    display: inline-block;
+}
+.wrapper-breadcrumb span.content-breadcrumb span {
+    padding: 0 3px;
+    vertical-align: middle;
+}
+
+
+article.node--type-servizio .node__content{
+    margin-top: 0;  padding-left: 55px;
+}
+article.node--type-servizio .node__content .field--name-body {
+    margin: 50px 0 30px;
+}
+
+header h2.node_title_servizi {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    padding: 30px 20px;
+    display:inline-block;
+}
+
+article.node--type-servizio h3 {
+    font-size: 25px;
+    color: #2a1f50;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+.info {
+    margin: 40px 0 118px;
+}
+.info-detail {
+    font-size: 18px;
+    color:#3F2863;
+    margin-bottom: 20px;
+}
+.info-detail a {
+    color:#3F2863;
+    text-decoration: underline;
+}
+.info-detail i {
+    color: #18a095;
+    font-size: 25px;
+}
+.info-detail .field-rif-content {
+    margin-left: 28px;
+}
+.box_tax_service {
+    display: inline-block;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    padding: 5px 15px;
+    /*    text-transform: uppercase; */
+}
+
+
+button[id^="edit-finish--"] {
+    background-color: #2c1d4c;
+    border-color:#2c1d4c;
+    text-align: center;
+    color: #fff;
+    vertical-align: top;
+}
+.block-nova-workflow button[id^="edit-finish--"] {
+    float: right;
+    padding: 0.3rem 1rem;
+}
+.block-nova-workflow button[id^="edit-finish--"]:after {
+    content: '\f054';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    margin-left: 0.2rem;
+}
+.block-nova-workflow #edit-actions {
+    text-align: right;
+}
+.view-footer .btn {
+    vertical-align: top;
+}
+@media (min-width: 1200px) {
+    h3, .h3 {font-size: 30px;}
+}
+.box-bottom {
+    /*    background: white;*/
+    margin-top: 155px;
+    padding: 0 55px 55px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.box-bottom:before {
+    left: 0;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    content: '';
+    position: absolute;
+    top: -0px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+.box-bottom-content {
+    z-index: 9;
+    position: relative;
+}
+.box-bottom h3 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    padding: 30px 20px;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    top: -55px;
+    display: inline-block;
+}
+.btn.flag-richiedi-servizio {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    background-color: #09b5a9;
+    color: #fff;
+    font-weight: 600;
+    line-height: 50px;
+}
+.flag-richiedi-servizio a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.flag-richiedi-servizio a:hover {
+    color: #f3cd00;
+}
+.box-bottom p {
+    font-size: 25px;;
+    font-family: 'Poppins', sans-serif;
+    margin-top: -20px;
+}
+/*trova il tuo servizio*/
+.nav-content {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+.nav.nav-servizi {
+    margin: 50px auto;
+    padding: 100px 20px;
+    clip-path: polygon(0 5%, 100% 0, 98% 97%, 2% 100%);
+    background: #fff;
+}
+.nav-servizi li .box-wrapper {position: relative;}
+.nav-servizi li .box-1:before {
+    position: absolute;
+    content: '';
+    position: absolute;
+    /*    top: -50px;*/
+    top: -35px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 40px);
+    /*    height: calc(100% + 100px);*/
+
+    clip-path: polygon(0 0, 100% 3%, 100% 96%, 0% 100%);
+    background-color: #18a095;
+}
+.nav-servizi .box-1, .nav-servizi .box-4 {color: white;}
+.nav-servizi .box-2, .nav-servizi .box-3,
+.nav-servizi .box-2, .nav-servizi .box-3.active {color: #2c1d4c!important;}
+.nav-servizi .box-content {
+    z-index:9;
+    position: relative;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    height: 100%;
+    word-break: break-word;
+}
+.nav-servizi .nav-link.box-wrapper {
+    border-radius: 0;
+    background: transparent;
+    padding:0;
+    transition: background 0.5s ease;
+    height: 100%;
+}
+
+.box-2:before {
+    background-color: #f3cd00;
+    position: absolute;
+    content: '';
+    /*    top: -50px;*/
+    top: -35px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 40px);
+    /*    height: calc(100% + 100px);*/
+    clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 97%);
+
+}
+
+.box-3:before {
+    clip-path: polygon(0 4%, 100% 0, 100% 94%, 0 99%);
+    background-color: white;
+    position: absolute;
+    content: '';
+    /*    top: -50px;*/
+    top: -35px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 40px);
+    /*    height: calc(100% + 100px);*/
+}
+.box-4:before {
+    background-color: #2c1d4c;
+    position: absolute;
+    content: '';
+    /*    top: -50px;*/
+    top: -35px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 40px);
+    /*    height: calc(100% + 100px);*/
+    clip-path: polygon(0 0, 100% 3%, 100% 96%, 0% 100%);
+}
+.nav-servizi h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Poppins;
+    line-height: 30px;
+    font-weight: 900;
+}
+.nav-servizi .nav-link .box-content p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+.block-nov-wizard p, .block-nova-workflow .fieldgroup {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: #2b1c4b;
+}
+.block-nova-workflow p,.block-nova-workflow .js-form-wrapper {
+    color: #2b1c4b;
+    font-weight: 300;
+}
+.block-nova-workflow .js-form-wrapper {
+    font-size: 25px;
+}
+.block-nova-workflow [id^="edit-actions--"]  button {
+    margin-top: 1.5rem;
+}
+.block-nova-workflow .selected_area {
+    font-family: 'graphiesemibold', sans-serif;
+    text-transform: uppercase;
+    display: inline-flex;
+    margin: 0.5rem 0.5rem 0 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #18a095;
+    color: white;
+    padding: 0.5rem 1rem;
+    line-height: 35px;
+}
+.block-nova-workflow h2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    padding: 30px 20px;
+    color: #432c65;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #2b1c4b;
+}
+.block-nova-workflow #edit-next,.block-nova-workflow #edit-next--2,
+.block-nova-workflow #edit-next--2, .block-nova-workflow #edit-next--3,
+.block-nova-workflow #edit-next--4 {
+    vertical-align: top;
+    float: right;
+}
+/*step 1*/
+#area--wrapper #area--wrapper--description span, .icon-robot {
+    height: 42px;
+    width: 42px;
+    background: url(../img/ico-robot.png)no-repeat center center;
+    display: inline-block;
+    vertical-align: bottom;
+}
+button.btn-start {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    font-size: 25px;
+    font-weight: 900;
+    padding: .375rem 2.5rem;
+    visibility: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.box-content-bottom {
+    position: relative;
+    bottom: 50px;
+    height: inherit;
+}
+.box-image {
+    width: 108px;
+    height: 108px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.box-1 .box-image {
+    background: #2c1d4c url(../img/bg/bg_servizio.png)no-repeat center center;
+}
+.box-2 .box-image {
+    background: #18a095 url(../img/bg/bg_servizio2.png)no-repeat center center;
+}
+.box-3 .box-image {
+    background: #f3cd00 url(../img/bg/bg_servizio3.png)no-repeat center center;
+}
+.box-4 .box-image {
+    background: #fff url(../img/bg/bg_servizio4.png)no-repeat center center;
+}
+.box-1 .btn-start {
+    background-color: #2c1d4c;
+    color: #fff;
+}
+.box-2 .btn-start {
+    background-color: #18a095;
+    color: #fff;
+}
+.box-3 .btn-start {
+    background-color: #f3cd00;
+    color: #2c1d4c;
+}
+.box-4 .btn-start {
+    background-color: #fff;
+    color: #2c1d4c;
+}
+.box-1 .btn-start:hover, .box-2 .btn-start:hover {
+    color: #fff;
+}
+/*step 2*/
+.form-wrapper.step-2 .icon-robot {
+    background: url(../img/ico-robot-2.png)no-repeat center center;
+    vertical-align: bottom;
+    margin-left: 4px;
+}
+/*zoomOut*/
+@media (min-width: 360px) {
+    .zoomOut {
+        -webkit-animation-name: zoomOut;
+        animation-name: zoomOut;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    @-webkit-keyframes zoomOut {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+            -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes zoomOut {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+            -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+.nav-servizi .box-wrapper:hover:before {
+    transition: background 1s ease;
+    -webkit-animation-name: zoomOut;
+    animation-name: zoomOut;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.nav-servizi a.box-wrapper:hover, .nav-pills .nav-link.active, .nav-servizi a.box-wrapper:active {
+    box-shadow: none;
+    color: #2c1d4c;
+    background-color: transparent!important;
+    filter: none;
+}
+
+.nav-servizi a.box-wrapper:hover .box-content:before {
+    content: url(../img/bg/element.png);
+    top: -40px;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(50deg);
+    left: -20px;
+}
+.nav-servizi a.box-wrapper:hover .box-image {
+    display: none;
+}
+
+.nav-servizi a.box-wrapper:hover .btn-start {
+    display: inline-block;
+    z-index:9;
+    visibility: visible;
+}
+
+/* box active state*/
+.nav-servizi a.box-wrapper.active .box-image {
+    display: none;
+}
+.nav-servizi a.box-wrapper.active .btn-start {
+    display: inline-block;
+    z-index:9;
+    visibility: visible;
+}
+/*workflow*/
+.block-nova-workflow .js-form-required {
+    color: #ffffff;
+    font-family: 'graphiesemibold', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    /*    line-height: 30px;*/
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #2c1d4c;
+    padding: 1rem 2rem;
+    margin: 30px 0 40px;
+    display: inline-block;
+}
+.view-trova-il-tuo-servizio {margin-top: 50px;}
+.view-trova-il-tuo-servizio .tab-pane.container {
+    padding:0;position: relative;
+    position: relative;
+}
+.block-nova-wizard .form-checkbox {
+    display: none;
+}
+.block-nova-wizard .js-form-type-checkbox {
+    text-align: center;
+    padding: 0;
+    height: 90%;
+}
+.block-nova-wizard label {
+    width: 100%;
+    box-shadow: 0 0 59px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+    position: relative;
+    height: 100%;
+}
+.block-nova-workflow #area label {
+    background-color: #18a095;
+}
+
+.block-nova-wizard .js-form-type-checkbox p {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 60px;
+    margin: 1rem 0;
+}
+.block-nova-wizard .js-form-type-checkbox .ico {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.btn-info {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn-info label {
+    font-size: 18px;
+    font-weight: 700;
+    top: 2px;
+    position: relative;
+}
+#area .js-form-type-checkbox label:hover, #area .js-form-type-checkbox label:checked {
+    background-color: #f3cd00;
+}
+#area .js-form-type-checkbox:hover .btn-success, #area .js-form-type-checkbox:focus-within .btn-success {
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+}
+.block-nova-wizard .js-form-type-checkbox .btn-success {
+    width: 212px;
+    bottom: -15px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+/*seconda selezione servizi*/
+div[id^="edit-cluster--"] {margin-top: 3rem;}
+div[id^="edit-cluster--"] .checkbox label {
+    background-color: #2c1d4c!important;
+    padding-top: 1rem;
+}
+div[id^="edit-cluster--"] .checkbox .ico {
+    display: none;
+}
+.block-nova-wizard div[class^="form-item-cluster-"] label p,.block-nova-wizard div[class*=' form-item-cluster-'] label p {
+    font-size: 20px;
+}
+
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label {
+    background-color: #f3cd00!important;
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select {
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select span {
+    display: none;
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select:before {
+    content: 'DESELEZIONA';
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select span {
+    display: none;
+}
+.block-nova-wizard .checkbox > input[type="checkbox"]:checked + label #btn-select:before {
+    content: 'DESELEZIONA';
+}
+#nova-workflow-wizard-form1--2 .checkbox > input[type="checkbox"]:checked + label #btn-select:before {
+    content: 'DESELEZIONA';
+}
+/*Nova worflow final step*/
+
+.box-search-service {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f3cd00;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.5rem 1rem 1.5rem 2.5rem;
+    position: relative;
+    margin-bottom: 40px;
+}
+.box-search-service .field_title a {
+    color: #2c1d4c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    word-break: break-word;
+}
+
+.box-search-service .field_title {
+    line-height: 22px;
+}
+.box-search-service .field_nome {
+    line-height: 33px;
+}
+.box-search-service .field_cat, .field_tip {
+    font-size: 15px;
+}
+.step-flow {
+    font-style: italic;
+}
+.first-step {
+    font-weight: 700;
+}
+.box-search-service .field_logo {
+    float: left;
+    padding: 0 1rem 1.5rem 0em;
+}
+.box-search-service .field_group {
+    margin-bottom: 0;
+}
+.view-nova-workflow  .views-row {
+    margin-bottom: 40px;
+}
+.view-nova-workflow  .views-row .views-field {
+    height: 100%;
+}
+.view-nova-workflow  .views-row .views-field .box-search-service {
+    height: 100%;
+}
+.field_tip {
+    text-transform: uppercase;
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    background-color: #18a095;
+    color: #fff;
+    padding: 4px;
+    font-weight: 500;
+    line-height: 25px;
+}
+.box-link {
+    width: 225px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    background-color: #2c1d4c;
+    text-align: center;
+    margin-top: 15px;
+    position: absolute;
+}
+.box-link a {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+/* Modal ico-robot */
+.icon-robot-yellow {
+    height: 47px;
+    width: 48px;
+    background: url(../img/ico-robot-yellow.png)no-repeat center center;
+    display: inline-block;
+    vertical-align: bottom;
+}
+/*2 path per la stessa pagina*/
+.path-trova-il-tuo-servizio .modal-backdrop.show, .path-trova-il-tuo-servizio .modal-backdrop.fade,
+.path-node .modal-backdrop.show, .path-node .modal-backdrop.fade {
+    opacity: 0;
+    z-index: -1;
+}
+.path-trova-il-tuo-servizio .modal,.path-node .modal {
+    max-width: 1320px;
+    left: auto;
+
+}
+.path-trova-il-tuo-servizio .modal.show .modal-dialog,.path-node .modal.show .modal-dialog  {
+    /*    float: right;*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+    /*    bottom: 5rem;*/
+    /*    right:0;*/
+    position: fixed;
+    z-index: 9;
+    position: fixed;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.path-trova-il-tuo-servizio .modal.show .modal-content, .path-trova-il-tuo-servizio .modal-content .modal-header,
+.path-node .modal.show .modal-content, .path-node  .modal-content .modal-header{
+    border-radius: 0;
+    border-color: transparent;
+}
+.path-trova-il-tuo-servizio .modal-content .modal-header,
+.path-node .modal-content .modal-header{
+    background-color: #3f2863;
+    color: white;
+    padding: 5px 30px;
+}
+.path-trova-il-tuo-servizio .modal-content .modal-header .modal-title,
+.path-node .modal-content .modal-header .modal-title {
+    font-family: 'graphiesemibold', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 50px;
+}
+
+.path-trova-il-tuo-servizio .modal-content .modal-header .btn-close-custom,
+.path-node .modal-content .modal-header .btn-close-custom{
+    background-color: #3f2863;
+    border-color: #3f2863;
+    color: white;
+}
+.modal-body-content {
+    background-color: #3f2863;
+    border-radius: 18px;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    padding: 15px;
+}
+.modal-body-content p,.modal-body-content .field-content  {
+    color: #fff;
+}
+
+/*Carrello*/
+.popover {
+    border-radius:0!important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.popover-body .info-contact, .popover-body .info-contact a {width: 100%}
+.service-cart {
+    padding-bottom: 15px;
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 15px;
+}
+.service-cart .field_name {
+    font-family: 'graphiesemibold', sans-serif;
+    text-transform: uppercase;
+    color:#3f2863;
+}
+.service-cart .field_dati  {
+    color: #2c1d4c;
+}
+.service-cart .field_dati div {
+    margin-bottom: 4px;
+}
+.service-cart i {
+    font-size: 18px;
+    color: #18a095;
+}
+.service-cart .flag-wishlist-servizi {
+    padding: 0 0.5rem;
+}
+.service-cart .flag a {
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+    color:#2c1d4c;
+    transition: all 0.4s ease;
+}
+.service-cart .flag:hover a {
+    color:#18a095;
+}
+
+.nova-workflow-wizard-form1, #block-novaliguria-novaworkflowconfigurablewizard {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    margin-bottom: 2rem;
+
+}
+.block-nova-workflow .content {
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 97%);
+    background: white;
+    padding: 6rem  0 5rem;
+    margin-top: 40px;
+}
+.block-nova-workflow h2 {
+    z-index: 1;
+    position: absolute;
+    top: -30px;
+    left: 15px;
+}
+.btn-cart.btn-primary {
+    width: 100%!important;
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+}
+.btn-cart.btn-primary:hover {
+    width: 100%;
+    background-color: #2c1d4c;
+    border-color: #2c1d4c;
+}
+/* carrello page */
+.cart-wrapper {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+.cart-page {
+    background: #fff;
+
+}
+.view-whishlist-servizi {
+    color: #2c1d4c;
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+.view-whishlist-servizi .view-content {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+}
+.view-whishlist-servizi .view-content .views-row .cart-wrapper .cart-page {
+    padding-top: 50px;
+}
+.view-whishlist-servizi .view-content .views-row:first-of-type .cart-wrapper .cart-page {
+    padding-top: 100px;
+}
+.view-whishlist-servizi .info-service {
+    border-bottom: 1px solid rgba(67,44,101,0.4);
+    padding-bottom: 50px;
+}
+.view-whishlist-servizi .view-content .views-row:last-of-type .info-service {
+    padding-bottom: 100px;
+}
+.view-whishlist-servizi .views-row:last-of-type .info-service,
+.popover .field-content:last-of-type .service-cart{
+    border-bottom: none;
+}
+.view-whishlist-servizi  .address-service {
+    letter-spacing: 1.43px;
+    text-decoration: underline;
+}
+.view-whishlist-servizi .flag.btn-success a {
+    font-family: 'Poppins', sans-serif;
+    color: #2c1d4c;
+    text-transform: uppercase;
+}
+.view-whishlist-servizi .flag.btn-success:hover a {
+    color: #18A095;
+}
+.view-whishlist-servizi .title a {
+    text-decoration: none;
+    color: #2c1d4c;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.view-whishlist-servizi i {
+    color:#18A095;
+    font-size: 20px;
+}
+.info-cart {
+    margin: 10px 0;
+}
+.info-contact {margin: 10px 0 0 0; display:inline-block;}
+.info-contact a {
+    color: white;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: #2c1d4c;
+    padding: .375rem .75rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+.info-contact a:hover {
+    color: #18A095;
+}
+
+
+/* page form richiesta azienda*/
+.page-richiesta, body.add-richiesta #page {
+    background: #18A095;
+}
+.page-richiesta .main-content {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    margin-bottom: 2rem;
+}
+.page-richiesta .layout-region-node-footer {width:100%}
+.page-richiesta .layout-region-node-footer #edit-actions button {
+    float: right;
+    background: #1BA4AF;
+    border-radius: 4px !important;
+    color: white;
+    border-color:#1BA4AF;
+}
+.page-richiesta .main-content .content {
+    clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
+    background: #fff;
+    padding: 30px 35px 70px 35px;
+}
+.page-richiesta {
+    font-family: 'graphieregular';
+}
+.page-richiesta .node_title_form {
+    font-size: calc(25px + 5 * ((100vw - 600px) / 600));
+    margin-bottom: 0;
+    font-family: 'graphiesemibold', sans-serif;
+    font-weight: 700;
+    padding: 30px 20px;
+    display: inline-block;
+    transform: skewY(-1deg);
+    background: #032675;
+    z-index: 9;
+    position: relative;
+}
+.page-richiesta header.header-form {
+    margin-bottom: -30px;
+}
+.page-richiesta .node_title_form span {
+    transform: skewY(1deg);
+    display: block;
+    color: white;
+    word-break: break-word;
+}
+.page-richiesta p {
+    font-family: 'graphieregular';
+    font-size: 18px;
+    color: #032675;
+}
+.page-richiesta .privacy-text {
+    width: 100%;
+    display: block;
+    color: #032675!important;
+    font-size: 18px;
+    border: 1px solid #1DA5B0;
+    border-radius: 4px;
+    padding: 1rem;
+    height: 150px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+.page-richiesta #edit-field-privacy-richiesta-value--description ::-webkit-scrollbar {
+    scrollbar-color:#4D4D4D #4D4D4D;
+}
+.page-richiesta .field-group-html-element h3 {
+    font-family: graphiesemibold;
+    text-align: center;
+    color: #032675;
+    margin: 40px 0 20px;
+}
+.page-richiesta label {
+    color: #09447C;
+    font-size: 18px;
+    font-family: graphieregular;
+    text-transform: uppercase;
+}
+.page-richiesta .js-form-item-field-privacy-richiesta-value label,
+.page-richiesta  .js-form-item-field-cert-dati-value label {
+    text-transform: none;
+}
+.content-field {
+    display: flex;
+}
+.content-field .js-form-wrapper, #edit-field-libero-professionista-wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#edit-field-libero-professionista-wrapper .js-form-item-field-libero-professionista-value {
+    margin-left: -25px;
+}
+.page-richiesta .form-email {
+    max-width: 528px;
+}
+.page-richiesta input, .page-richiesta .form-select, .page-richiesta .form-textarea{
+    border: 1px solid #1DA5B0;
+    color: #032675;
+}
+.page-richiesta #edit-field-note-aggiuntive-wrapper,
+.page-richiesta #edit-field-cert-dati-wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.page-richiesta .form-check-input[type="checkbox"] {
+    border-radius: 50%;
+    padding: 8px;
+    position: relative;
+    border: 2px solid #5C72A8;
+    margin: 5px;
+}
+.page-richiesta input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+}
+.page-richiesta input[type="checkbox"]:checked::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    color: #cb0a3d;
+    position: absolute;
+    top: -4px;
+    right: 0;
+    font-weight: 600;
+    color: #18A095;
+}
+/*Pagina richiesta accreditamento*/
+.page-richiesta.accreditamento {
+    background: transparent;
+}
+
+
+@media only screen and (max-width: 768px)  and (orientation: landscape)  {
+    .container {
+        width: 100%!important;
+        max-width: 100%!important;
+    }
+    .box-info-wrapper-progetti {
+        padding-bottom: 3rem;
+        padding-top: 1rem;
+    }
+}
+.vetrina .featured_3 .view-catalogo-impresa .views-field-nothing {
+    background: #1DA5B0;
+}
+.vetrina .featured_2 {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 98%);
+}
+.block-imprese h2 {
+    padding: 30px 15px;
+}
+.social-impresa.text-end {
+    margin-top: 20px;
+    text-align: right!important;
+}
+.node--type-impresa .ms-5.me-5 {
+    margin: 0 1rem!important;
+}
+/* For mobile phones:********* */
+.region-primary-menu {
+    background: #18a095;
+}
+#block-novaliguria-main-menu {
+    background: #18a095;
+}
+#block-novaliguria-main-menu .navbar-nav li a {
+    color: #fff;
+}
+.nav.nav-servizi {
+    padding: 120px 5px 0;
+}
+.nav-servizi li {
+    margin-bottom: 8rem;
+}
+.box-info {
+    padding: 33px 43px;
+}
+.info-detail .field-rif-content {
+    margin-left: 0;
+}
+.block-nova-workflow h2 {left:0;}
+h2 {word-break: break-all;}
+.block-nova-workflow .js-form-required {
+    font-size: 25px;
+}
+#nova-workflow-wizard-form1--2 {
+    margin-bottom: 3rem;
+}
+.box-search-service {
+    margin-bottom: 30px;
+}
+.block-nova-workflow .js-form-wrapper {
+    margin-top: 1.5em;
+}
+/*carrello*/
+.cart-wrapper {background: #fff;}
+.view-whishlist-servizi .view-header h2 {
+    left: 0;
+}
+.view-whishlist-servizi .view-content {
+    margin: 0 5px;
+}
+view-whishlist-servizi .view-content .views-row:first-of-type .cart-wrapper .cart-page {
+    padding-top: 50px;
+}
+.view-whishlist-servizi .view-content .views-row .cart-wrapper .cart-page {
+    padding-bottom: 50px;
+    padding-top: 0;
+}
+.view-whishlist-servizi .cart-wrapper:last-of-type .info-service {
+    border: none;
+}
+.site-footer {
+    clip-path: polygon( 0 4%, 100% 0, 100% 100%, 0 100%);
+}
+.site_footer_mid .list-inline-item:not(:last-child) {
+    border: none;
+    padding-bottom: 5px;
+}
+/*cerca*/
+#block-formespostoricerca-servizipage-1 .content {
+    padding-right: 0.8rem;
+}
+.page-view-ricerca-servizi .view-ricerca-servizi .view-content {
+    clip-path: none;
+}
+.page-view-ricerca-servizi .view-ricerca-servizi h2 {
+    top: -40px;
+    font-size: 27px;
+}
+/*servizio*/
+article.node--type-servizio header {
+    margin-left: -44px;
+}
+button.btn.flag-wishlist-servizi a {
+    font-size: 18px;
+}
+.box-info-wrapper {
+    background-position-x:0;
+}
+.page-richiesta .main-content .content {
+    padding: 5px 5px 50px 5px;
+}
+.content-field {
+    display: block;
+}
+.wrapper-breadcrumb {
+    margin: 50px 0 50px;
+}
+.wrapper-breadcrumb li.breadcrumb-item {
+    padding:10px;
+    background-color: #032675;
+    color: #fff;
+    display: inline-block;
+}
+.wrapper-breadcrumb li.breadcrumb-item a{color:#fff;text-decoration: none;font-weight: bold;   padding: 0 3px;
+                                         vertical-align: middle;
+}
+.wrapper-breadcrumb li.breadcrumb-item a:hover{
+    color: #1BA4AF;
+}
+
+.view-catalog .views-field-nothing {
+    border: 1px solid #FFF;
+    height: 100%;
+    border-radius: 3px;
+    /* padding: 1rem;*/
+    min-height: 300px;
+    color: white;
+    padding-bottom: 0;
+}
+
+.view-catalog .slide {height: 100%}
+.view-catalog .field-wrapper, .view-catalog .unslick .views-field-nothing {
+    border: none;
+    min-height: 0px;
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+.view-catalog .unslick .views-field-nothing .field-wrapper {
+    border: 1px solid white;
+}
+
+ul.pagination {
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+
+/* page form richiesta azienda DA TOGLIERE*/
+.page-richiesta, body.add-richiesta #page {
+    background: #18A095;
+}
+.page-richiesta .main-content {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    margin-bottom: 2rem;
+}
+.page-richiesta .layout-region-node-footer {width:100%}
+.page-richiesta .layout-region-node-footer #edit-actions button {
+    float: right;
+    background: #1BA4AF;
+    border-radius: 4px !important;
+    color: white;
+    border-color:#1BA4AF;
+}
+.page-richiesta .main-content .content {
+    clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
+    background: #fff;
+    padding: 30px 35px 70px 35px;
+}
+.page-richiesta {
+    font-family: 'graphieregular';
+}
+.page-richiesta .node_title_form {
+    font-size: calc(25px + 5 * ((100vw - 600px) / 600));
+    margin-bottom: 0;
+    font-family: 'graphiesemibold', sans-serif;
+    font-weight: 700;
+    padding: 30px 20px;
+    display: inline-block;
+    transform: skewY(-1deg);
+    background: #032675;
+    z-index: 9;
+    position: relative;
+}
+.page-richiesta header.header-form {
+    margin-bottom: -30px;
+}
+.page-richiesta .node_title_form span {
+    transform: skewY(1deg);
+    display: block;
+    color: white;
+    word-break: break-word;
+}
+.page-richiesta p {
+    font-family: 'graphieregular';
+    font-size: 18px;
+    color: #032675;
+}
+.page-richiesta .privacy-text {
+    width: 100%;
+    display: block;
+    color: #032675!important;
+    font-size: 18px;
+    border: 1px solid #1DA5B0;
+    border-radius: 4px;
+    padding: 1rem;
+    height: 150px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+#edit-field-cert-dati-value--description {
+    height: auto;
+}
+.page-richiesta #edit-field-privacy-richiesta-value--description ::-webkit-scrollbar {
+    scrollbar-color: #4D4D4D #4D4D4D;
+}
+.page-richiesta .field-group-html-element h3 {
+    font-family: graphiesemibold;
+    text-align: center;
+    color: #032675;
+    margin: 40px 0 20px;
+}
+.page-richiesta label {
+    color: #09447C;
+    font-size: 18px;
+    font-family: graphieregular;
+    text-transform: uppercase;
+}
+.page-richiesta .js-form-item-field-privacy-richiesta-value label,
+.page-richiesta  .js-form-item-field-cert-dati-value label {
+    text-transform: none;
+}
+.page-richesta details.form-wrapper {
+    font-size: 20px; margin-bottom: 0.5rem;
+}
+.content-field {
+    display: flex;
+}
+.content-field .js-form-wrapper, #edit-field-libero-professionista-wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#edit-field-libero-professionista-wrapper .js-form-item-field-libero-professionista-value {
+    margin-left: -25px;
+}
+.page-richiesta .form-email {
+    max-width: 528px;
+}
+.page-richiesta input, .page-richiesta .form-select, .page-richiesta .form-textarea{
+    border: 1px solid #1DA5B0;
+    color: #032675;
+}
+.page-richiesta #edit-field-note-aggiuntive-wrapper,
+.page-richiesta #edit-field-cert-dati-wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.page-richiesta .form-check-input[type="checkbox"] {
+    border-radius: 50%;
+    padding: 8px;
+    position: relative;
+    border: 2px solid #5C72A8;
+    margin: 5px;
+}
+.page-richiesta input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+}
+.page-richiesta input[type="checkbox"]:checked::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    color: #cb0a3d;
+    position: absolute;
+    top: -4px;
+    right: 0;
+    font-weight: 600;
+    color: #18A095;
+}
+/***********************************************/
+/*
+/* 2022-06-21 MOD.
+/*
+/***********************************************/
+
+/* Custom table and filter /catalogo-impresa */
+
+.view-management-catalogo .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-catalogo .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-catalogo .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-catalogo .view-filters {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-catalogo .view-filters .form-check {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.view-management-catalogo .view-filters .fieldset-legend::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-catalogo table {
+    font-family: 'graphieregular';
+    font-size: 1rem;
+}
+
+.view-management-catalogo table a {
+    color: #18A095;
+}
+
+.view-management-catalogo table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-catalogo table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-catalogo table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+
+.view-management-catalogo .view-empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #FFF;
+    margin-bottom: 2rem;
+}
+/***********************************************/
+/*
+/* 2022-06-21 MOD.
+/*
+/***********************************************/
+
+/* Custom table and filter /catalogo-impresa */
+
+.view-management-catalogo .view-header {
+    /*background: #FFF;*/
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.view-management-catalogo .view-header h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.view-management-catalogo .view-header h1::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-catalogo .view-filters {
+    background: #FFF;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.view-management-catalogo .view-filters .form-check {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.view-management-catalogo .view-filters .form-check input{
+    border-color:black;
+}
+.view-management-catalogo .view-filters .fieldset-legend::after {
+    background: #E7D72A;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.view-management-catalogo table {
+    font-family: 'graphieregular';
+    font-size: 1rem;
+}
+
+.view-management-catalogo table a {
+    color: #18A095;
+}
+
+.view-management-catalogo table th {
+    background: rgba(78, 52, 134, 0.7)!important;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    vertical-align: middle;
+}
+
+.view-management-catalogo table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right:  1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+
+.view-management-catalogo table tr:hover td {
+    background: rgb(243, 243, 243);
+}
+
+.view-management-catalogo .view-empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #FFF;
+    margin-bottom: 2rem;
+}
+.view .views-field-operations .dropbutton-wrapper .dropbutton-widget {position: relative;}
+.view-filters .views-exposed-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.view-filters .views-exposed-form .form-row .js-form-item {margin-right: 0.5rem;}
+.js td .dropbutton-multiple {
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+form.nova-accredita-enrollment-form .form-item-field-tipo-di-impresa-667 {
+    margin-top: 20px;
+}
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 40%;
+    left: 0px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+@media only screen and (max-width: 768px) {
+    #block-mainmenuvetrinaimprese ul {
+        display: block;
+    }
+    .view-catalog-imprese .form-row>fieldset {
+        width: 80%;
+    }
+    .view-catalog ul.item-list__checkbox {
+        display: block;
+    }
+    .navbar .container {
+        background: #5E75AB;
+    }
+    .slick-dots {
+        width: 90%;
+        margin: 1rem auto 0 auto;
+        overflow: hidden;
+    }
+    .block-vetrina {margin-bottom: 0;}
+    .view-search .form-row>fieldset {
+        width: 80%;
+        padding-left:0;
+    }
+    body.vetrina-prodotti-tec #page {
+        overflow-x: hidden;
+    }
+    .node--type-catalogo-prodotti-progetti-tecno .ms-5 {
+        margin: 0 1rem!important;
+    }
+    .box-info .tip {
+        margin-top: 1rem;
+    }
+    .tip .field__item {
+        display: inline-block;
+        margin-bottom: 0.3rem;
+    }
+
+    #TabImpresa {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .node--type-catalogo-prodotti-progetti-tecno #TabImpresa li {
+        display: inherit;
+        margin: 0 auto!important;
+    }
+    .node--type-catalogo-prodotti-progetti-tecno #TabImpresa li button.nav-link {
+        padding: .5rem .3rem;
+        word-break: break-word;
+    }
+    .node_title_progetto span {
+        word-break: break-word;
+    }
+    .view-management .view-content {
+        overflow-x: auto;
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    .adminimal-admin-toolbar li.nav-item a.nav-link {
+        margin-left:0!important;
+        word-break: break-word;
+        margin-top: 0.5rem;
+    }
+    button.nova-link {width: 200px;}
+    #block-vetrina-aziende-headeruserlogin a img { width: 20px; }
+    #block-vetrina-aziende-headeruserlogin  { letter-spacing: -1px; }
+    .brand-imprese h1 {
+        font-size: calc(1.375rem + 1.1vw);
+    }
+    .box-info {
+        padding: 33px;
+    }
+    .site_footer_mid .list-inline-item:not(:first-child) {
+        padding-left: 0;
+        padding-right: 0
+    }
+    .site-footer .content ul.list-inline { 
+        padding: 0 0.5rem;
+    }
+    #block-vetrina-aziende-loghifooter p {margin: 0 5px; }
+}

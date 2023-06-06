@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+name: 'Tipologia di Servizio'
+vid: tipologia_di_servizio
+description: ''
+weight: 0

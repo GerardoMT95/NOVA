@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_inizio_
+    - node.type.servizio
+  module:
+    - datetime
+id: node.servizio.field_data_inizio_
+field_name: field_data_inizio_
+entity_type: node
+bundle: servizio
+label: 'Data inizio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

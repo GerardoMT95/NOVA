@@ -1,0 +1,1361 @@
+/*
+* GENERAL
+*/
+body { overflow-x: hidden!important; background-color: #2C1D4C}
+/*html { overflow-x: hidden!important;}*/
+.bg-green { background-color: #18A095;}
+.bg-yellow { background-color: #F3CD00 }
+.bg-white { background-color: #FFFFFF }
+.bg-purple { background-color: #2C1D4C }
+.bg-transparent { background-color: transparent }
+
+.color-green { color: #18A095 }
+.color-yellow { color: #F3CD00 }
+.color-white { color: #FFFFFF }
+.color-purple { color: #2C1D4C }
+
+.text-green { color: #18A095 }
+.text-yellow { color: #F3CD00 }
+.text-white { color: #FFFFFF }
+.text-purple { color: #2C1D4C }
+.btn-liguria a.color-white {color: #FFFFFF }
+
+#main { padding: 0px!important; background-color: #18A095 }
+
+.btn-liguria { padding: 5px 50px; font-size: 25px; border: 0; display: inline-block }
+.dot-list { display: flex; align-items: center; justify-content: center; }
+.dot { height: 8px; width: 8px; border-radius: 50%; display: inline-block; opacity: 0.7; z-index: 9999; margin: 0px 2px; }
+.dot.active { height: 12px; width: 12px; opacity: 1; }
+.dotPlus-list { display: flex; align-items: center; justify-content: center; }
+.dotPlus { height: 8px; width: 8px; border-radius: 50%; display: inline-block; opacity: 0.7; z-index: 9999; margin: 0px 2px; }
+.dotPlus.active { height: 12px; width: 12px; opacity: 1; }
+
+/*
+* /themes/custom/novaliguria/css/colors.css:28
+*/
+
+/*
+* Freccia giu homepage
+*/
+.pulse_anchor {
+    position: fixed; bottom: 90px;width: 100%;
+}
+.pulse_next_arrow span.bounce-i {
+    font-size: 40px;
+    -webkit-animation-name: bounceInSmall;
+    -moz-animation-name: bounceInSmall;
+    -ms-animation-name: bounceInSmall;
+    -o-animation-name: bounceInSmall;
+    animation-name: bounceInSmall;
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -ms-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    -o-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounceInSmall{
+    0%{opacity:1;transform:translateY(0px)}20%{opacity:1;transform:translateY(-5px)}30%{opacity:1;transform:translateY(10px)}40%{opacity:1;transform:translateY(0)}
+}
+.pulse_next_arrow {
+    position: relative;
+    bottom: 10px;
+    z-index: 3;
+    display: block;
+}
+
+/**
+* Header
+*/
+
+#navbar-main { z-index: 999 }
+
+#homepage-header { top: 0; left: 0; position: relative; padding-bottom: 0px }
+/*.homepage-header-container {position: absolute; min-height: 100px; bottom: 300px; width:100%; }*/
+.homepage-header-container {
+    position: relative;
+    min-height: 100px;
+    bottom: 400px;
+    width: 100%;
+}
+#homepage-header .row { padding: 50px;    margin-top: 20px; }
+.homepage-header-container .row .titolo { position: relative; padding: 10px 20px; font-weight: bold; text-transform: uppercase; font-size: 30px; z-index: 10 }
+.homepage-header-container > .row { position: absolute; min-height: 100px; top: -100px; display: inline-block; z-index: 10; }
+.homepage-header-content { padding-top: 50px; clip-path: polygon( 0 3%, 100% 0, 97% 100%, 3% 100% );}
+/*#navbar-main > .container > a { display:none }*/
+
+/* #navbar-main{background-color: transparent!important}
+#header {
+  position: relative;
+  z-index: 9;
+} */
+
+.primo .servizio { color: #fff; }
+.secondo .servizio { color: #2C1D4C; }
+.terzo .servizio { color: #2C1D4C; }
+.quarto .servizio { color: #fff; }
+
+.servizio button, .servizio .button { background: transparent; border: none; bottom: 0px; width: max-content; height: 80px; display: inherit; margin: 0 auto;}
+/*.servizio button {background: transparent;border: none;bottom: 0px;height: 80px; }*/
+.servizio button:before, .servizio .button:before { 
+    content: ''; position: absolute;  width: 100%; height: 100%;bottom: 0px; left: 0px; z-index: 1; transition: all .66s; background-position: center;  }
+.primo, .secondo, .terzo, .quarto { filter: drop-shadow( 0px 3px 6px #888888 ); }
+.servizio button span, .servizio .button span { opacity: 0; transition: all .66s }
+.primo .servizio button i, .primo .servizio .button i { background: #2C1D4C; padding: 20px; transition: all .66s }
+.secondo .servizio button i, .secondo .servizio .button i { background: #18A095; padding: 20px; transition: all .66s }
+.terzo .servizio button i, .terzo .servizio .button i { background: #F3CD00; padding: 20px; transition: all .66s }
+.quarto .servizio button i, .quarto .servizio .button i { background: #FFFFFF; padding: 20px; transition: all .66s }
+.servizio button i svg, .servizio .button i svg { width: 80px; height: 80px; }
+.servizio:hover button span, .servizio:hover .button span { opacity: 1; transition: all .66s }
+.servizio:hover button i, .servizio:hover .button i { opacity: 0; transition: all .66s }
+.servizio button span, .servizio button i, .servizio .button span, .servizio .button i { position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); font-size: 30px; font-weight: bold; }
+.servizio { padding-bottom: 50px!important; }
+.servizio:hover button span, .servizio:hover .button span { /*padding: 8px 40px;*/ top: -31px; transition: background .66s .66s; box-shadow: 0px 3px 6px #888888; }
+.servizio:hover .button span a {padding: 8px 40px; display: block;}
+.primo .servizio:hover button span, .primo .servizio:hover .button span { background: #2C1D4C; color: #fff }
+.secondo .servizio:hover button span, .secondo .servizio:hover .button span  { background: #18A095; color: #fff }
+.terzo .servizio:hover button span, .terzo .servizio:hover .button span { background: #F3CD00; color: #2C1D4C }
+.quarto .servizio:hover button span, .quarto .servizio:hover .button span { background: #FFFFFF; color: #2C1D4C }
+.servizio button span, .servizio .button span { top: -30px; }
+.primo .servizio button:before, .primo .servizio .button:before { background: #18A095; clip-path: polygon(0 0, 100% 5%, 100% 93%, 0% 100%); }
+
+.secondo .servizio button:before, .secondo .servizio .button:before { background: #F3CD00; clip-path: polygon(0 3%, 100% 0, 100% 99%, 0 94%); }
+.terzo .servizio button:before, .terzo .servizio .button:before { background: #FFFFFF; clip-path: polygon(0 0, 100% 0, 95% 94%, 3% 95%); }
+.quarto .servizio button:before, .quarto .servizio .button:before { background: #2C1D4C; clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 95%); }
+.servizio { position: relative; }
+.servizio:hover button:before,.servizio:hover .button:before { /* position: relative!important; */ transition: all .66s; width: 170px; height: 60px; /*bottom: -20px; */top: inherit; margin: 0 auto; left: 50%; transform: translateX( -50% ); clip-path: polygon( 0 0, 100% 0, 100% 100%, 0% 100% ); }
+.primo .servizio:hover { color: #2C1D4C; }
+.quarto .servizio:hover { color: #2C1D4C; }
+
+.servizio h1, .servizio p, .servizio button span, .servizio button i, .servizio .button span, .servizio .button i { position: relative; z-index: 2; display: block; }
+.servizio h1 {font-weight: 900;}
+.primo .servizio:hover button i, .primo .servizio:hover .button i {
+    background: #2C1D4C;
+    padding: 0px;
+}
+
+.primo .servizio:hover button:before, .primo .servizio:hover .button:before {
+    position: relative;
+    top: 30px;
+    height: 0;
+}
+
+.secondo .servizio:hover button i,.secondo .servizio:hover .button i {
+    background: #18A095;
+    padding: 0px;
+}
+
+.secondo .servizio:hover button:before, .secondo .servizio:hover .button:before {
+    position: relative;
+    top: 30px;
+    height: 0;
+}
+
+.terzo .servizio:hover button i, .terzo .servizio:hover .button i {
+    background: #F3CD00;
+    padding: 0px;
+}
+
+.terzo .servizio:hover button:before, .terzo .servizio:hover .button:before {
+    position: relative;
+    top: 30px;
+    height: 0;
+}
+
+.quarto .servizio:hover button i, .quarto .servizio:hover .button i  {
+    background: #FFFFFF;
+    padding: 0px;
+}
+
+.quarto .servizio:hover button:before, .quarto .servizio:hover .button:before {
+    position: relative;
+    top: 30px;
+    height: 0;
+}
+
+/*
+    SLICK-TRACK
+*/
+#bacheca-aziende-new .slick-vertical .slick-slide { 
+    height: 250px !important;
+}
+#bacheca-aziende-new .slick-track{
+    float:right !important;
+    left:15px !important;
+}
+#bacheca-aziende-new ul.slick-dots {
+    /*float:left;*/
+    display:flex;
+    flex-direction: column;
+    width: 20px !important;
+    margin: 0px;
+    padding:0px;
+    position: absolute;
+    top: 77px;
+    left: -7px;
+}
+#bacheca-aziende-new .slick-active {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#bacheca-aziende-2 .view-catalog .field-wrapper{
+    /*margin-bottom: 33px !important;*/
+    margin-top: 5px !important;
+}
+#bacheca-aziende-2 .view-content{
+    max-height: 170px !important;
+}
+
+#bacheca-aziende-2 .slick-list.draggable{
+    min-height: 160px;
+}
+
+#slick-views-spazi-homepage-block-block-1-1-slider div.field-wrapper-spazi { 
+    text-align: center;
+}
+/* #slick-views-spazi-homepage-block-block-1-1-slider .view-catalog h3.h5 {
+    text-align: left;
+} */
+
+
+/*
+* Vetrina imprese homepage
+*/
+
+#vetrina-imprese { overflow: hidden; background-color: #18A095;position: relative;padding: 189px 0px 0px 0px; clip-path: polygon(0 0, 100% 21%, 100% 100%, 0% 100%); top: -400px;margin-bottom: -350px;}
+/* #vetrina-imprese { background-image: url( '/sites/default/files/liguriadigitale-homepage/bolla_gialla_grande.svg' ); background-size: 3840px 2160px; background-repeat: no-repeat; background-position: center center; } */
+#vetrina-imprese button.bg-purple a:hover{color: #FFF!important;}
+#ppt-button-vetrina.btn-liguria.bg-purple a.color-white:hover {color: #18A095!important;}
+#vetrina-imprese h2, #vetrina-imprese h3 { color: #fff; text-transform: uppercase; }
+#vetrina-imprese .titolo { clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%); max-width: 600px; }
+#vetrina-imprese .sottotitolo { clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%); max-width: 350px; }
+#vetrina-imprese .descrizione { z-index: 1; max-width: 500px; position: relative; }
+
+/*#views-bootstrap-elenco-imprese-home-block-1 > div.row > div:nth-child(4) { display: none }*/
+/*#views-bootstrap-elenco-imprese-home-block-1 > div.row > div:nth-child(5) { display: none }*/
+/*#views-bootstrap-elenco-imprese-home-block-1 > div.row > div:nth-child(6) { display: none }*/
+/*#views-bootstrap-elenco-imprese-home-block-1 > div.row > div:nth-child(7) { display: none }*/
+/*#views-bootstrap-elenco-imprese-home-block-1 > div.row > div:nth-child(8) { display: none }*/
+/*#views-bootstrap-elenco-imprese-home-block-1 > div.row > div:nth-child(9) { display: none }*/
+
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="0"] > img.bg-mid, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="0"] > img.bg-right { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="1"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="1"] > img.bg-right { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="2"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="2"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="3"]> img.bg-mid, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="3"]> img.bg-right { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="4"]> img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="4"]> img.bg-right { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="5"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="5"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="6"] > img.bg-mid, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="6"] > img.bg-right { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="7"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="7"] > img.bg-right { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="8"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="8"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="9"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="9"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="10"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="10"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="11"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="11"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="12"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="12"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="13"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="13"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="14"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="14"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="15"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="15"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="16"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="16"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="17"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="17"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="18"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="18"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="19"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="19"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="-1"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="-1"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="-2"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="-2"] > img.bg-mid { display: none; }
+.view-id-elenco_imprese_home .row .slick-slide[data-slick-index="-3"] > img.bg-left, .view-id-elenco_imprese_home .row .slick-slide[data-slick-index="-3"] > img.bg-mid { display: none; }
+
+#views-bootstrap-bacheca-block-1 .slick-dots,
+#views-bootstrap-gestione-news-homepage-block-1 .slick-dots,
+#views-bootstrap-gestione-bandi-new-block-1 .slick-dots,
+#views-bootstrap-elenco-imprese-home-block-1 .slick-dots,
+#views-bootstrap-gestione-opportunity-block-1 .slick-dots,
+#views-bootstrap-formazione-homepage-block-1 .slick-dots{
+    text-align: center;
+}
+
+#views-bootstrap-bacheca-block-1 .slick-dots li button ,
+#views-bootstrap-gestione-news-homepage-block-1 .slick-dots li button ,
+#views-bootstrap-gestione-bandi-new-block-1 .slick-dots li button ,
+#views-bootstrap-elenco-imprese-home-block-1 .slick-dots li button ,
+#views-bootstrap-gestione-opportunity-block-1 .slick-dots li button ,
+#views-bootstrap-formazione-homepage-block-1 .slick-dots li button {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.7;
+    z-index: 9999;
+    margin: 0px 2px;
+    border: none;
+    outline: none;
+}
+
+/*#views-bootstrap-bacheca-block-1 .slick-dots li {*/
+/*    float: left;*/
+/*    width: 20px;*/
+/*}*/
+
+
+#views-bootstrap-gestione-news-homepage-block-1 .slick-dots li button {
+    background-color: #18A095;
+}
+
+#views-bootstrap-gestione-bandi-new-block-1 .slick-dots li button {
+    background-color: #2C1D4C;
+}
+
+#views-bootstrap-elenco-imprese-home-block-1 .slick-dots li button {
+    background-color: #2C1D4C;
+}
+
+#views-bootstrap-gestione-opportunity-block-1 .slick-dots li button {
+    background-color: #F3CD00;
+}
+
+#views-bootstrap-formazione-homepage-block-1 .slick-dots li button {
+    background-color: #18A095;
+}
+
+#views-bootstrap-bacheca-block-1 .slick-dots li button {
+    background-color: #F3CD00;
+}
+
+
+
+
+
+#views-bootstrap-bacheca-block-1  .slick-dots li ,
+#views-bootstrap-gestione-news-homepage-block-1 .slick-dots li ,
+#views-bootstrap-gestione-bandi-new-block-1 .slick-dots li ,
+#views-bootstrap-elenco-imprese-home-block-1 .slick-dots li ,
+#views-bootstrap-gestione-opportunity-block-1 .slick-dots li ,
+#views-bootstrap-formazione-homepage-block-1 .slick-dots li {
+    list-style-type: none;
+    font-size: 0px;
+    display: inline-block;
+}
+
+#views-bootstrap-bacheca-block-1  .slick-dots li.slick-active button ,
+#views-bootstrap-gestione-news-homepage-block-1 .slick-dots li.slick-active button ,
+#views-bootstrap-gestione-bandi-new-block-1 .slick-dots li.slick-active button ,
+#views-bootstrap-elenco-imprese-home-block-1 .slick-dots li.slick-active button ,
+#views-bootstrap-gestione-opportunity-block-1 .slick-dots li.slick-active button ,
+#views-bootstrap-formazione-homepage-block-1 .slick-dots li.slick-active button {
+    height: 12px;
+    width: 12px;
+    opacity: 1;
+}
+
+
+
+#views-bootstrap-gestione-news-homepage-block-1 .slick-list,
+#views-bootstrap-gestione-bandi-new-block-1 .slick-list,
+#views-bootstrap-elenco-imprese-home-block-1 .slick-list,
+#views-bootstrap-gestione-opportunity-block-1 .slick-list,
+#views-bootstrap-formazione-homepage-block-1 .slick-list{
+    width: 100%!Important;
+}
+
+
+#views-bootstrap-gestione-news-homepage-block-1 .row,
+#views-bootstrap-gestione-bandi-new-block-1 .row,
+#views-bootstrap-elenco-imprese-home-block-1 .row,
+#views-bootstrap-gestione-opportunity-block-1 .row,
+#views-bootstrap-formazione-homepage-block-1 .row{
+    margin: 0px!important;
+    padding: 0px!important;
+}
+@media only screen and (min-width: 992px) {
+
+    #views-bootstrap-gestione-bandi-new-block-1 > .row > div {
+        margin: 0px!important;
+        padding: 0px !important;
+    }
+
+
+    #views-bootstrap-gestione-bandi-new-block-1 {
+        padding: 40px;
+    }
+}
+
+.view-display-id-block_1 .views-field.views-field-field-citta{
+    padding: 5px 20px!important;
+}
+
+.view-display-id-block_1 .views-field-field-superficie-1{
+    padding: 5px 20px!important;
+    padding-bottom: 50px!Important;
+}
+
+.view-display-id-block_1 .slick-dots{
+    margin-top: 30px!important;
+}
+
+.view-display-id-block_1 .views-field.views-field-title{
+    padding: 5px 20px!important;
+}
+.view-display-id-block_1 .views-field.views-field-field-categoria{
+    padding: 10px 20px !important;
+}
+
+
+.view-id-elenco_imprese_home .row .slick-slide img { position: relative; margin-top: auto }
+.view-id-elenco_imprese_home .row .slick-slide { position: relative; }
+.view-id-elenco_imprese_home .row .slick-slide div.text-content { position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) }
+.view-id-elenco_imprese_home .row .slick-slide div.text-content img {  display: block; margin: auto; width: auto; height: auto; }
+.view-id-elenco_imprese_home .row .slick-slide div.text-content a {  display: block; margin: auto; color: #432C65; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 16px; word-break: break-word; }
+
+/*.vetrina-imprese-stato{*/
+/*    background-color: #F3CD00;*/
+/*    display: inline-block;*/
+/*    padding: 0px 3px;*/
+/*    margin-bottom: 0px;*/
+/*    box-shadow: 0px 3px 6px rgb(0 0 0 / 30%);*/
+/*    font-weight: bold;*/
+/*    text-transform: uppercase;*/
+/*    position: absolute;*/
+/*    top: 30px;*/
+/*    left: 40px;*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    z-index: 9999;*/
+/*    min-height: 20px;*/
+/*}*/
+
+
+.vetrina-imprese-stato { background-color: #F3CD00; width: max-content; padding: 0px 3px; margin-bottom: 30px; box-shadow: 0px 3px 6px rgba( 0, 0, 0, 30%); font-weight: bold; text-transform: uppercase; position: absolute; top: -50px; left: -50px;}
+.vetrina-imprese-logo { max-width: 220px; min-height: 80px; }
+.vetrina-imprese-logo img { max-height: 100px; }
+
+/*
+* Bacheca aziende
+*/
+
+#row-bacheca-aziende { justify-content: center; align-items: center; width: 60%; margin-left: auto; margin-right: auto; margin-bottom: 200px }
+#bacheca-aziende { background-color: #2C1D4C; display: flex; flex-basis: 80%; clip-path: polygon(0 4%, 100% 0, 98% 100%, 2% 100%); padding: 40px }
+#bacheca-aziede-la-bacheca { background-color: #18A095;  clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 96%); font-size: 49px; text-align: center; font-weight: bold; margin: 5px 10px }
+#bacheca-aziede-delle-aziende { background-color: #F3CD00;  clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%); font-size: 49px; text-align: center; font-weight: bold; margin: 5px 10px }
+
+#bacheca-aziende .col-6 { padding: 0px 10px }
+#bacheca-aziede-titolo, .bacheca-aziede-titolo { font-weight: bold; font-size: 28px;min-height: 60px; }
+#bacheca-aziede-titolo a, .bacheca-aziede-titolo a { word-break: break-word; }
+#bacheca-aziede-nome { font-size: 16px }
+#bacheca-aziede-descrizione { font-size: 18px;margin-top: 20px; }
+#bacheca-aziede-button { font-size: 25px }
+#bacheca-aziende-3 #bacheca-aziede-titolo {font-size: 45px;}
+
+.label-tip {
+    display: inline;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #032675;
+    padding: 0.5rem;
+    font-family: 'graphiesemibold', sans-serif;
+    text-decoration: none;
+}
+.label-tip-list .list-group {display: inherit;}
+.label-tip-list li  {
+    background: #F3CD00;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #032675;
+    padding: 0.2rem!important;
+    font-family: 'graphiesemibold', sans-serif;
+    text-decoration: none;
+    margin: 1px 3px!important;
+    display: inline-block;
+    font-size: 15px;
+    box-shadow: 0px 3px 6px rgba( 0, 0, 0, 30%);
+}
+.label-tip-list {margin: 0 -40px; margin-top: -30px;}
+/**
+* PPT
+*/
+#sezionePPT { margin-top: 50px; margin-bottom: 150px }
+#sezionePPT .titolo { width: 100%; color: #fff; font-weight: bold; font-size: 40px; margin-bottom: 20px;  }
+#sezionePPT .separator { width: 50%; margin-bottom: 20px; }
+#sezionePPT .separator hr { color: #432C65; height: 4px; opacity: 1; }
+
+#sezionePPT .contenuti { display: flex; }
+#sezionePPT .contenuti .ppt-single-element {  width: 33.33%; padding: 10px 5px }
+#sezionePPT .contenuti .ppt-single-element > div:nth-child(1) { width: 50%; background-color: #F3CD00; color: #432C65; font-weight: bold; font-size: 25px; text-transform: uppercase; text-align: center}
+#sezionePPT .contenuti .ppt-single-element .node__title { color: #fff; font-weight: bold; font-size: 38px; text-transform: uppercase; }
+#sezionePPT .contenuti .ppt-single-element .node__content { color: #fff; font-size: 16px; }
+
+/** themes/contrib/bootstrap_barrio/css/components/node.css?r82odz */
+.node--view-mode-teaser { border-bottom: 0!important; }
+
+/** BANDI */
+#row-finanziamenti { position: relative;
+                     z-index: 10;
+                     margin-left: 50%;
+                     transform: translateX(-50%);
+                     margin-bottom: -800px; }
+#row-finanziamenti > .row { background-color: #2C1D4C; width: 60%; padding: 10px 50px; text-align: center; color: #fff; font-size: 35px; font-weight: bold; position: absolute; top: 0%; z-index: 99999999; left: 50%; transform: translate(-50%, -50%); }
+#row-finanziamenti #row-content-finanziamenti { background-color: #fff; clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 95%); padding: 50px 40px }
+#views-bootstrap-gestione-bandi-new-block-1 > .row > div { width: 100%; padding: 5px 0px; }
+#views-bootstrap-gestione-bandi-new-block-1 > .row > div:nth-child(4) { display: none }
+#views-bootstrap-gestione-bandi-new-block-1 > .row > div:nth-child(5) { display: none }
+#views-bootstrap-gestione-bandi-new-block-1 > .row > div:nth-child(6) { display: none }
+#views-bootstrap-gestione-bandi-new-block-1 > .row > div:nth-child(7) { display: none }
+#views-bootstrap-gestione-bandi-new-block-1 > .row > div:nth-child(8) { display: none }
+#views-bootstrap-gestione-bandi-new-block-1 > .row > div:nth-child(9) { display: none }
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-field-ente { background-color: #F3CD00; color: #3F2863; font-weight: bold; font-size: 14px; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 0px 6px }
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-title { font-size: 20px; font-weight: bold; color: #3F2863; width: auto; /*white-space: nowrap; overflow: hidden; text-overflow: ellipsis;*/ }
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-title {  padding: 0px;}
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-title a { color: #3F2863; text-decoration: none; }
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-field-data-di-pubblicazione { font-size: 16px }
+
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-title { padding-left: 0px!important; padding-right: 0px!important;}
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-field-categoria { padding-left: 0px!important; padding-right: 0px!important; }
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-field-data-di-chiusura { padding-left: 0px!important; padding-right: 0px!important; }
+#views-bootstrap-formazione-homepage-block-1 .views-field-title { padding-left: 0px!important; padding-right: 0px!important; }
+#views-bootstrap-formazione-homepage-block-1 .views-field-field-categoria { padding-left: 0px!important; padding-right: 0px!important; }
+#views-bootstrap-formazione-homepage-block-1 .views-field-field-data-di-chiusura { padding-left: 0px!important; padding-right: 0px!important; }
+#views-bootstrap-formazione-homepage-block-1 .views-field-body { padding-left: 0px!important; padding-right: 0px!important; }
+
+@media only screen and (min-width: 992px) {
+    /*#views-bootstrap-gestione-bandi-new-block-1 > .row > div { width: 33.33%;; padding: 5px 40px; }*/
+    #views-bootstrap-gestione-bandi-new-block-1 .views-field-title {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        font-size: 20px;
+        font-weight: bold;
+        color: #3F2863;
+        width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+    #views-bootstrap-gestione-bandi-new-block-1 .views-field-field-categoria { padding-left: 0px!important; padding-right: 0px!important; }
+    #views-bootstrap-gestione-bandi-new-block-1 .views-field-field-data-di-chiusura { padding-left: 0px!important; padding-right: 0px!important; }
+    #views-bootstrap-formazione-homepage-block-1 .views-field-title { padding-left: 0px!important; padding-right: 0px!important; }
+    #views-bootstrap-formazione-homepage-block-1 .views-field-field-categoria { padding-left: 0px!important; padding-right: 0px!important; }
+    #views-bootstrap-formazione-homepage-block-1 .views-field-field-data-di-chiusura { padding-left: 0px!important; padding-right: 0px!important; }
+    #views-bootstrap-formazione-homepage-block-1 .views-field-body { padding-left: 0px!important; padding-right: 0px!important; }
+}
+/*
+#row-finanziamenti { position: relative; background-color: #fff; clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 95%); padding: 50px 40px }
+#row-finanziamenti .titolo { background-color: #2C1D4C; width: 60%; padding: 10px 50px; text-align: center; color: #fff; font-size: 35px; font-weight: bold; position: absolute; top: 0%; z-index: 99999999; left: 50%; transform: translate(-50%, -50%);}
+#views-bootstrap-gestione-bandi-new-block-1 > .row > div { width: 33.33%; padding: 5px 40px }
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-field-ente { background-color: #F3CD00; color: #3F2863; font-weight: bold; font-size: 14px; }
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-title { font-size: 20px; font-weight: bold; color: #3F2863 }
+#views-bootstrap-gestione-bandi-new-block-1 .views-field-field-data-di-pubblicazione { font-size: 16px }
+*/
+
+/** MARKETING TERRITORIALE */
+#row-opportunita { background-color: #2C1D4C; padding: 300px 150px 50px 200px; clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%); /*margin-top: 400px;*/     margin-top: 480px; }
+#row-opportunita #views-bootstrap-gestione-opportunity-block-1  .row .slick-slide { width: 30%; margin-right: 35px; margin-left: 35px; background-color: #fff }
+
+/*#row-opportunita .titolo { color: #fff; font-size: 35px; text-align: right; text-transform: uppercase; background-color: #2C1D4C; margin-left: auto; width: 500px; padding-right: 35px; margin-top: 10rem;}*/
+/*#row-opportunita .descrizione { color: #fff; font-size: 35px; font-weight: bold; text-align: right; width: 45%; margin-left: auto; margin-right: 35px }*/
+
+#row-opportunita .titolo { color: #fff; font-size: 35px; text-align: center; text-transform: uppercase; background-color: #2C1D4C; margin-left: auto; width: 500px; padding: 20px 0px 20px 0; margin-top: 5rem; font-weight:bold;}
+#row-opportunita .descrizione {color:#fff; font-weight:300; font-size:35px; width:50%; text-align:right; width: 50%; margin-left:auto; margin-right:35px}
+
+
+@media(max-width: 1400px){
+    div#bacheca-aziede-la-bacheca {
+        font-size: 35px;
+    }
+
+    div#bacheca-aziede-delle-aziende {
+        font-size: 35px;
+    }
+
+    #bacheca-aziende-3 #bacheca-aziede-titolo {
+        font-size: 35px;
+    }
+
+    .button-azienda a {
+        font-size: 16px;
+    }
+
+    /* #bacheca-aziende-2 .view-catalog .field-wrapper{
+        margin-bottom: 110px !important;
+        margin-top: 80px !important;
+    }
+    #bacheca-aziende-2 .view-content{
+        max-height: 195px !important;
+    } */
+}
+
+@media(max-width: 1024px){
+    #row-opportunita .titolo { 
+        margin-top: 7rem;
+        margin-right: 0px; 
+    }
+    #row-opportunita .descrizione { 
+        margin-right: 0px;
+        width: 445px;
+    }
+}
+
+@media(max-width: 992px){
+    #homepage-header video { margin-top: 0!important; }
+    #row-opportunita { background-color: #2C1D4C; padding: 0px 0px 0px 0px; clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%); /*margin-top: 400px;*/     padding-top: 120px; }
+    #row-opportunita #views-bootstrap-gestione-opportunity-block-1  .row .slick-slide { width: 30%; margin-right: 0px; margin-left: 0px; background-color: #fff }
+
+    #views-bootstrap-gestione-opportunity-block-1 .slick-list {
+        padding: 0px !important;
+        margin: 0px 0px 1rem 0px;
+        overflow: hidden;
+    }
+    #row-opportunita .descrizione{
+        width: 100%!important;
+    }
+
+    #row-finanziamenti{
+        position: relative !important;
+        margin-bottom: -680px;
+        margin-top: 5rem;
+    }
+
+    #row-opportunita > img.img-fluid {
+        right: -110px !important;
+        top: 180px !important;
+        width: 100%!important;
+    }
+
+
+    #row-opportunita .titolo {
+        font-size: 20px;
+        width: 190px;
+        margin-top: 11rem;
+    }
+    #row-opportunita .descrizione {
+        font-size: 18px;
+        width: 220px !important;
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+
+    #row-finanziamenti #row-content-finanziamenti {
+        background-color: #fff;
+        clip-path: none;
+        padding: 50px 40px;
+    }
+    #row-finanziamenti > .row {
+        position: absolute;
+        /*! width: 320px; */
+        transform: translateX(-50%);
+        /*! left: 50%; */
+        width: 80%;
+        margin: 0px;
+        top: -40px;
+        padding: 10px 0px;
+    }
+    #row-finanziamenti #row-content-finanziamenti {
+        padding: 20px 20px;
+    }
+    #row-finanziamenti .descrizione {
+        line-height: 40px;
+        margin-top: 40px!important;
+    }
+    .btn-liguria{
+        margin-bottom: 50px;
+    }
+    #formazione{
+        padding: 24px!important;
+    }
+    #bacheca-aziende-3 #bacheca-aziede-titolo, #row-formazione .titolo{
+        width: 100%;
+        padding: 10px 0px!Important;
+        transform: translateX(-50%);
+        left: 50% !important;
+        position: relative;
+    }
+
+
+    #row-formazione .titolo-row.text-center {
+        width: 100% !important;
+        left: 0px!important;
+    }
+    #row-formazione .descrizione{
+        width: 100%!Important;
+    }
+    #row-formazione #row-content-formazione{
+        margin: 0px!important;
+        padding: 0px 0px 2rem 0!Important;
+    }
+    #row-formazione #views-bootstrap-formazione-homepage-block-1 > .row > div{
+        width: auto!Important;
+        padding: 0px!important
+    }
+    #views-bootstrap-gestione-news-homepage-block-1 .views-field-field-image{
+        width: 100%;
+        display: block;
+        flex: 0 0 100%;
+    }
+    #views-bootstrap-gestione-news-homepage-block-1 .views-field-field-image img {
+        height: auto;
+    }
+    #views-bootstrap-gestione-news-homepage-block-1 .views-field-field-immagine-testo{
+        width: 100%!important;
+        display: block;
+        flex: 0 0 100%;
+        margin-top: 30px;
+
+    }
+    #views-bootstrap-gestione-news-homepage-block-1 .col-12{
+        display: block!Important;
+    }
+
+
+    #views-bootstrap-gestione-news-homepage-block-1 .views-field-field-immagine-testo .views-field.views-field-title {
+        margin-top: 30px;
+        padding-left: 0px!Important;
+        padding-right: 0px!Important;
+    }
+
+    #views-bootstrap-gestione-news-homepage-block-1 .views-field-field-immagine-testo .views-field.views-field-body {
+        padding-left: 0px!Important;
+        padding-right: 0px!Important;
+    }
+
+    #row-news .descrizione {
+        width: 100% !important;
+    }
+
+    .homepage-header-content {
+        clip-path: polygon(1px 0%, 100% 99px, 100% 100%, 0% 100%)!Important;
+        padding-top: 200px;
+    }
+    #homepage-header .row {
+        top: 50px;
+    }
+
+    .primo, .secondo, .terzo, .quarto{
+        margin-bottom: 50px;
+        width: 100%!important;
+    }
+
+
+    #vetrina-imprese > .container > img.img-fluid {
+        width: 1420px !important;
+        left: 0% !important;
+        top: -90px !important;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-left: -80px;
+    }
+
+    #vetrina-imprese .titolo, #vetrina-imprese .titolo h2 {
+        font-weight: bold;
+        display: inline-block;
+        padding: 2px 10px;
+    }
+
+    .homepage-header-container {
+        position: relative;
+        min-height: 100px;
+        bottom: -100px;
+        width: 100%;
+    }
+
+    #vetrina-imprese {
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+        top: 0px;
+        margin-bottom: -85px;
+    }
+
+    #bacheca-aziede-titolo {
+        margin-bottom: 10px;
+    }
+
+    #bacheca-aziede-button {
+        font-size: 25px;
+        left: 40px!important;
+    }
+}
+
+@media(max-width: 960px){
+    #row-finanziamenti .descrizione {
+        margin-top:60px !important;
+    }
+    #row-opportunita .titolo { 
+        width: 330px;
+        margin-top: 17rem;
+        margin-right: 20px; 
+    }
+    #row-opportunita .descrizione { 
+        margin-right: 20px; 
+    }
+    .site-footer .nav li a, .site-footer p.social {
+        font-size: 17px !important;
+    }
+}
+
+@media(max-width: 912px){
+    #row-opportunita > img.img-fluid { 
+        right: -200px !important;
+        top: 70px;
+    }
+}
+
+@media(max-width: 820px){
+    #row-opportunita > img.img-fluid { 
+        right: -180px !important; 
+    }
+    .pulse_anchor {
+        bottom: -100px;
+        position: relative;
+    } 
+}
+
+@media(max-width: 540px){
+    #row-opportunita > img.img-fluid { 
+        right: -167px !important; 
+        width: 100%
+    }
+    #row-opportunita .titolo { 
+        width: 255px;
+        margin-top: 14rem;
+        margin-right: 0px;
+        font-size: 18px; 
+    }
+    #row-opportunita .descrizione { 
+        margin-right: 0px; 
+        font-size: 18px;
+        width: 255px !important;
+    }
+}
+
+@media(max-width: 414px){
+    #row-finanziamenti .descrizione {
+        margin-top:60px !important;
+    }
+    #row-opportunita .titolo { 
+        width: 170px;
+        margin-top: 10rem;
+        margin-right: 0px;
+        font-size: 16px; 
+    }
+    #row-opportunita .descrizione { 
+        margin-right: 0px; 
+        font-size: 14px;
+        width: 140px !important;
+    }
+}
+
+@media(max-width: 390px){
+    #row-finanziamenti .descrizione {
+        margin-top:60px !important;
+    }
+    #row-opportunita .titolo { 
+        width: 145px;
+        margin-top: 9rem;
+        margin-right: 0px;
+        font-size: 14px; 
+    }
+    #row-opportunita .descrizione { 
+        margin-right: 0px; 
+        font-size: 14px;
+        width: 180px !important;
+    }
+}
+
+@media(max-width: 375px){
+    #row-finanziamenti .descrizione {
+        margin-top:60px !important;
+    }
+    #row-opportunita .titolo { 
+        width: 145px;
+        margin-top: 9rem;
+        margin-right: 0px;
+        font-size: 14px; 
+    }
+    #row-opportunita .descrizione { 
+        margin-right: 0px; 
+        font-size: 14px;
+        width: 140px !important;
+    }
+}
+
+
+@media(min-width: 300px) and (max-width: 380px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: 0!important;
+    }
+}
+
+@media(min-width: 381px) and (max-width: 800px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(20% + 20px) !important;
+    }
+}
+
+@media(min-width: 801px) and (max-width: 850px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(25% + 25px) !important;
+    }
+}
+
+@media(min-width: 851px) and (max-width: 951px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(20% + 35px) !important;
+    }
+}
+
+@media(min-width: 852px) and (max-width: 991px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(25% + 15px) !important;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1051px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(3% + 15px) !important;
+    }
+}
+
+@media(min-width: 1052px) and (max-width: 1151px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(5% + 15px) !important;
+    }
+}
+
+@media(min-width: 1152px) and (max-width: 1251px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(10% + 10px) !important;
+    }
+}
+
+@media(min-width: 1252px) and (max-width: 1351px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(13% + 10px) !important;
+    }
+}
+
+@media(min-width: 1352px) and (max-width: 1451px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(15% + 15px) !important;
+    }
+}
+
+@media(min-width: 1452px) and (max-width: 1551px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(18% + 15px) !important;
+    }
+}
+
+@media(min-width: 1552px) and (max-width: 1651px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(20% + 15px) !important;
+    }
+    #row-opportunita img {
+        right: -230px;
+        top: 10px;
+    }
+}
+
+@media(min-width: 1652px) and (max-width: 1751px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(22% + 15px) !important;
+    }
+}
+
+@media(min-width: 1752px) and (max-width: 1851px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(24% + 15px) !important;
+    }
+}
+
+@media(min-width: 1852px) and (max-width: 1920px){
+    #vetrina-imprese .container img.img-fluid.position-absolute {
+        left: calc(25% + 25px) !important;
+    }
+}
+
+
+#row-opportunita{
+    overflow: hidden;
+}
+
+#views-bootstrap-formazione-homepage-block-1 .slick-slide {
+    padding: 0px 10px;
+}
+
+#views-bootstrap-gestione-news-homepage-block-1 .views-field-field-immagine-testo .views-field.views-field-title {
+    padding-left: 0px!Important;
+    padding-right: 0px!Important;
+}
+
+#views-bootstrap-gestione-news-homepage-block-1 .views-field-field-immagine-testo .views-field.views-field-body {
+    padding-left: 0px!Important;
+    padding-right: 0px!Important;
+}
+
+#row-news .views-field-field-immagine-testo {
+    padding: 0px;
+}
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row > div{
+    width: auto!Important;
+    padding: 0px!important
+}
+
+#views-bootstrap-gestione-news-homepage-block-1 > .row > div{
+    width: auto!Important;
+    padding: 0px!important
+}
+
+#slick-views-bacheca-block-block-2-1 .slick-dots {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -25px;
+}
+
+.view-display-id-block_1 .views-field.views-field-field-data-di-chiusura {
+    padding: 10px 20px !important;
+}
+
+.view-display-id-block_1 .views-field.views-field-body {
+    padding: 10px 20px !important;
+}
+/*#views-bootstrap-gestione-opportunity-block-1 { padding: 20px 30px }*/
+
+#views-bootstrap-gestione-opportunity-block-1 {
+    padding: 0px !important;
+    margin-top: 50px;
+}
+#row-opportunita #views-bootstrap-gestione-opportunity-block-1 > .row > div:nth-child(4) { display: none }
+#row-opportunita #views-bootstrap-gestione-opportunity-block-1 > .row > div:nth-child(5) { display: none }
+#row-opportunita #views-bootstrap-gestione-opportunity-block-1 > .row > div:nth-child(6) { display: none }
+#row-opportunita #views-bootstrap-gestione-opportunity-block-1 > .row > div:nth-child(7) { display: none }
+#row-opportunita #views-bootstrap-gestione-opportunity-block-1 > .row > div:nth-child(8) { display: none }
+#row-opportunita #views-bootstrap-gestione-opportunity-block-1 > .row > div:nth-child(9) { display: none }
+#row-opportunita #views-bootstrap-gestione-opportunity-block-1 > .row > div:last-child { margin-right: 0 }
+#row-opportunita .views-field-title, #row-opportunita .views-field-title a { text-decoration: none;font-size: 20px; color: #3F2863; font-weight: bold; margin-bottom: 10px;word-break: break-word; }
+#row-opportunita .views-field-field-categoria { font-size: 14px; color: #101010; padding: 10px 0px }
+#row-opportunita .views-field-field-citta { font-size: 13px; color: #101010; padding-bottom: 10px;}
+#row-opportunita .views-field-field-superficie-1 { font-size: 13px; color: #101010; padding-bottom: 100px}
+#row-opportunita .views-field.views-field-field-immagine-url img { height: 250px; object-fit: cover; }
+
+/** SPAZI */
+#row-spazi { background-color: #2C1D4C; padding: 50px 0px; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); position: relative;margin-top: -20px; }
+#row-spazi .titolo {background-color: #18A095;text-align: center;color: #fff;/*font-size: 30px;*/font-size: 35px;text-transform: uppercase;font-weight: bold;display: inline-block;padding: 20px 190px;letter-spacing: 3px;}
+#row-spazi .views-field h3 { min-height: 48px !important;}
+#row-spazi .descrizione {color: #FFF;font-weight: 300;font-size: 35px;width: 50%;text-align: center;width: 50%; margin: 0 auto;}
+/*#row-spazi .titolo { background-color: #18A095; color: #fff; font-size: 35px; text-transform: uppercase; padding: 5px 20px; font-weight:bold;    display: inline-block;}
+#row-spazi .descrizione { color: #fff; font-size: 35px; font-weight: bold; }*/
+#row-spazi .col-xl-6:nth-child(2),#row-spazi .col-lg-6:nth-child(2),#row-spazi .col-md-12:nth-child(2), #row-spazi .col-sm-6:nth-child(2) { background-color: #fff; padding: 30px; clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%); }
+#row-spazi .views-field-title { color: #2A1F50; font-weight: 600; font-size: 44px; margin: 20px 0px }
+#row-spazi .views-field-field-tipologia { font-size: 20px;  }
+#row-spazi .views-field-field-indirizzo { font-size: 20px; margin-bottom: 20px }
+#row-spazi .views-field-field-servizi-accessori span { font-size: 25px; color: #2A1F50; font-weight: 600 }
+#row-spazi .views-field-field-servizi-accessori .field-content {  margin-top: 20px }
+
+#row-spazi .view-filters .fieldset-legend { display: none }
+#row-spazi .views-element-container .views-exposed-form { display: none }
+
+#row-spazi .views-field-field-servizi-accessori .field-content input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
+#row-spazi .views-field-field-servizi-accessori .field-content .checkmark { position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #eee; }
+#row-spazi .views-field-field-servizi-accessori .field-content input ~ .checkmark { background-color: #ccc; }
+#row-spazi .views-field-field-servizi-accessori .field-content input:checked ~ .checkmark { background-color: rgba(75, 255, 165, 0.5); border-radius: 5px; }
+#row-spazi .views-field-field-servizi-accessori .field-content .checkmark:after { content: ""; position: absolute; display: none; }
+#row-spazi .views-field-field-servizi-accessori .field-content input:checked ~ .checkmark:after { display: block; left: 9px; top: 5px; width: 5px; height: 10px; border: solid #4BFFA5; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+
+.btn-spazi { background-color: #fff!important; color: #2C1D4C!important }
+.btn-check:active+.btn-spazi, .btn-check:checked+.btn-spazi, .btn-spazi.active, .btn-spazi:active, .show>.btn-spazi.dropdown-toggle { background-color: #F3CD00!important }
+
+/** SPAZI SLICK CAROUSEL */
+
+.path-frontpage .slick--view--stakehoder-spazi--block-1 .views-field-field-nome a {
+    color: #2A1F50;
+    font-weight: 600;
+    font-size: 44px;
+    text-decoration: underline 0.15em rgba(42, 31, 80, 0);
+    transition: text-decoration-color 300ms;
+
+}
+
+.path-frontpage .slick--view--stakehoder-spazi--block-1 .views-field-field-nome a:hover,
+.path-frontpage .slick--view--stakehoder-spazi--block-1 .views-field-field-nome a:focus {
+    text-decoration: underline 0.15em rgb(42, 31, 80);
+}
+
+.path-frontpage .slick--view--stakehoder-spazi--block-1 .views-field-body {
+    font-size: 1.2em;
+    color: #212529;
+}
+
+.path-frontpage .slick--view--stakehoder-spazi--block-1 .slick-dots li button::before {
+    color: #2C1D4C;
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.path-frontpage .slick--view--stakehoder-spazi--block-1 .slick-dots li.slick-active button:before {
+    color: #2C1D4C;
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.path-frontpage .view-id-stakehoder_spazi .view-footer a, .path-frontpage .view-id-stakehoder_spazi .view-footer a:hover {
+    text-decoration: none;
+    color: #2C1D4C;
+}
+
+/** FORMAZIONE */
+#formazione {clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);}
+#row-formazione {position: relative;background-color: #fff;width: 100%;margin: 120px auto; }
+#row-formazione > .row {top: 0%;z-index: 99999999;margin-bottom: 30px;text-align: center;}
+#row-formazione #row-content-formazione {background-color: #fff; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); margin: 0px 15px; padding: 20px 30px;}
+#row-formazione .titolo {background-color: #18A095;text-align: center;color: #fff;/*font-size: 30px;*/font-size: 35px;text-transform: uppercase;font-weight: bold;display: inline-block;padding: 20px 190px;letter-spacing: 3px;}
+#row-formazione .descrizione {color: #2C1D4C;font-weight: 300;font-size: 35px;width: 50%;text-align: center;width: 50%;margin: 0 auto;}
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row > div { width: 33.33% }
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row > div:nth-child(4) { display: none }
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row > div:nth-child(5) { display: none }
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row > div:nth-child(6) { display: none }
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row > div:nth-child(7) { display: none }
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row > div:nth-child(8) { display: none }
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row > div:nth-child(9) { display: none }
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row .views-field-field-azienda-associata { background-color: #3F2863; color: #fff; border-radius: 6px; width: auto; display: inline-block; padding: 1px 4px; font-weight: bold; margin-bottom: 10px}
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row .views-field-title a { color: #3F2863 ; font-size: 20px; font-weight: bold; margin-bottom: 10px;text-decoration: none;    word-break: break-word; }
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row .views-field-body { color: #3F2863; font-size: 15px; }
+#row-formazione .titolo-row.text-center { position: relative;top: -40px; }
+#views-bootstrap-formazione-homepage-block-1 .views-field-title {
+    padding-left:0;
+}
+#row-formazione #views-bootstrap-formazione-homepage-block-1 > .row .views-field-title a:hover {color: #18A095}
+/** NEWS */
+#row-news {position: relative;background-color: #fff;width: 100%; margin: 0 auto; padding-top: 100px;    margin-bottom: 50px; padding-bottom: 50px;}
+#row-news > .row {top: 0%;z-index: 99999999; margin-bottom: 30px;text-align: center;}
+#row-news #row-content-news {background-color: #fff; margin: 0px 15px;clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);padding: 20px 30px;}
+#row-news .titolo {background-color: #2C1D4C;text-align: center;color: #fff;font-size: 30px;text-transform: uppercase;display: inline-block;font-weight: bold;padding: 20px 190px;letter-spacing: 3px;}
+#row-news .descrizione {color: #2C1D4C;font-weight: 300;font-size: 35px;width: 50%;text-align: center;width: 50%;margin: 0 auto;}
+#row-news #views-bootstrap-news-homepage-block-1 > .row > div { width: 33.33% }
+#row-news #views-bootstrap-news-homepage-block-1 > .row .views-field-title { color: #3F2863; font-size: 20px; font-weight: bold; }
+#row-news #views-bootstrap-news-homepage-block-1 > .row .views-field-body { color: #3F2863; font-size: 15px; }
+#row-news .titolo-row.text-center {position: relative;top: -150px;}
+#row-news .view-gestione-news-homepage tr { background-color: #fff }
+#row-news .views-field-field-immagine-url { width: 50%; clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%); }
+#row-news .views-field-field-immagine-testo { width: 50%; }
+#row-news .row .col-12 { display: flex }
+#row-news .views-field-field-immagine-testo { padding-left: 20px }
+#views-bootstrap-gestione-news-homepage-block-1 { margin-bottom: 20px }
+#views-bootstrap-gestione-news-homepage-block-1 > div.row > div:nth-child(2) { display: none }
+#views-bootstrap-gestione-news-homepage-block-1 > div.row > div:nth-child(3) { display: none }
+#row-news .views-field-field-data-di-pubblicazione { font-size: 20px; color: #3F2863; margin-left: 5px; margin-right: 15px }
+#row-news .views-field-field-categoria-posizione { font-size: 20px; color: #3F2863; /*margin-left: 5px;*/ }
+#row-news .views-field-title { font-size: 35px; color: #3F2863; font-weight: bold; margin-bottom: 20px }
+#row-news .views-field-body { font-size: 18px; }
+#row-news .row-content-formazione {
+    margin-top: -100px;
+}
+
+#row-news .views-field-field-data-inizio-e-fine-evento {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+/*Last fix css della home di BBS*/
+/* New bacheca aziende */
+#bacheca-aziende-new {margin-bottom: 100px;}
+#bacheca-aziende-1 {clip-path: polygon(0 4%, 100% 0, 98% 100%, 2% 100%); padding: 40px 35px;background-color: #2C1D4C;}
+#bacheca-aziende-2 {background-color: #2C1D4C; clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);padding: 40px;}
+#bacheca-aziende-3 {background-color: #2C1D4C; clip-path: polygon(0 0, 100% 1%, 100% 98%, 0 100%);padding: 40px;}
+.button-azienda a {text-decoration: none;}
+
+.homepage-header-content h1 {
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+#vetrina-imprese .titolo a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    display: block;
+}
+#vetrina-imprese .titolo a:hover, #vetrina-imprese .btn-liguria a:hover {color:#F3CD00; text-decoration: none;}
+#vetrina-imprese .vetrina-imprese-nome {margin: 0 -45px;}
+
+/*#row-finanziamenti .titolo {font-size: 49px;}*/
+/*#row-finanziamenti .descrizione {font-size: 35px;color: #2C1D4C;}*/
+#row-finanziamenti .titolo {text-align: center;color: #fff;/*font-size: 30px;*/font-size: 35px;text-transform: uppercase;font-weight: bold;display: inline-block;padding: 20px 0px;letter-spacing: 3px;}
+#row-finanziamenti .descrizione {font-weight: 300;font-size: 35px;width: 50%;text-align: center; margin: 0 auto;}
+
+#row-news .titolo {
+    font-size: 35px;
+}
+
+.field--name-field-descrizione-breve { display: none;}
+.secondo .servizio:hover button i {
+    background: #18A095;
+    padding: 0px;
+    transition: all .66s;
+}
+
+.secondo .servizio:hover button:before {
+    position: relative;
+    top: 30px;
+}
+/* /finanziamenti */
+
+.data-chiusura-finanziamento {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+@media(max-width: 1400px){
+    div#slick-views-spazi-homepage-block-block-1-2-slider .slick-slide {
+        margin: 10px;
+    }
+}
+
+@media(max-width: 1248px){
+    .view-id-elenco_imprese_home .row .slick-slide div.text-content a {
+        font-size: 13px;
+        width: 100%;
+        word-break: break-all;
+    }
+}
+
+@media(max-width: 1024px){
+    div#slick-views-spazi-homepage-block-block-1-2-slider .slick-slide {
+        margin: 10px;
+    }
+}
+
+@media(max-width: 992px){
+    #vetrina-imprese .imprese .view-content .grid .bg-left,
+    #vetrina-imprese .imprese .view-content .grid .bg-mid,
+    #vetrina-imprese .imprese .view-content .grid .bg-right {
+        width: 100%;
+    }
+    div#row-bacheca-aziende-new > div {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #bacheca-aziende-3 {
+        padding-bottom: 80px!important;
+    }
+
+    div#views-bootstrap-elenco-imprese-home-block-1 .slick-slide {
+        background: white;
+        margin: 15px;
+    }
+
+    div#views-bootstrap-elenco-imprese-home-block-1 .slick-slide > img {
+        display: none;
+    }
+
+    div#views-bootstrap-elenco-imprese-home-block-1 .slick-slide > .text-content {
+        position: relative;
+        top: inherit;
+        left: inherit;
+        transform: none;
+        padding: 40px;
+        padding-top: 80px;
+    }
+
+    .vetrina-imprese-stato {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .vetrina-imprese-logo img {
+        width: 100%;
+    }
+
+    .vetrina-imprese-logo {
+        max-width: 100%!Important;
+        min-height: auto!Important;
+    }
+
+    #row-finanziamenti .descrizione {
+        width: 100% !important;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-top: 65px !important;
+    }
+
+    #row-spazi .descrizione { 
+        width: 100% !important;
+    }
+
+    #row-news .titolo { 
+        padding-left: 90px !important;
+        padding-right: 90px !important;
+    }
+    #views-bootstrap-gestione-opportunity-block-1 .slick-track,
+    #views-bootstrap-elenco-imprese-home-block-1 .slick-track {
+        height: 100%;
+    }
+}
+
+@media(max-width: 380px){
+    #vetrina-imprese .titolo h2 {
+        font-size: 30px !important;
+    }
+    #row-finanziamenti .titolo {
+        font-size: 30px;
+    }
+    #row-news .titolo { 
+        padding: 20px 55px !important;
+    }
+}
+
+
+
+@media(max-width: 768px){
+
+    #CollapsingNavbar {
+        height: calc(100vh - 0px);
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+        display: block;
+    }
+    .primo .servizio { margin-top: 100px;}
+    #vetrina-imprese {padding-top: 50px}
+    #ppt-button-vetrina {margin-top: 5px;margin-bottom: 0;}
+    #bacheca-aziende-new {margin-bottom: 80px;}
+    #row-spazi .titolo {padding: 20px 50px;}
+    #row-finanziamenti .descrizione {font-size: 30px;}
+    #row-content-finanziamenti .slick-dots { padding-bottom: 0; }
+    #row-content-finanziamenti .views-element-container {
+        margin-bottom: 0px!important;
+    }
+    #row-formazione {margin-top: 75px;}
+    .view-display-id-block_1 .slick-dots {
+        margin-top: 5px!important;  
+        padding: 1rem 0 3rem 0;
+    }
+    #homepage-header .row {margin-top: 5px;    margin-bottom: -80px;}
+    .homepage-header-container {top: -5px;}
+    .pulse_next_arrow {bottom: 60px}
+    #ppt-button {margin-bottom:0}
+    .view-spazi-homepage .view-footer .text-center {margin-top:0!important}
+    #bacheca-aziende-new {margin-top: 0;}
+    .path-frontpage #page-wrapper {overflow-x: hidden;}
+}

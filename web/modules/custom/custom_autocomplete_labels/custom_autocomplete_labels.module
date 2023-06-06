@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_search_api_autocomplete_suggestions_alter().
+ */
+function custom_autocomplete_labels_search_api_autocomplete_suggestions_alter(array &$suggestions, array $alter_params) {
+
+  if ($alter_params['search']->id() == 'ricerca_servizi') {
+
+    /* @var \Drupal\search_api_autocomplete\Suggestion\Suggestion $suggestion */
+    foreach ($suggestions as $key => &$suggestion) {
+
+      $options = $suggestion->getUrl()->getOptions();
+      $node = $options['entity'];
+      $user = Drupal\user\Entity\User::load($node->getOwner()->id());
+      $label = $suggestion->getLabel();
+      $user_label = $user->field_nome->value;
+
+      $suggestion->setLabel($label . ' - (' . $user_label . ')');
+    }
+  }
+}

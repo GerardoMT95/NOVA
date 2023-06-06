@@ -1,0 +1,17 @@
+langcode: it
+status: false
+dependencies:
+  theme:
+    - novaliguria
+id: novaliguria_page_title
+theme: novaliguria
+region: top_header
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titolo della pagina'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,19 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.servizio
+id: node.servizio.uid
+field_name: uid
+entity_type: node
+bundle: servizio
+label: 'Creato da'
+description: 'Nome utente dell''autore del contenuto.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

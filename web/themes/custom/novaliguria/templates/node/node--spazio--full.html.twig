@@ -1,0 +1,178 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ * - <span>Email: </span>: eliminate label da lista
+ * @see template_preprocess_node()
+ */
+#}
+{#{{ kint(node) }}#}
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+    'box-wrapper',
+    'node--type-servizio',
+  ]
+%}
+
+{#    <div class="wrapper-breadcrumb text-center">
+        {{ content.field_pseudobreadcrumbs }}
+    </div>#}
+<article{{ attributes.addClass(classes) }}>
+    <div class="row">
+        <div{{ content_attributes.addClass('node__content', 'clearfix',' col-sm-7') }}>
+            <header>
+                {{ title_prefix }}
+
+                <h2{{ title_attributes.addClass('node__title','node_title_servizi') }}>
+                    {{ label }}
+                </h2>
+
+                {{ title_suffix }}
+            </header>
+            <div class="pe-5 content_service">
+                {% if node.field_gratuito_a_pagamento is not empty %}
+                    <div class="box_tax box_tax_service">
+                        {{ content.field_gratuito_a_pagamento.0 }}
+                    </div>
+                {% endif %}
+                {% if node.field_tipologia is not empty %}
+                    <div class="box_tax box_tax_service">
+                        {{ content.field_tipologia.0 }}
+                    </div>
+                {% endif %}
+                <div class="info">
+                    {% if content.body is not empty %}
+                        {{ content.body }}
+                    {% endif %}
+                    <div class="info-detail">
+                        <div class="mb-3">
+                            {% if node.field_indirizzo is not empty %}
+                                <img src="/themes/custom/novaliguria/img/news_map-pin.svg" alt="pin mappa"/>&nbsp;{{ content.field_indirizzo.0 }} {{ content.field_civico_interno.0 }},
+                            {% endif %}
+                            {% if node.field_comune is not empty %}
+                                {{ content.field_comune.0 }}
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-3 field-ref">
+                            {% if node.field_indirizzo_e_mail_di_contat is not empty %}
+                                <i class="fas fa-arrow-circle-right"></i>&nbsp;Riferimenti:
+                                <div class="field-rif-content mb-1"><i class="far fa-envelope fa-cutom"></i>&nbsp; {{ content.field_indirizzo_e_mail_di_contat.0 }}</div>
+                            {% endif %}
+                            {% if node.field_telefono_spazio is not empty %}
+                                <div class="field-rif-content mb-1"><i class="fas fa-phone-alt fa-custom"></i>&nbsp; {{ content.field_telefono_spazio.0 }}</div>
+                            {% endif %}
+                            {% if node.field_sito_web_spazio is not empty %}
+                                <div class="field-rif-content site_name mb-1">Link: <a href="{{ content.field_sito_web_spazio.0 }}" target="_blank">{{ content.field_sito_web_spazio.0 }}</a></div>
+                                {% endif %}
+                                {% if node.field_disponibilita is not empty %}
+                                <div class="field-rif-content mb-1">Disponibilità: {{ content.field_disponibilita.0 }}</div>
+                            {% endif %}
+                            {% if node.field_altre_informazioni is not empty %}
+                                <div class="field-rif-content mb-1">Altre Informazioni: {{ content.field_altre_informazioni.0 }}</div>
+                            {% endif %}
+                            {% if node.field_posti is not empty %}
+                                <div class="field-rif-content">Posti: {{ content.field_posti.0 }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <ul class="list-unstyled list-custom">
+                        {% if node.field_servizi_accessori is not empty %}
+                            {{ content.field_servizi_accessori }}
+                        {% endif %}
+                    </ul>
+                    {#        <button class="flag btn flag-wishlist-servizi js-flag-wishlist-servizi-6575 action-flag">
+                                <a href="/node/add/richiesta_spazio?display=azienda&&nid={{ node.id }}">Invia la richiesta</a>
+                            </button>#}
+
+                    {{ content.flag_wishlist_servizi }}
+
+                </div>
+            </div>
+        </div>
+        {#RIQUADRO AZIENDA #}
+        <div class="col-sm-5  box-info-wrapper d-flex align-items-center">
+            <div class="box box-info">
+                {#     <h2 class="node_title_servizi">
+                         {{ node.Owner.field_nome.value }}
+                     </h2>#}
+                {# {{ node.field_stakeholder.entity.field_logo_impresa.value }}#}
+                <img src="{{ file_url(node.Owner.user_picture.0.entity.uri.value) }}" />
+                <ul class="list-unstyled list-custom">
+                      <li><i class="fas fa-check"></i>{{ drupal_view('scheda_stakeholder', 'block_1') }}</li>
+                    {% if node.field_sito_web_spazio is not empty %}
+                        <li class="site_name"><i class="fas fa-check"></i> <a href="{{ content.field_sito_web_spazio.0 }}" target="_blank">{{ content.field_sito_web_spazio.0 }}
+                            </a></li>
+                        {% endif %}
+                    <li><i class="fas fa-check"></i> <a href="/servizi-stakeholder/{{ node.getOwnerId() }}">Servizi</a> </li>
+                    <li><i class="fas fa-check"></i> <a href="/spazi-stakeholder/{{ node.getOwnerId() }}">Spazi</a> </li>   
+                <li><i class="fas fa-check"></i> <a href="/formazione-stakeholder/{{ node.getOwnerId() }}">Proposta formativa</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div><!--/row-->
+
+</article>

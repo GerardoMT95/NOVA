@@ -1,0 +1,30 @@
+langcode: it
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d1d9b362-d079-4240-8ad9-259c90e03033'
+  module:
+    - block_content
+    - system
+  theme:
+    - novaliguria
+id: headercarrello
+theme: novaliguria
+region: content
+weight: -17
+provider: null
+plugin: 'block_content:d1d9b362-d079-4240-8ad9-259c90e03033'
+settings:
+  id: 'block_content:d1d9b362-d079-4240-8ad9-259c90e03033'
+  label: 'header carrello'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /carrello
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modalita_di_erogazione
+    - node.type.servizio
+    - taxonomy.vocabulary.modalit
+id: node.servizio.field_modalita_di_erogazione
+field_name: field_modalita_di_erogazione
+entity_type: node
+bundle: servizio
+label: 'Modalità di erogazione'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      modalit: modalit
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

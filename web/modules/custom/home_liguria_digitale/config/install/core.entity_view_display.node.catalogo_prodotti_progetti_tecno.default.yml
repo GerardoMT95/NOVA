@@ -1,0 +1,197 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.catalogo_prodotti_progetti_tecno.body
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_allegati
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_caratteristiche_tecniche
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_categoria_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_categoria_tecnolo
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_collaborazione_partners
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_data_scadenza_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_durata_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_id_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_immagine_catalogo
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_impresa_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_obbiettivi
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_progetto_origine
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_riferimenti
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_settore_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_sito_web
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_stato_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_tipologia_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_valore_economico
+    - node.type.catalogo_prodotti_progetti_tecno
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.catalogo_prodotti_progetti_tecno.default
+targetEntityType: node
+bundle: catalogo_prodotti_progetti_tecno
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_allegati:
+    weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_caratteristiche_tecniche:
+    weight: 118
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_categoria_progetto:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_categoria_tecnolo:
+    weight: 113
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_collaborazione_partners:
+    weight: 111
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_data_scadenza_progetto:
+    weight: 109
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_durata_progetto:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_id_progetto:
+    weight: 114
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_immagine_catalogo:
+    weight: 112
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_impresa_progetto:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_obbiettivi:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_progetto_origine:
+    weight: 110
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_riferimenti:
+    weight: 117
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_settore_progetto:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sito_web:
+    weight: 115
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_stato_progetto:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tipologia_progetto:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_valore_economico:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

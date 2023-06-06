@@ -1,0 +1,89 @@
+
+{#{{ kint(node) }}#}
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+    'box-wrapper',
+    'node--type-servizio',
+  ]
+%}
+
+{#    <div class="wrapper-breadcrumb text-center">
+        {{ content.field_pseudobreadcrumbs }}
+    </div>#}
+<article{{ attributes.addClass(classes) }}>
+    <div class="row">
+        <div{{ content_attributes.addClass('node__content', 'clearfix',' col-sm-7') }}>
+            <header>
+                {{ title_prefix }}
+
+                <h2{{ title_attributes.addClass('node__title','node_title_servizi') }}>
+                    {{ label }}
+                </h2>
+
+                {{ title_suffix }}
+            </header>
+            <div class="pe-5 content_service">
+                {% if node.field_categoria is not empty %}
+                    <div class="box_tax box_tax_service">
+                        {{ content.field_categoria.0 }}
+                    </div>
+                {% endif %}
+                <div class="info">
+                    <div class="info-detail">
+                        {% if node.field_data_di_apertura is not empty %}
+                            <img src="/themes/custom/novaliguria/img/news_calendar.svg" alt="calendario"> <span>Apertura:</span>     {{ content.field_data_di_apertura.0 }}
+                        {% endif %}
+                        {% if node.field_data_di_chiusura is not empty %}<br/>
+                            <span>Scadenza:</span>   {{ content.field_data_di_chiusura.0 }}
+                        {% endif %}
+                    </div>
+                    {% if content.body is not empty %}
+                        {{ content.body }}
+                    {% endif %}
+                    <div class="info-detail">
+
+
+                        <div class="mb-3 field-ref">
+                            {% if node.field_note is not empty %}
+                                <i class="fas fa-arrow-circle-right"></i>&nbsp;Note:<br/><div class="field-rif-content">{{ content.field_note.0 }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {#RIQUADRO #}
+        <div class="col-sm-5  box-info-wrapper d-flex align-items-start pt-5">
+            <div class="box box-info mt-5">
+                <h2 class="node_title_servizi">
+                    {{ content.field_ente.0 }}
+                </h2>
+                <ul class="list-unstyled list-custom">
+                    {% if node.field_data_di_pubblicazione is not empty %}
+                        <li><i class="fas fa-check"></i>Data di pubblicazione: {{ content.field_data_di_pubblicazione.0 }}</li>
+                        {% endif %}
+                    <li>
+                        {% if node.field_url_bando is not empty %}
+                            <i class="fas fa-check"></i>    <a href="{{ content.field_url_bando.0 }}" target="_blank">Link al Bando</a>
+                        {% endif %}
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div><!--/row-->
+
+</article>
+

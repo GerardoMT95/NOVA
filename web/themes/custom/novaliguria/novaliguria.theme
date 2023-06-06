@@ -1,0 +1,286 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ */
+function novaliguria_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function novaliguria_preprocess_menu__tools_menu(&$variables) {
+  if ($flag = \Drupal::service('flag')->getFlagById('wishlist_servizi')) {
+    $user = \Drupal::currentUser();
+    $session = \Drupal::request()->getSession();
+    $session_id = $session->getId();
+    $flagcount = \Drupal::service('flag.count')->getUserFlagFlaggingCount($flag, $user, $session_id);
+    // prevent caching certain element
+    $variables['like_count'] = [
+      '#markup' => $flagcount,
+      '#cache' => ['max-age' => 0],
+    ];
+  }
+}
+function novaliguria_preprocess_block__topheadersearch(&$variables) {
+  if ($flag = \Drupal::service('flag')->getFlagById('wishlist_servizi')) {
+    $user = \Drupal::currentUser();
+    $session = \Drupal::request()->getSession();
+    $session_id = $session->getId();
+    $flagcount = \Drupal::service('flag.count')->getUserFlagFlaggingCount($flag, $user, $session_id);
+    // prevent caching certain element
+    $variables['like_count'] = [
+      '#markup' => $flagcount,
+      '#cache' => ['max-age' => 0],
+    ];
+  }
+  }
+/**
+ * @param array $suggestions
+ * @param array $variables
+ * @param $hook
+ */
+function novaliguria_theme_suggestions_fieldset_alter(array &$suggestions, array $variables, $hook)
+{
+    if (isset($variables['element']['#id'])) {
+        $id = str_replace("-", "_", $variables['element']['#id']);
+        $suggestions[] = $hook . '__' . $id;
+    }
+}
+function novaliguria_theme_suggestions_checkboxes_alter(array &$suggestions, array $variables, $hook) {
+    if (isset($variables['element']['#id'])) {
+        $id = str_replace("-", "_", $variables['element']['#id']);
+        $suggestions[] = $hook . '__' . $id;
+    }
+}
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function novaliguria_theme_suggestions_container_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+
+  if (isset($element['#type']) && $element['#type'] == 'view') {
+    $suggestions[] = 'container__' . $element['#name'];
+    $suggestions[] = 'container__' . $element['#name'] . '__' . $element['#display_id'];
+  }
+
+  if (isset($element['#type']) && $element['#type'] == 'container' && isset($element['children']['#type'])) {
+    $suggestions[] = 'container__' . $element['children']['#type'];
+  }
+}
+
+/**
+ * Replace the Search Submit Button with a Font Awesome Character and save button on node edit.
+ */
+function novaliguria_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-ricerca-servizi-page-1') {
+    $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;'); 
+//    $form['actions']['submit']['#attributes']['class'][] = 'fa fa-search';
+    }  
+    if ($form_id == 'node_richiesta_nuovi_servizi_form'||$form_id == 'node_richiesta_form'||$form_id == 'node_richiesta_spazio_form' ) {
+         $form['actions']['submit']['#value'] = t('INVIA LA RICHIESTA');
+     
+  }
+      if ($form_id == 'node_avviso_form') {
+         $form['actions']['submit']['#value'] = t('INVIA ANNUNCIO');
+     $form['actions']['preview']['#access'] = FALSE;
+  }
+    if ($form['#id'] == 'views-form-management-workflow-page-1')  {
+    $form['actions']['#weight'] = -99; //Decrease the weight of output to rise it above other elements.
+  }
+      if ($form['#id'] == 'taxonomy-term-categorie-servizi-form')  {
+    $form['description']['widget'][0]['#title'] = t('Chatbox');
+  }
+    //    if ($form['#id'] == 'nova-workflow-wizard-form492--2')  {
+    //$form['wrapper']['actions']['#weight'] = -1;
+    //$form['wrapper']['area']['#weight'] = 0;
+  //}
+  }
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+
+function novaliguria_theme_suggestions_views_view_table_alter(array &$suggestions, array &$variables, $hook)
+{
+    if ($variables['view']->id() && $variables['view']->current_display) {
+        $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display;
+
+    }
+}
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for node_edit_form.
+ */
+function novaliguria_theme_suggestions_node_edit_form_alter(array &$suggestions, array $variables) {
+  $route_match = \Drupal::routeMatch();
+
+  if ($node = $route_match->getParameter('node')) {
+    // When editing an existing node, add the node's bundle as the theme hook
+    // suggestion.
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $node->bundle();
+  }
+  elseif ($node_type = $route_match->getParameter('node_type')) {
+    // When a new node is created, the node type (object) is provided.
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $node_type->id();
+  }
+
+  return $suggestions;
+}
+
+/* implement hook
+*/
+ 
+function novaliguria_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+	
+	 if ($node = \Drupal::routeMatch()->getParameter('node')) {
+	     $suggestions[] = 'html__' . $node->bundle();
+	 }
+	
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for page.html.twig.
+ */
+function novaliguria_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add content type suggestions.
+  // Get current path.
+  $current_path = \Drupal::service('path.current')->getPath();
+  // explode args.
+  $path_args = explode('/', $current_path);
+  if (($node = \Drupal::request()->attributes->get('node')) && isset($path_args[3]) && ($path_args[3] == 'edit' || $path_args[3] == 'delete')) {
+    array_splice($suggestions, 1, 0, 'page__node__edit_' . $node->getType());
+  }
+}
+/**
+ * Add a "nodeType-detail-page" class to the body on a offer detail page
+ */
+//function novaliguria_preprocess_html(&$variables) {
+//  $node = \Drupal::routeMatch()->getParameter('node');
+//  if($node) {
+//    $variables['attributes']['class'][] = 'node-'. $node->bundle();
+//  }
+//}
+function novaliguria_preprocess_form_element(&$variables) {
+    
+  if($variables['element']['#type'] == 'checkbox') {
+    $variables['description_display'] = 'before';
+    $variables['description']['attributes']['class'] = 'privacy-text';
+  }
+}
+function novaliguria_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+     if ($form_id == 'views_exposed_form') {
+
+    $display_list = ['block_1'];
+
+    /** @var \Drupal\views\Entity\View $view */
+    $view = $form_state->getStorage('view');
+    if ($view['view']->id() == 'finanziamenti_search_api' && in_array($view['view']->current_display, $display_list)) {
+        
+              $form['actions']['submit']['#attributes']['class'] = array('fa icon');
+  $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    }
+    
+    if ($view['view']->id() == 'spazi_search_api' && in_array($view['view']->current_display, $display_list)) {
+        
+              $form['actions']['submit']['#attributes']['class'] = array('fa icon');
+  $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+
+    }
+    if ($view['view']->id() == 'pagina_lista_annunci' && in_array($view['view']->current_display, $display_list)) {
+        
+              $form['actions']['submit']['#attributes']['class'] = array('fa icon');
+  $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    }
+        if ($view['view']->id() == 'formazione' && in_array($view['view']->current_display, $display_list)) {
+        
+              $form['actions']['submit']['#attributes']['class'] = array('fa icon');
+  $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    }
+      if ($view['view']->id() == 'magazine' && in_array($view['view']->current_display, $display_list)) {
+        
+              $form['actions']['submit']['#attributes']['class'] = array('fa icon');
+  $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    }
+     if ($view['view']->id() == 'ricerca_generale') {
+        
+              $form['actions']['submit']['#attributes']['class'] = array('fa');
+  $form['actions']['submit']['#value']  = html_entity_decode('&#xf002;');
+    }    
+    if ($view['view']->id() == 'opportunity_index' && in_array($view['view']->current_display, $display_list)) {
+        
+              $form['actions']['submit']['#attributes']['class'] = array('fa icon');
+  $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    }
+}
+}
+
+/**
+ * @param array $suggestions
+ * @param array $variables
+ * @param $hook
+ */
+function novaliguria_theme_suggestions_views_view_fields_alter(array &$suggestions, array &$variables, $hook)
+{
+    if ($variables['view']->id() && $variables['view']->current_display) {
+        $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display . '__' . $variables['field']->field;
+
+    }
+}
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function novaliguria_preprocess_node(&$variables) {
+   $uid = \Drupal::currentUser()->id();
+   $author_id = $variables['node']->getOwner()->id();
+   if ($author_id == $uid) {
+     $variables['is_author'] = TRUE;
+   }
+   else {
+     $variables['is_author'] = FALSE;
+   }
+   $variables['role'] = \Drupal::currentUser()->getRoles();
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function novaliguria_preprocess_html(&$variables) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  $path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+  $path_alias = ltrim($path_alias, '/');
+  $variables['attributes']['class'][] = 'path-' . \Drupal\Component\Utility\Html::cleanCssIdentifier($path_alias);
+  $node = \Drupal::routeMatch()->getParameter('node');
+ if($node) {
+   $variables['attributes']['class'][] = 'node-'. $node->bundle();
+  }
+    $roles = \Drupal::currentUser()->getRoles();
+  foreach ($roles as $role) {
+    $variables['attributes']['class'][] = "role-{$role}";
+  }
+}

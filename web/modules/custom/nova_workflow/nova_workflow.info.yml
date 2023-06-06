@@ -1,0 +1,12 @@
+name: 'Nova Workflow Form'
+description: "Dall'idea al progetto."
+package: Custom
+php: 7.4
+type: module
+core_version_requirement: ^8.7.7 || ^9
+dependencies:
+  - 'drupal:views'
+  - 'drupal:taxonomy'
+
+version: '1.0.3'
+

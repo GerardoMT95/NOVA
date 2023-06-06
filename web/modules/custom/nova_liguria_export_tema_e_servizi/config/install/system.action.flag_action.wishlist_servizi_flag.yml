@@ -1,0 +1,14 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - flag.flag.wishlist_servizi
+  module:
+    - flag
+id: flag_action.wishlist_servizi_flag
+label: 'Aggiungi al carrello'
+type: node
+plugin: 'flag_action:wishlist_servizi_flag'
+configuration:
+  flag_id: wishlist_servizi
+  flag_action: flag

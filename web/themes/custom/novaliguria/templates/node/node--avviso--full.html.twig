@@ -1,0 +1,189 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ * - <span>Email: </span>: eliminate label da lista
+ * @see template_preprocess_node()
+ */
+#}
+{#{{ kint(node) }}#}
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+    'box-wrapper',
+    'node--type-servizio','node--type-avviso',
+  ]
+%}
+
+{#    <div class="wrapper-breadcrumb text-center">
+        {{ content.field_pseudobreadcrumbs }}
+    </div>#}
+<article{{ attributes.addClass(classes) }}>
+    <div class="row">
+        <div{{ content_attributes.addClass('node__content', 'clearfix',' col-sm-7') }}>
+            <header>
+                {#        {{ title_prefix }}#}
+
+                <h2{{ title_attributes.addClass('node__title','node_title_servizi') }}>
+                    {{ label }}
+                </h2>
+            </header>
+            <div class="pe-5 content_service">
+                {#   {% if node.field_categoria_avviso is not empty %}#}
+                <div class="box_tax box_tax_service">
+                    {{ content.field_categoria_annuncio.0 }}
+
+                </div>
+                {#       {% endif %}#}
+
+                <div class="info">
+                    <div class="info-detail">
+
+                        <img src="/themes/custom/novaliguria/img/news_calendar.svg"> <span>Dal </span>{{ node.field_data_pubblicazione.start_value|date(format='d/m/Y') }}
+
+
+                        <span> Al</span>   {{ node.field_data_pubblicazione.end_value|date(format='d/m/Y') }}
+
+                    </div>
+                    {% if content.body is not empty %}
+                        {{ content.body }}
+                    {% endif %}
+
+
+
+
+                </div>
+            </div>
+        </div>
+        {#RIQUADRO AZIENDA #}
+        <div class="col-sm-5  box-info-wrapper d-flex align-items-center">
+            <div class="box box-info">
+                <div class="info-detail">
+                    <h4>RIFERIMENTI:</h4>
+                                                                 {% if node.field_tipo_richiedente is not empty %}
+                                <div class="mb-1">
+                                {{ content.field_tipo_richiedente.0 }}
+                            </div>
+                        {% endif %}<div class="field-rif-content">
+                        {% if node.field_ragione_sociale is not empty %}
+                            <div class="mb-1">
+                                {{ content.field_ragione_sociale.0 }}
+                            </div>
+                        {% endif %} 
+                        {% if node.field_denominazione is not empty %}
+                            <div class="mb-1">
+                                {{ content.field_denominazione.0 }}
+                            </div>
+                        {% endif %}   
+                        <br/>
+                        {% if node.field_email_user is not empty %}
+                            <div class="mb-1">
+                                <i class="far fa-envelope"></i>&nbsp; {{ content.field_email_user.0 }}
+                            </div>
+                        {% endif %}
+                        <br/>
+                        {% if node.field_telefono_user is not empty %}
+                            <div class="mb-1">
+                                <i class="fas fa-phone-alt fa-custom me-1"></i>&nbsp;{{ content.field_telefono_user.0 }}
+                            </div>
+                        {% endif %}   
+                        <br/>
+
+                        {% if node.field_comune is not empty %}
+                            <div class="mb-1">
+                                <img src="/themes/custom/novaliguria/img/news_map-pin.svg" alt="pin mappa"class="me-1">&nbsp;{{ content.field_comune.0 }}, {{ content.field_comune['#items'][0].entity.parent.entity.label }}
+                            {% endif %}
+                            {% if node.field_regione is not empty %}
+                                {{ content.field_regione.0 }}
+                            </div>
+                        {% endif %}   
+                    </div>
+
+
+
+
+                </div>
+
+                <ul class="list-unstyled list-custom">
+
+                    <!--nuovi campi-->
+
+                    {% if is_author or 'administrator' in user.getroles or 'amministratore_portale' in user.getroles or 'content_admin' in user.getroles%}
+                        {% if node.field_gestione_workflow is not empty %}
+                            <li><i class="fas fa-check"></i>Stato: {{ content.field_gestione_workflow }}</li>
+                            {% endif %}
+                            {% if node.field_gestione_workflow is empty %}
+                            <li><i class="fas fa-check"></i>Stato: IN ATTESA</li>
+                            {% endif %}
+
+                    {% endif %}  
+                </ul>
+
+
+            </div>
+        </div>
+    </div><!--/row-->
+
+</article>
+

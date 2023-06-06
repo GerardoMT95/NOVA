@@ -1,0 +1,265 @@
+confronta_servizi:
+  path: '/confronta_servizi/{nid_service}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\ServiziController::confronta_servizi'
+    _title: 'Confronta Servizi'
+  requirements:
+    _permission: 'access content'
+
+confronta_spazi:
+  path: '/confronta_spazi/{nid_spazi}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\SpaziController::confronta_spazi'
+    _title: 'Confronta Spazi'
+  requirements:
+    _permission: 'access content'
+
+invia_richiesta:
+  path: '/invia_richiesta/{nid_service}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteController::invia_richiesta'
+    _title: 'Confronta Spazi'
+  requirements:
+    _permission: 'access content'
+
+elenco_richieste_attesa:
+  path: '/elenco_richieste_attesa'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteController::elenco_richieste_attesa'
+    _title: 'Elenco richieste'
+  requirements:
+    _permission: 'access content'
+
+invia_richiesta_servizi:
+  path: '/invia_richiesta_servizi/{nid_service}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteServiziController::invia_richiesta_servizi'
+    _title: 'Confronta Spazi'
+  requirements:
+    _permission: 'access content'
+
+filtra_servizi:
+  path: '/filtra_servizi'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\ServiziController::get_service'
+    _title: 'Filtra Servizi'
+  requirements:
+    _permission: 'access content'
+
+filtra_richieste_servizi:
+  path: '/filtra_richieste_servizi'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteServiziController::get_elenco_richieste_gestite'
+    _title: 'Filtra Servizi'
+  requirements:
+    _permission: 'access content'
+
+filtra_spazi:
+  path: '/filtra_spazi'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\SpaziController::get_spazi'
+    _title: 'Filtra spazi'
+  requirements:
+    _permission: 'access content'
+filtra_richieste_spazi:
+  path: '/filtra_richieste_spazi'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteSpaziController::get_elenco_richieste_gestite_spazi'
+    _title: 'Filtra spazi'
+  requirements:
+    _permission: 'access content'
+
+invia_richiesta_spazi:
+  path: '/invia_richiesta_spazi/{nid_spazi}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteSpaziController::invia_richiesta_spazi'
+    _title: 'Confronta Spazi'
+  requirements:
+    _permission: 'access content'
+
+create_add_new_agency_user:
+  path: '/create_add_new_agency_user/{request}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\ImpresaController::create_add_new_agency_user'
+  requirements:
+    _permission: 'access content'
+
+azienda_primaria:
+  path: '/azienda_primaria/{nid_azienda}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\UserController::azienda_primaria'
+  requirements:
+    _permission: 'access content'
+
+update_stato_richiesta:
+  path: '/update_stato_richiesta/{id_richiesta}/{id_stato}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteServiziController::update_stato_richiesta'
+  requirements:
+    _permission: 'access content'
+
+nuova_richiesta:
+  path: '/nuova_richiesta/{testo_nuova_richeista}/{pubblicabile}/{motivazione_select}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteServiziController::nuova_richiesta'
+  requirements:
+    _permission: 'access content'
+
+conferma_pubblicazione:
+  path: '/conferma_pubblicazione/{id_richiesta}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteServiziController::conferma_pubblicazione'
+  requirements:
+    _permission: 'access content'
+servizio_erogabile:
+  path: '/servizio_erogabile/{id_richiesta}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteServiziController::servizio_erogabile'
+  requirements:
+    _permission: 'access content'
+servizio_nonerogabile:
+  path: '/servizio_nonerogabile/{id_richiesta}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteServiziController::servizio_nonerogabile'
+  requirements:
+    _permission: 'access content'
+
+invia_conclusioni:
+  path: '/invia_conclusioni/{id_richiesta}/{id_motivazione}/{obiettivi}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteServiziController::invia_conclusioni'
+  requirements:
+    _permission: 'access content'
+
+add_service_user:
+  path: '/add_service_user/{nid}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\UserController::add_service_user'
+  requirements:
+    _permission: 'access content'
+
+remove_service_user:
+  path: '/remove_service_user/{nid}/{index}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\UserController::remove_service_user'
+  requirements:
+    _permission: 'access content'
+
+richiesta_stato_attesa:
+  path: '/richiesta_stato_attesa'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::richiesta_stato_attesa'
+  requirements:
+    _permission: 'access content'
+
+get_num_settore_catalogo:
+  path: '/get_num_settore_catalogo/{id_azienda}/{id_tipo_progetto}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\ImpresaController::get_num_settore_catalogo'
+  requirements:
+    _permission: 'access content'
+
+get_num_categoria_tecnologia:
+  path: '/get_num_categoria_tecnologia/{id_azienda}/{id_tipo_progetto}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\ImpresaController::get_num_categoria_tecnologia'
+  requirements:
+    _permission: 'access content'
+
+get_num_mercato_riferimento:
+  path: '/get_num_mercato_riferimento'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\ImpresaController::get_num_mercato_riferimento'
+  requirements:
+    _permission: 'access content'
+
+importFeedOpportunity:
+  path: '/importFeedOpportunity'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::importFeedOpportunity'
+  requirements:
+    _permission: 'access content'
+
+importFeedBandiFilse:
+  path: '/importFeedBandiFilse'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::importFeedBandiFilse'
+  requirements:
+    _permission: 'access content'
+
+importFeedBandiRegione:
+  path: '/importFeedBandiRegione'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::importFeedBandiRegione'
+  requirements:
+    _permission: 'access content'
+
+importFeedBandiAgri:
+  path: '/importFeedBandiAgri'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::importFeedBandiAgri'
+  requirements:
+    _permission: 'access content'
+
+importFeedNewsWylab:
+  path: '/importFeedNewsWylab'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::importFeedNewsWylab'
+  requirements:
+    _permission: 'access content'
+
+importFeedFormazioneWylab:
+  path: '/importFeedFormazioneWylab'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::importFeedFormazioneWylab'
+  requirements:
+    _permission: 'access content'
+
+esegui_cron:
+  path: '/esegui_cron'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::esegui_cron'
+  requirements:
+    _permission: 'access content'
+
+importFeedVetrinaImprese:
+  path: '/importFeedVetrinaImprese'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::importFeedVetrinaImprese'
+  requirements:
+    _permission: 'access content'
+
+importFeedVetrinaTassonomie:
+  path: '/importFeedVetrinaTassonomie'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\CronController::importFeedVetrinaTassonomie'
+  requirements:
+    _permission: 'access content'
+
+nuovo_commento:
+  path: '/nuovo_commento'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteController::nuovo_commento'
+  requirements:
+    _permission: 'access content'
+
+edit_azienda:
+  path: '/edit_azienda/{request}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\ImpresaController::edit_azienda'
+  requirements:
+    _permission: 'access content'
+
+invia_sollecito:
+  path: '/invia_sollecito/{id_richiesta}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\NotificationController::invia_sollecito'
+  requirements:
+    _permission: 'access content'
+
+update_stato_richiesta_nonerogabile:
+  path: '/update_stato_richiesta_nonerogabile/{id_richiesta}'
+  defaults:
+    _controller: 'Drupal\ex81\Controller\RichiesteController::update_stato_richiesta_nonerogabile'
+  requirements:
+    _permission: 'access content'

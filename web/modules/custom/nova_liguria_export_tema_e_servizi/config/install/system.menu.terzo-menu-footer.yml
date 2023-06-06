@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: terzo-menu-footer
+label: 'Terzo menu footer'
+description: ''
+locked: false

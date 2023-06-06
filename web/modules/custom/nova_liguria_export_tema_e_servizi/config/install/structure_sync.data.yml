@@ -1,0 +1,1771 @@
+blocks:
+  -
+    info: 'header carrello'
+    langcode: it
+    uuid: d1d9b362-d079-4240-8ad9-259c90e03033
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<div class=\"text-center mt-5 mb-5\">\r\n<h1 class=\"big\"><span>Carrello</span></h1>\r\n</div>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'header servizi'
+    langcode: it
+    uuid: d32666c2-a633-4405-ab35-2a9aca5e79c4
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<div class=\"text-center\">\r\n<h1 class=\"big\"><span>Servizi</span></h1>\r\n</div>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Top header search'
+    langcode: it
+    uuid: b623f611-1663-4762-81e7-81ef87d0b323
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Header User login'
+    langcode: it
+    uuid: d3ad3bd8-e7e5-42ad-9316-796b9d8d484d
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<div><a href=\"/user/login\"><img src=\"/themes/custom/novaliguria/img/user_login.png\" /> Accedi all'area riservata</a></div>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Legal footer bottom'
+    langcode: it
+    uuid: e80c5d34-b784-4042-bdfc-cbf8b6716151
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<ul class=\"list-inline legal\">\r\n\t<li class=\"list-inline-item\"><a href=\"#\">Media policy</a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"#\">Note legali</a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"#\">Privacy Policy</a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"#\">Mappa del sito</a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"#\">Amministrazione trasparente</a></li>\r\n</ul>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Loghi footer'
+    langcode: it
+    uuid: 29348a1a-6b6d-4876-b777-419196f99a3c
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<ul class=\"list-inline\">\r\n\t<li class=\"list-inline-item\"><a href=\"\"><img src=\"/themes/custom/novaliguria/img/logo_pon.png\" /></a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"\"><img src=\"/themes/custom/novaliguria/img/logo_comune_genova_color.png\" /></a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"\"><img src=\"/themes/custom/novaliguria/img/logo_rep_ita.png\" /></a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"\"><img src=\"/themes/custom/novaliguria/img/logo_eu.png\" /></a></li>\r\n</ul>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Social footer'
+    langcode: it
+    uuid: dd31ebf5-d5ab-43f7-af61-0d94bb6b5cab
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p class=\"social\">Seguici su</p>\r\n<ul class=\"list-inline\">\r\n\t<li class=\"list-inline-item\"><a href=\"\"><i class=\"fab fa-facebook-f\">&nbsp;</i></a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"\"><i class=\"fab fa-youtube\">&nbsp;</i></a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"\"><i class=\"fab fa-twitter\">&nbsp;</i></a></li>\r\n\t<li class=\"list-inline-item\"><a href=\"\"><i aria-hidden=\"true\" class=\"fa fa-rss\">&nbsp;</i></a></li>\r\n</ul>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Logo Comune Genova'
+    langcode: it
+    uuid: 9ccfc5c3-efa8-4670-a170-047ec9c39d24
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><img alt=\"logo del comune di Genova\" src=\"/themes/custom/novaliguria/img/logo_comune_genova.png\" /></p>\r\n\r\n<p>Via Garibaldi 9, Palazzo<br />\r\nTursi, 16124 Genova<br>\r\nP. Iva: 00856930102</p>\r\n"
+          summary: ''
+          format: full_html
+taxonomies:
+  categorie_servizi:
+    -
+      vid: categorie_servizi
+      tid: '135'
+      langcode: it
+      name: 'Accelerazione Impresa in ambito sportivo'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '26'
+      uuid: 28710cd4-540f-4969-adf0-35ecd532f08c
+    -
+      vid: categorie_servizi
+      tid: '15'
+      langcode: it
+      name: 'Accelerazione tecnologica'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '3'
+      uuid: d5c0fd6c-e45c-4631-b6ea-4ed601abbfe3
+    -
+      vid: categorie_servizi
+      tid: '46'
+      langcode: it
+      name: 'Accesso al credito'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '8'
+      uuid: 43dccb92-9d60-4869-af77-1f8f7ee76d0f
+    -
+      vid: categorie_servizi
+      tid: '59'
+      langcode: it
+      name: 'Accesso al credito'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '11'
+      uuid: d1368db1-ddfe-4c0f-87eb-2f80c871be9d
+    -
+      vid: categorie_servizi
+      tid: '93'
+      langcode: it
+      name: 'Accesso al credito'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '17'
+      uuid: 52296879-e69b-4f7e-82ae-58f00fdec3e4
+    -
+      vid: categorie_servizi
+      tid: '123'
+      langcode: it
+      name: 'Accesso al credito'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '23'
+      uuid: 25613f59-b72a-421d-b2a1-9362ae7870c0
+    -
+      vid: categorie_servizi
+      tid: '126'
+      langcode: it
+      name: 'Accompagnamento all''innovazione'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '24'
+      uuid: 6c920bd3-b45c-4c96-b27e-ea656ef6d013
+    -
+      vid: categorie_servizi
+      tid: '75'
+      langcode: it
+      name: 'Alternanza scuola-lavoro'
+      description__value: null
+      description__format: null
+      weight: '9'
+      parent: '13'
+      uuid: 10cafca2-d5b8-44a7-b634-a33afb361525
+    -
+      vid: categorie_servizi
+      tid: '108'
+      langcode: it
+      name: 'Alternanza scuola-lavoro'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '19'
+      uuid: 7f960a5c-72e8-4c6b-a54e-6eceb959e964
+    -
+      vid: categorie_servizi
+      tid: '133'
+      langcode: it
+      name: 'Alternanza Scuola-lavoro'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '25'
+      uuid: 0810a90a-333e-436d-96d7-a3fdc3b20385
+    -
+      vid: categorie_servizi
+      tid: '27'
+      langcode: it
+      name: 'Analisi fabbisogni e percorsi di accompagnamento'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '5'
+      uuid: 084bce6b-8f15-4c5c-84ce-5c6f5adcc1ad
+    -
+      vid: categorie_servizi
+      tid: '25'
+      langcode: it
+      name: 'Aree di innovazione: Scenari e competenze'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '4'
+      uuid: 540f955b-bf3b-4360-840a-5d4aa3969f6c
+    -
+      vid: categorie_servizi
+      tid: '83'
+      langcode: it
+      name: 'Assessment della tecnologia e sviluppo'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '15'
+      uuid: 111e0484-962e-4b34-9e3a-1ded1d0d8308
+    -
+      vid: categorie_servizi
+      tid: '107'
+      langcode: it
+      name: 'Assistenza alla progettazione europea'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '19'
+      uuid: 06889ace-23b5-45de-91d6-946aa7a786eb
+    -
+      vid: categorie_servizi
+      tid: '68'
+      langcode: it
+      name: 'Assistenza alla richiesta di brevetti'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '13'
+      uuid: 265d6edb-e092-411f-88ac-2e9c2f6a0ce9
+    -
+      vid: categorie_servizi
+      tid: '85'
+      langcode: it
+      name: 'Assistenza alla richiesta di brevetti'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '15'
+      uuid: 034a3857-76c0-4d0a-8064-c2118b3259d3
+    -
+      vid: categorie_servizi
+      tid: '129'
+      langcode: it
+      name: 'Assistenza alla richiesta di brevetti'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '24'
+      uuid: 16866cc2-ec5d-480a-8106-d68867e3eda2
+    -
+      vid: categorie_servizi
+      tid: '71'
+      langcode: it
+      name: 'Assistenza progettazione europea'
+      description__value: null
+      description__format: null
+      weight: '5'
+      parent: '13'
+      uuid: 255c59fb-251a-4da4-ba88-22a7eaab25ca
+    -
+      vid: categorie_servizi
+      tid: '47'
+      langcode: it
+      name: 'Attivazione finanziamenti privati'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '8'
+      uuid: a4b0e157-4ee5-4a75-bf2a-4549919a4e69
+    -
+      vid: categorie_servizi
+      tid: '60'
+      langcode: it
+      name: 'Attivazione finanziamenti privati e venture Capital'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '11'
+      uuid: 220447f8-fc06-4a89-b134-4542e1b99db0
+    -
+      vid: categorie_servizi
+      tid: '94'
+      langcode: it
+      name: 'Attivazione finanziamenti privati e venture Capital'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '17'
+      uuid: 8aa1465f-f9af-4023-b688-f1e5365bbebe
+    -
+      vid: categorie_servizi
+      tid: '124'
+      langcode: it
+      name: 'Attivazione finanziamenti privati e Venture Capital'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '23'
+      uuid: f8585b6d-657c-4847-bace-2cefa7d68f65
+    -
+      vid: categorie_servizi
+      tid: '76'
+      langcode: it
+      name: 'Attrezzature e laboratori'
+      description__value: null
+      description__format: null
+      weight: '10'
+      parent: '13'
+      uuid: b52a6cc8-51f5-400b-9952-0332c8fb43af
+    -
+      vid: categorie_servizi
+      tid: '87'
+      langcode: it
+      name: 'Attrezzature e laboratori'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '15'
+      uuid: 665fee4e-131f-45ea-a67d-d56ead46dadf
+    -
+      vid: categorie_servizi
+      tid: '118'
+      langcode: it
+      name: 'Attrezzature e laboratori'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '21'
+      uuid: afe11086-d466-40cf-908e-d8b856ffb046
+    -
+      vid: categorie_servizi
+      tid: '79'
+      langcode: it
+      name: 'Bandi insediamento d''impresa'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '14'
+      uuid: 9b082ab5-6a42-4aa7-b676-d9d3ebb2af85
+    -
+      vid: categorie_servizi
+      tid: '110'
+      langcode: it
+      name: 'Bandi insediamento d''impresa'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '20'
+      uuid: a9d1cfa1-3355-4921-84ae-8e9bf640d872
+    -
+      vid: categorie_servizi
+      tid: '137'
+      langcode: it
+      name: 'Bandi insediamento d''impresa'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '26'
+      uuid: e10fee3c-a151-4585-85dc-82af45c22f59
+    -
+      vid: categorie_servizi
+      tid: '6'
+      langcode: it
+      name: 'Business Plan'
+      description__value: "<p>Help Business Plan</p>\r\n"
+      description__format: basic_html
+      weight: '1'
+      parent: '1'
+      uuid: 68f646c3-f152-42b9-b87a-6667b5289d74
+    -
+      vid: categorie_servizi
+      tid: '38'
+      langcode: it
+      name: 'Business Plan e Business Model'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '6'
+      uuid: be405682-c424-46ae-a7e1-a42336263bc7
+    -
+      vid: categorie_servizi
+      tid: '66'
+      langcode: it
+      name: 'Business Plan e Business Model'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '13'
+      uuid: b5170607-b3c9-4121-9b04-9f389ab1e373
+    -
+      vid: categorie_servizi
+      tid: '104'
+      langcode: it
+      name: 'Business Plan e Business model'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '19'
+      uuid: cef88ec1-65e2-46a4-bb68-5c9f8b97203e
+    -
+      vid: categorie_servizi
+      tid: '9'
+      langcode: it
+      name: Competenze
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '2'
+      uuid: 3fbc345d-69e6-4705-9ae7-5d8fc0270120
+    -
+      vid: categorie_servizi
+      tid: '36'
+      langcode: it
+      name: 'Comunicazione e marketing'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '6'
+      uuid: ba2aa72f-332e-4e27-9d08-a729c1a0bd70
+    -
+      vid: categorie_servizi
+      tid: '37'
+      langcode: it
+      name: 'Connessione tra innovatori e territorio'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '6'
+      uuid: 49b342da-1af9-4991-a08d-bca2b7cbfac2
+    -
+      vid: categorie_servizi
+      tid: '65'
+      langcode: it
+      name: 'Connessione tra innovatori e territorio'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '12'
+      uuid: 9bf5f6ce-e603-4087-875e-1770952cb444
+    -
+      vid: categorie_servizi
+      tid: '99'
+      langcode: it
+      name: 'Connessione tra innovatori e territorio'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '18'
+      uuid: 6fe5e857-5be6-4e7f-b351-0a3836893d69
+    -
+      vid: categorie_servizi
+      tid: '116'
+      langcode: it
+      name: 'Connessioni tra innovatori e territorio'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '21'
+      uuid: 5729c050-cfc6-4664-bb4f-1fb60bd046e8
+    -
+      vid: categorie_servizi
+      tid: '74'
+      langcode: it
+      name: 'Consulenze legali, amministrative, bancarie, fiscali, ambientali energetici, diritto del lavoro etc.'
+      description__value: null
+      description__format: null
+      weight: '8'
+      parent: '13'
+      uuid: 700c01fe-633a-49aa-a7f5-60731700a444
+    -
+      vid: categorie_servizi
+      tid: '101'
+      langcode: it
+      name: 'Consulenze legali, amministrativi, bancarie, fiscali, ambientali, energetiche, diritto del lavoro etc.'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '19'
+      uuid: dcea4715-cfb0-4ad6-a7ba-59196cdcb509
+    -
+      vid: categorie_servizi
+      tid: '40'
+      langcode: it
+      name: 'Consulenze legali, amministrativi, bancarie, fiscali, lavoro, previdenziale etc.'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '7'
+      uuid: 972ba78b-ee0e-4558-b5c7-d9f782a82355
+    -
+      vid: categorie_servizi
+      tid: '127'
+      langcode: it
+      name: 'Consulenze marketing, amministrative, digitali e legali, etc.'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '24'
+      uuid: 77095eab-fa38-458e-8cd7-c40df7a5e9e0
+    -
+      vid: categorie_servizi
+      tid: '90'
+      langcode: it
+      name: 'Consulenze ricerche di mercato'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '16'
+      uuid: 1ee9c025-e61e-4875-9a79-fbb19856516d
+    -
+      vid: categorie_servizi
+      tid: '56'
+      langcode: it
+      name: 'Consulenze sviluppo d''impresa'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '10'
+      uuid: e4f8060f-af3e-4761-a29e-dcaca7df726e
+    -
+      vid: categorie_servizi
+      tid: '91'
+      langcode: it
+      name: 'Consulenze sviluppo d''impresa'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '16'
+      uuid: 47544083-0320-4455-bfc6-40c815c87971
+    -
+      vid: categorie_servizi
+      tid: '33'
+      langcode: it
+      name: 'Contest per idee di impresa'
+      description__value: null
+      description__format: null
+      weight: '6'
+      parent: '5'
+      uuid: 885d88e6-ca16-4c28-8d93-9dee65a324a6
+    -
+      vid: categorie_servizi
+      tid: '62'
+      langcode: it
+      name: 'Contest per lo sviluppo di idee di impresa'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '12'
+      uuid: dac9fdc0-6885-4318-93ad-593d0442f2ac
+    -
+      vid: categorie_servizi
+      tid: '7'
+      langcode: it
+      name: 'Costituzione e Avvio'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '1'
+      uuid: 91004163-7910-4077-92a3-bdf1cd324617
+    -
+      vid: categorie_servizi
+      tid: '78'
+      langcode: it
+      name: Coworking
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '14'
+      uuid: 79c66a3d-4335-4582-8a74-e016cded080e
+    -
+      vid: categorie_servizi
+      tid: '112'
+      langcode: it
+      name: Coworking
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '20'
+      uuid: 2517649b-7112-4fb1-9a15-17466c1bf978
+    -
+      vid: categorie_servizi
+      tid: '138'
+      langcode: it
+      name: Coworking
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '26'
+      uuid: e222e708-b17a-438c-b5f8-9966e42bc3c5
+    -
+      vid: categorie_servizi
+      tid: '97'
+      langcode: it
+      name: 'Creazione partnership'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '18'
+      uuid: cf72cf11-04d6-4bc0-bee3-abf7bea4dbd6
+    -
+      vid: categorie_servizi
+      tid: '61'
+      langcode: it
+      name: 'Creazione partnership e attivazione reti'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '12'
+      uuid: b761219b-bd92-40e8-892f-c6662857e79a
+    -
+      vid: categorie_servizi
+      tid: '5'
+      langcode: it
+      name: 'Dall''idea al progetto'
+      description__value: "<p>Descrizione dall'idea al progetto</p>\r\n"
+      description__format: basic_html
+      weight: '0'
+      parent: '1'
+      uuid: 228f0de9-e224-4834-a2a4-45107bd6ea1b
+    -
+      vid: categorie_servizi
+      tid: '43'
+      langcode: it
+      name: 'Digitalizzazione d''impresa'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '7'
+      uuid: f37dea11-bdd8-41ef-bda1-6db232002d68
+    -
+      vid: categorie_servizi
+      tid: '51'
+      langcode: it
+      name: 'Digitalizzazione d''impresa'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '9'
+      uuid: e4c4bbef-fde0-4984-8878-f8a08b3534c6
+    -
+      vid: categorie_servizi
+      tid: '84'
+      langcode: it
+      name: 'Digitalizzazione d''impresa'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '15'
+      uuid: 0cb0fd21-2a41-4f03-b318-e87fd42f76d8
+    -
+      vid: categorie_servizi
+      tid: '117'
+      langcode: it
+      name: 'Digitalizzazione imprese'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '21'
+      uuid: 3eafc8ca-a856-4322-b37b-2319f38d2ff4
+    -
+      vid: categorie_servizi
+      tid: '125'
+      langcode: it
+      name: 'Erogazione agevolazioni'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '23'
+      uuid: df0e8c8d-622c-4528-9911-a426e79c145b
+    -
+      vid: categorie_servizi
+      tid: '45'
+      langcode: it
+      name: 'Erogazione agevolazioni bandi pubblici'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '8'
+      uuid: 21f2f2ae-80c5-4c0f-afeb-6d5f4702d4c8
+    -
+      vid: categorie_servizi
+      tid: '58'
+      langcode: it
+      name: 'Erogazione agevolazioni bandi pubblici'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '11'
+      uuid: 1075c6c4-c840-4fdc-bf6a-e3fada17609e
+    -
+      vid: categorie_servizi
+      tid: '95'
+      langcode: it
+      name: 'Erogazione agevolazioni bandi pubblici Regione Liguria'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '17'
+      uuid: 6cdfdf60-41e7-457c-9162-158e1e2e2293
+    -
+      vid: categorie_servizi
+      tid: '82'
+      langcode: it
+      name: 'Fattibilità tecnico scientifica'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '15'
+      uuid: ec599ca6-5a47-47b4-bccb-5023847434a8
+    -
+      vid: categorie_servizi
+      tid: '11'
+      langcode: it
+      name: Finanziamenti
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '2'
+      uuid: 3e936257-97b4-47f6-9340-6b6e3af9a598
+    -
+      vid: categorie_servizi
+      tid: '17'
+      langcode: it
+      name: Finanziamenti
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '3'
+      uuid: 17211d72-1f45-4c3a-a0ee-3985677633ad
+    -
+      vid: categorie_servizi
+      tid: '8'
+      langcode: it
+      name: 'Finanziamenti per l''avvio'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '1'
+      uuid: 0a7c54b7-7e2e-4b63-bec1-cba34187207d
+    -
+      vid: categorie_servizi
+      tid: '120'
+      langcode: it
+      name: 'Finanziamenti pubblici'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '23'
+      uuid: 2dc33bb6-2878-44c8-bb4a-8226db811af4
+    -
+      vid: categorie_servizi
+      tid: '49'
+      langcode: it
+      name: 'Formazione per progettazione europea'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '9'
+      uuid: e644ceac-fbb7-4a2d-af2d-b96e0965a1be
+    -
+      vid: categorie_servizi
+      tid: '103'
+      langcode: it
+      name: 'Formazione per progettazione europea'
+      description__value: null
+      description__format: null
+      weight: '5'
+      parent: '19'
+      uuid: 718899fa-6fe7-4101-9eb4-d7e161f91212
+    -
+      vid: categorie_servizi
+      tid: '132'
+      langcode: it
+      name: 'Formazione per progettazione europea'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '25'
+      uuid: f29fee0f-253e-476c-9b74-81712e795875
+    -
+      vid: categorie_servizi
+      tid: '1'
+      langcode: it
+      name: 'Hai un''idea? Crea una start up'
+      description__value: "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>\r\n"
+      description__format: full_html
+      weight: '0'
+      parent: '0'
+      uuid: bb4400e8-7235-497c-869b-f97ed9b0c146
+    -
+      vid: categorie_servizi
+      tid: '2'
+      langcode: it
+      name: 'Hai una start up? Fai crescere la tua azienda'
+      description__value: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
+      description__format: basic_html
+      weight: '104'
+      parent: '0'
+      uuid: 62707012-d52a-4e17-b5f3-75df19f3fbf4
+    -
+      vid: categorie_servizi
+      tid: '134'
+      langcode: it
+      name: Incubazione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '26'
+      uuid: adeaee05-ecdf-44e6-a5dc-a266686f37a5
+    -
+      vid: categorie_servizi
+      tid: '44'
+      langcode: it
+      name: 'Informazioni sui finanziamenti agevolati'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '8'
+      uuid: 67da639e-b818-4f3f-9ddd-d6492ac59553
+    -
+      vid: categorie_servizi
+      tid: '57'
+      langcode: it
+      name: 'Informazioni sui finanziamenti agevolati'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '11'
+      uuid: ea64efb7-6543-41e9-8471-8a7098e3171b
+    -
+      vid: categorie_servizi
+      tid: '92'
+      langcode: it
+      name: 'Informazioni sui finanziamenti agevolati'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '17'
+      uuid: c97e59d3-018b-4c90-b1c0-e03d1e76555f
+    -
+      vid: categorie_servizi
+      tid: '21'
+      langcode: it
+      name: 'Innovazione e Trasferimento tecnologico'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '4'
+      uuid: e90b97f6-547b-44db-b2f7-021da231f044
+    -
+      vid: categorie_servizi
+      tid: '113'
+      langcode: it
+      name: 'Innovazione prodotto/servizio'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '21'
+      uuid: c30b5176-d6fc-4329-aacd-fe5a7ff04156
+    -
+      vid: categorie_servizi
+      tid: '22'
+      langcode: it
+      name: Mercati
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '4'
+      uuid: 3d969cda-35cd-4489-a8f9-8d2c1d4deaa0
+    -
+      vid: categorie_servizi
+      tid: '63'
+      langcode: it
+      name: 'Networking internazionale'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '12'
+      uuid: 69e1ba54-11a7-4a03-9ff2-762ac845ff63
+    -
+      vid: categorie_servizi
+      tid: '98'
+      langcode: it
+      name: 'Networking internazionale'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '18'
+      uuid: d1029da4-fe9f-4005-b7b8-504b7a26fc33
+    -
+      vid: categorie_servizi
+      tid: '121'
+      langcode: it
+      name: 'Orientamento alla ricerca Fondi Europei'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '23'
+      uuid: 448f9eba-3963-49cc-a9ae-1723769b3ed5
+    -
+      vid: categorie_servizi
+      tid: '70'
+      langcode: it
+      name: 'Orientamento ricerca fondi europei'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '13'
+      uuid: df53600a-d698-4c1d-8999-ee974b688815
+    -
+      vid: categorie_servizi
+      tid: '96'
+      langcode: it
+      name: 'Orientamento ricerca fondi europei'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '17'
+      uuid: d5184ffc-48f0-4c1d-8ea6-15054799a4f4
+    -
+      vid: categorie_servizi
+      tid: '12'
+      langcode: it
+      name: 'Partnership e Networking'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '2'
+      uuid: cdeef76f-1819-4d25-8929-3936c4464605
+    -
+      vid: categorie_servizi
+      tid: '18'
+      langcode: it
+      name: 'Partnership e Networking'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '3'
+      uuid: 6fde060a-879a-4568-8272-d8ec3be64f74
+    -
+      vid: categorie_servizi
+      tid: '28'
+      langcode: it
+      name: 'Percorsi di cultura d''impresa'
+      description__value: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. \r\n"
+      description__format: basic_html
+      weight: '1'
+      parent: '5'
+      uuid: 5260b26e-4e4c-4b7b-bb50-fc10d79feaca
+    -
+      vid: categorie_servizi
+      tid: '102'
+      langcode: it
+      name: 'Percorsi di Cultura d''impresa'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '19'
+      uuid: 756a25bb-d5b7-4b18-aeb9-6041e22520fc
+    -
+      vid: categorie_servizi
+      tid: '48'
+      langcode: it
+      name: 'Percorsi di Cultura d''impresa e specialistici'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '9'
+      uuid: 4bc544f7-4127-48bb-976e-bcfef9e18e0f
+    -
+      vid: categorie_servizi
+      tid: '29'
+      langcode: it
+      name: 'Percorsi formativi nuove tecnologie'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '5'
+      uuid: d287e982-bf02-4a10-ae68-e74261919e95
+    -
+      vid: categorie_servizi
+      tid: '50'
+      langcode: it
+      name: 'Percorsi formativi nuove tecnologie'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '9'
+      uuid: d967bf4e-652d-4dfc-aa08-fc15fe7442d2
+    -
+      vid: categorie_servizi
+      tid: '81'
+      langcode: it
+      name: 'Percorsi formativi, seminari e workshop'
+      description__value: null
+      description__format: null
+      weight: '6'
+      parent: '15'
+      uuid: 4bd8fab4-461a-43bb-8a0c-84b0cf8b8406
+    -
+      vid: categorie_servizi
+      tid: '131'
+      langcode: it
+      name: 'Percorsi formativi, seminari e workshop specialistici'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '25'
+      uuid: 7134dfc3-961c-48ba-be28-caf57245d473
+    -
+      vid: categorie_servizi
+      tid: '54'
+      langcode: it
+      name: 'Pianificazione di marketing'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '10'
+      uuid: 9a8c00f5-7493-42c1-980b-ab8e9dd8226f
+    -
+      vid: categorie_servizi
+      tid: '89'
+      langcode: it
+      name: 'Pianificazione marketing'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '16'
+      uuid: 4b454e0e-5c06-4b47-a0c8-e839c52a8d63
+    -
+      vid: categorie_servizi
+      tid: '122'
+      langcode: it
+      name: 'Presentazione dei progetti di ricerca e innovazione'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '23'
+      uuid: 92d3e67c-09c8-4bf7-9e8a-5d4654a7f77b
+    -
+      vid: categorie_servizi
+      tid: '72'
+      langcode: it
+      name: 'Progettazione culturale e organizzazione eventi'
+      description__value: null
+      description__format: null
+      weight: '6'
+      parent: '13'
+      uuid: c6d5c5be-9d34-41fd-a96f-19ffacef3764
+    -
+      vid: categorie_servizi
+      tid: '105'
+      langcode: it
+      name: 'Progettazione culturale e organizzazione eventi'
+      description__value: null
+      description__format: null
+      weight: '6'
+      parent: '19'
+      uuid: f8be93e3-9570-4129-9723-78ebf8799262
+    -
+      vid: categorie_servizi
+      tid: '52'
+      langcode: it
+      name: 'Proprietà intellettuale e industriale'
+      description__value: null
+      description__format: null
+      weight: '5'
+      parent: '9'
+      uuid: 12b5031c-d17c-4401-8afa-32850edde11d
+    -
+      vid: categorie_servizi
+      tid: '39'
+      langcode: it
+      name: 'Registrazione impresa'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '7'
+      uuid: e48c20d8-3ac7-459e-8fe8-2e2fe232eb75
+    -
+      vid: categorie_servizi
+      tid: '73'
+      langcode: it
+      name: 'Registro Imprese'
+      description__value: null
+      description__format: null
+      weight: '7'
+      parent: '13'
+      uuid: abfcce74-65ad-4047-9d66-4adceb7f4ac5
+    -
+      vid: categorie_servizi
+      tid: '100'
+      langcode: it
+      name: 'Registro Imprese'
+      description__value: null
+      description__format: null
+      weight: '7'
+      parent: '19'
+      uuid: 879bdd02-dc7d-4180-9d30-5fb318dabd2f
+    -
+      vid: categorie_servizi
+      tid: '23'
+      langcode: it
+      name: 'Reperimento Capitali'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '4'
+      uuid: 972e3dc4-35eb-41ec-abf4-d410c90f019f
+    -
+      vid: categorie_servizi
+      tid: '41'
+      langcode: it
+      name: 'Richiesta di brevetti'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '7'
+      uuid: 9dae3d75-59b6-47eb-a825-e81153404826
+    -
+      vid: categorie_servizi
+      tid: '3'
+      langcode: it
+      name: 'Sei una PMI innovativa ? Espandi il tuo business'
+      description__value: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
+      description__format: basic_html
+      weight: '105'
+      parent: '0'
+      uuid: 704a8138-227a-485a-a5a0-8266f3e6ef84
+    -
+      vid: categorie_servizi
+      tid: '80'
+      langcode: it
+      name: 'Servizi di incubazione'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '14'
+      uuid: 40963c71-5c23-4e59-9936-8440c57c7f62
+    -
+      vid: categorie_servizi
+      tid: '111'
+      langcode: it
+      name: 'Servizi di incubazione'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '20'
+      uuid: 4c1bd00c-b0b4-4201-b294-c4cd139c6e88
+    -
+      vid: categorie_servizi
+      tid: '30'
+      langcode: it
+      name: 'Servizi di incubazione con percorsi personalizzati'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '5'
+      uuid: d4bf821f-6f7f-4872-a9d0-c73b0d0f387a
+    -
+      vid: categorie_servizi
+      tid: '69'
+      langcode: it
+      name: 'Servizi personalizzati di comunicazione e marketing'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '13'
+      uuid: 33294217-6127-4c19-bfa6-44794ea39131
+    -
+      vid: categorie_servizi
+      tid: '106'
+      langcode: it
+      name: 'Servizi personalizzati di comunicazione e marketing'
+      description__value: null
+      description__format: null
+      weight: '8'
+      parent: '19'
+      uuid: 9f5cdc63-bdce-45f4-b6ad-e77e63772ddc
+    -
+      vid: categorie_servizi
+      tid: '13'
+      langcode: it
+      name: 'Servizi Specialistici'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '2'
+      uuid: 40d4bf0a-43b7-4c31-b2c9-7419526d65a9
+    -
+      vid: categorie_servizi
+      tid: '130'
+      langcode: it
+      name: 'Servizi specialistici di incubazione'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '24'
+      uuid: fc32179d-33e2-4209-b809-09ffc9a76387
+    -
+      vid: categorie_servizi
+      tid: '19'
+      langcode: it
+      name: 'Servizi specialistici e aggiornamenti'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '3'
+      uuid: 294469a0-b65d-4fcf-a9e4-7abe9080b6b9
+    -
+      vid: categorie_servizi
+      tid: '20'
+      langcode: it
+      name: Spazi
+      description__value: null
+      description__format: null
+      weight: '5'
+      parent: '3'
+      uuid: a33fe8a9-1afd-4ee4-a3b2-83f81b98f32d
+    -
+      vid: categorie_servizi
+      tid: '26'
+      langcode: it
+      name: Spazi
+      description__value: null
+      description__format: null
+      weight: '5'
+      parent: '4'
+      uuid: 240aaf5b-3396-41ce-9ecb-d5797f8098e5
+    -
+      vid: categorie_servizi
+      tid: '14'
+      langcode: it
+      name: 'Spazi e insediamenti con servizi di accompagnamento'
+      description__value: null
+      description__format: null
+      weight: '5'
+      parent: '2'
+      uuid: 3f02c4d7-0320-49d1-b5d4-0098f6b9eda3
+    -
+      vid: categorie_servizi
+      tid: '136'
+      langcode: it
+      name: 'Spazi per workshop, riunioni ed eventi'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '26'
+      uuid: e71f4113-1bc0-4fa2-9458-96b55876e7b4
+    -
+      vid: categorie_servizi
+      tid: '77'
+      langcode: it
+      name: 'Spazi per workshop, riunioni, etc.'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '14'
+      uuid: 778e348e-c5cb-4f28-bbe5-9425f6ea3e7b
+    -
+      vid: categorie_servizi
+      tid: '109'
+      langcode: it
+      name: 'Spazi per workshop, riunioni, eventi'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '20'
+      uuid: fd580275-1f4f-4bab-8f08-510e9bf09191
+    -
+      vid: categorie_servizi
+      tid: '34'
+      langcode: it
+      name: 'Startup Mentor'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '6'
+      uuid: 33308a06-6f14-4db1-a55b-3fb2e92c15ef
+    -
+      vid: categorie_servizi
+      tid: '31'
+      langcode: it
+      name: 'Supporto alla creazione del team'
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '5'
+      uuid: 8daf36fd-a0ba-4ca4-a98b-ce1c3dbe2cde
+    -
+      vid: categorie_servizi
+      tid: '32'
+      langcode: it
+      name: 'Supporto tecnologico alla definizione del prodotto'
+      description__value: null
+      description__format: null
+      weight: '5'
+      parent: '5'
+      uuid: 857c8ae8-0b69-46a5-a430-64fea0515f24
+    -
+      vid: categorie_servizi
+      tid: '24'
+      langcode: it
+      name: 'Sviluppo business innovativi'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '4'
+      uuid: 15d3df9c-bea6-4c90-9861-06045373da94
+    -
+      vid: categorie_servizi
+      tid: '128'
+      langcode: it
+      name: 'Sviluppo Business Plan e Business Model'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '24'
+      uuid: f001177b-91bf-4c37-8765-4d438152402a
+    -
+      vid: categorie_servizi
+      tid: '53'
+      langcode: it
+      name: 'Sviluppo del team'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '9'
+      uuid: 32784b5b-7361-4c48-af7c-183d58cc24a6
+    -
+      vid: categorie_servizi
+      tid: '16'
+      langcode: it
+      name: 'Sviluppo mercati'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '3'
+      uuid: 437b012e-6abe-4f95-b613-c9b08d9b5321
+    -
+      vid: categorie_servizi
+      tid: '10'
+      langcode: it
+      name: 'Sviluppo Mercato'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '2'
+      uuid: f693d4f1-9331-46c5-9604-a46cfa7ee9d8
+    -
+      vid: categorie_servizi
+      tid: '55'
+      langcode: it
+      name: 'Sviluppo opportunità business all''estero'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '10'
+      uuid: b36ffb16-1932-4aff-9443-64edfd32450f
+    -
+      vid: categorie_servizi
+      tid: '88'
+      langcode: it
+      name: 'Sviluppo opportunità business all''estero'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '16'
+      uuid: e64d149a-eb02-4527-a6b8-bf770ecb78d2
+    -
+      vid: categorie_servizi
+      tid: '119'
+      langcode: it
+      name: 'Sviluppo opportunità business all''estero'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '22'
+      uuid: fc900731-b272-4096-bfad-3279887116aa
+    -
+      vid: categorie_servizi
+      tid: '114'
+      langcode: it
+      name: 'Sviluppo partnership'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '21'
+      uuid: 60e594eb-c985-409c-99d5-6d919d4a4948
+    -
+      vid: categorie_servizi
+      tid: '496'
+      langcode: it
+      name: test
+      description__value: null
+      description__format: null
+      weight: '7'
+      parent: '5'
+      uuid: c126932a-1066-4dc7-b872-c9f566e2a5df
+    -
+      vid: categorie_servizi
+      tid: '42'
+      langcode: it
+      name: 'Trasferimento Tecnologico'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '7'
+      uuid: 6f96b442-cef5-4248-a9d6-cd6708196bd8
+    -
+      vid: categorie_servizi
+      tid: '64'
+      langcode: it
+      name: 'Trasferimento Tecnologico e Open Innovation'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '12'
+      uuid: e98c3bfe-9aa2-49bf-a487-dc96fe25c959
+    -
+      vid: categorie_servizi
+      tid: '86'
+      langcode: it
+      name: 'Trasferimento Tecnologico e Open Innovation'
+      description__value: null
+      description__format: null
+      weight: '5'
+      parent: '15'
+      uuid: 799d5a23-0038-40a9-a9d9-80dc67e47c5e
+    -
+      vid: categorie_servizi
+      tid: '115'
+      langcode: it
+      name: 'Trasferimento Tecnologico e Open Innovation'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '21'
+      uuid: 2dc6fec5-bd83-4792-a827-5a25b4bd4c38
+    -
+      vid: categorie_servizi
+      tid: '35'
+      langcode: it
+      name: 'Valutazione delle tecnologie'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '6'
+      uuid: 2cfc4148-b87c-4e67-8e99-f0a0621fe2db
+    -
+      vid: categorie_servizi
+      tid: '67'
+      langcode: it
+      name: 'Valutazione tecnologica'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '13'
+      uuid: d27f71e9-d35e-44ed-96df-752e67f2145e
+    -
+      vid: categorie_servizi
+      tid: '4'
+      langcode: it
+      name: 'Vuoi innovarti ? Scopri cosa fa per te'
+      description__value: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
+      description__format: basic_html
+      weight: '106'
+      parent: '0'
+      uuid: 7ff62860-4b7f-4108-8ec3-f689b4351553
+  tipologia_di_servizio:
+    -
+      vid: tipologia_di_servizio
+      tid: '493'
+      langcode: it
+      name: 'A Pagamento'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 9c638cd4-21a3-4f06-95c1-6225b8531118
+    -
+      vid: tipologia_di_servizio
+      tid: '492'
+      langcode: it
+      name: Gratuito
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 96d9a8fe-56ce-41cc-b1a7-f25d723d3ff6
+menus:
+  -
+    menu_name: terzo-menu-footer
+    title: 'Chi siamo'
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: it
+    uuid: b447fe08-d6f3-446b-9030-21f4d9f88b36
+  -
+    menu_name: terzo-menu-footer
+    title: Contattaci
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '2'
+    langcode: it
+    uuid: 47d48b6d-4cf1-46e1-94d7-ccf9bcc1b0ab
+  -
+    menu_name: secondo-menu-footer
+    title: 'Imprese innovative'
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: it
+    uuid: c8c9bae5-f5cc-45f2-a4d2-1e3418314e2b
+  -
+    menu_name: secondo-menu-footer
+    title: 'Marketing territoriale'
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '2'
+    langcode: it
+    uuid: 9fde5462-5b7d-4b66-996f-fab4ef92959d
+  -
+    menu_name: secondo-menu-footer
+    title: Formazione
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '3'
+    langcode: it
+    uuid: abffc61f-8b1c-4af0-b035-fa4d0406a051
+  -
+    menu_name: secondo-menu-footer
+    title: 'Sei un azienda e vuoi accreditarti?'
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '3'
+    langcode: it
+    uuid: 54e63318-f67c-42e8-8e7d-5d91a779ac4f
+  -
+    menu_name: menu-footer-1
+    title: Servizi
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: it
+    uuid: 2565d97d-0545-4210-ba3c-c7468e4e8a98
+  -
+    menu_name: menu-footer-1
+    title: Bandi
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '1'
+    langcode: it
+    uuid: 1b494bbd-98b1-4410-a480-62710bb2d594
+  -
+    menu_name: menu-footer-1
+    title: Spazi
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '2'
+    langcode: it
+    uuid: 0e4631d7-2a15-4119-b663-454be738feab
+  -
+    menu_name: menu-footer-1
+    title: Opportunità
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '3'
+    langcode: it
+    uuid: 1708e18b-87b0-4389-bdd8-f39bddb50c48
+  -
+    menu_name: main
+    title: Servizi
+    parent: null
+    uri: 'entity:node/9'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-49'
+    langcode: it
+    uuid: b7034159-a214-4206-8062-3290c55438de
+  -
+    menu_name: main
+    title: Spazi
+    parent: null
+    uri: 'entity:node/13'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-47'
+    langcode: it
+    uuid: ab5fbe4f-44e3-494f-b2c6-ac9636e59b54
+  -
+    menu_name: main
+    title: Magazine
+    parent: null
+    uri: 'entity:node/23'
+    link_title: ''
+    description: null
+    enabled: '0'
+    expanded: '0'
+    weight: '-39'
+    langcode: it
+    uuid: 1252670d-b0d0-4460-a61a-b54f0cdf057d
+  -
+    menu_name: main
+    title: 'Imprese innovative'
+    parent: null
+    uri: 'entity:node/25'
+    link_title: ''
+    description: null
+    enabled: '0'
+    expanded: '0'
+    weight: '-40'
+    langcode: it
+    uuid: 3f0b4f29-73f3-46d7-9181-60856300b889
+  -
+    menu_name: main
+    title: 'Marketing Territoriale'
+    parent: null
+    uri: 'entity:node/24'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-45'
+    langcode: it
+    uuid: d8085b7e-090f-4e18-a726-46846741b92d
+  -
+    menu_name: main
+    title: Bandi
+    parent: null
+    uri: 'entity:node/913'
+    link_title: null
+    description: null
+    enabled: '0'
+    expanded: '0'
+    weight: '-41'
+    langcode: it
+    uuid: 62caacc6-c945-400b-92b4-bcf8dd40786b
+  -
+    menu_name: main
+    title: Formazione
+    parent: null
+    uri: 'internal:/formazione'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-44'
+    langcode: it
+    uuid: bc20be26-4343-4107-a3f8-a4d53b256cf1
+  -
+    menu_name: main
+    title: 'Chi siamo'
+    parent: null
+    uri: 'internal:/perche-questo-sito'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-50'
+    langcode: it
+    uuid: 5cc6be4a-c8e2-48e1-b03d-6ac788b34ec0
+  -
+    menu_name: main
+    title: Finanziamenti
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-48'
+    langcode: it
+    uuid: 6eeff2f7-ca35-48af-bbf3-f10177f57c7a
+  -
+    menu_name: main
+    title: 'Vetrina imprese'
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-46'
+    langcode: it
+    uuid: 25dae74e-a98b-4deb-8a20-b1ac5db25c56
+  -
+    menu_name: main
+    title: Bacheca
+    parent: null
+    uri: 'internal:#'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-43'
+    langcode: it
+    uuid: 4df83fe1-1d5d-4e48-abcf-f1a5fe7fecd1

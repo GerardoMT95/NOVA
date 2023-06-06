@@ -1,0 +1,406 @@
+/**
+ * @file
+ * Novaliguria theme specific CSS.
+ */
+/*
+* 0. General
+* 1. Header / Content
+* 2. Footer
+* 3. Media Queries
+*
+*
+*/
+/*
+* 0. General
+*/
+
+.brand-logo {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: white;
+    transition: all linear 0.3s;
+    display: flex; 
+    align-items: center;
+}
+.brand-logo .text {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+.brand-logo .logo-hover {
+    display: none;
+}
+.brand-logo:hover .logo {
+    display: none;
+}
+.brand-logo:hover {
+    background: #1BA4AF;
+    border-color: #1BA4AF;
+}
+.brand-logo:hover .logo-hover {
+    display: block;
+}
+body.vetrina {
+    font-family: 'Poppins', sans-serif;
+}
+.bg-green {
+    background: #1DA5B0;
+    background-image: url(../img/bg/bg_vetrina_green.svg);
+    background-position: top -10px left -10px;
+    background-repeat: no-repeat;
+}
+.white {color: white;}
+ul.pagination {
+    justify-content: center;
+    margin-bottom: 100px;
+}
+ul.pagination li.active .page-link {
+    background: #FAB715;
+    border-color: #FAB715;
+    border-radius: 4px;
+    margin: 0 3px;
+    color: black;
+}
+ul.pagination li .page-link {
+    border: none;
+    background: none;
+    color: white;
+}
+.webform-submission-contatti-vetrina-form label {color: #fff;}
+.view-search .view-empty {text-align: center;}
+.view-search .view-empty h3, .view-search .view-empty p {
+    background: #fff;
+    padding: 0.5rem;
+    display: inline-block;
+}
+/* admin pages */
+.view-management table {background: white;}
+.view-management table td {
+    background: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-right: 1px solid #EFEFEF;
+    box-shadow: inset -1px 0 4px -1px rgba(221, 221, 221, 0.3);
+}
+.view-management table thead tr {background: #2c1d4c}
+.view-management, .view-management a, .view-management table {font-size: 16px;word-break: inherit;}
+.view-management .dropbutton-action a {background: #e7d72a;}
+.view-management .views-field-operations .dropbutton-multiple.dropbutton-wrapper {margin:0;padding: 0; }
+.view-management #edit-views-fields-on-off-form--wrapper--description {display: none;}
+#views-exposed-form-management-bandi-page-1 .form-row, #views-exposed-form-management-spazi-page-1 .form-row {
+    display: flex;    flex-wrap: wrap;
+}
+.view-management .views-field-operations li.dropbutton-toggle button {
+    background-color: #e7d72a!important;
+    background-image: none;
+    background-image: none;
+    background: #e7d72a;
+}
+.view-button .views-field-operations .dropbutton-multiple .dropbutton a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'graphiesemibold', sans-serif;
+    text-transform: uppercase;
+}
+#block-views-block-gestione-imprese-block-1 h2, .view-management fieldset legend span {color: #fff;}
+.view-management  #edit-views-fields-on-off-form {
+    background: #1BA4AF;
+    padding: 1rem 0.5rem;
+    width: auto;
+    display: flex;
+}
+.view-management  #edit-views-fields-on-off-form .js-form-item {
+    margin-right: 1rem;
+}
+
+/*
+* 1. Header / content
+*/
+
+#navbar-top {background:#032675;}
+#navbar-top {
+    font-family: Poppins;
+    font-size: 14px;
+    display: flex;
+    flex-flow: row-reverse;
+    padding:0;
+}
+#navbar-main.affix {background: #1DA5B0;}
+#navbar-top .container {
+    display: flex;
+    flex-flow: row-reverse;
+}
+#navbar-top .region-top-header {width:  30%}
+#block-vetrina-aziende-headeruserlogin {
+    background: #2D5B9C;
+    padding: .5rem 0 .5rem .5rem;
+}
+#block-vetrina-aziende-headeruserlogin a,#block-vetrina-aziende-headeruserlogin {
+    text-decoration: none;
+    color: white;
+}
+#block-vetrina-aziende-headeruserlogin .contextual-links a {color: black;}
+#block-headeruserlogin,#block-gtranslate {
+    display: inline-flex;
+}
+#block-vetrina-aziende-headeruserlogin {
+    width: 54%;
+    margin-left: 15px;
+    letter-spacing: -0.5px;
+}
+#block-gtranslate-2 {
+    margin-top: 8px;
+    width: 45%;
+    margin-left: -20px;
+}
+.vetrina #page {
+    background-color: #5E75AB;
+    background-image: url(../img/bg/bg_top_vetrina.svg);
+    background-position: top -10px left -10px;
+    background-repeat: no-repeat;
+}
+.vetrina #page .content-bg {
+    background-image: url(../img/bg/bg_vetrina_bottom.png); 
+    background-position: bottom -100px left -20px;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    margin-bottom: -30px;
+}
+.vetrina #page .content-bg-impresa {
+    background-image: url(../img/bg/bg_impresa_left.png),url(../img/bg/bg_impresa_right.png);
+    background-repeat: no-repeat;
+    background-position: bottom -100px left -90px, bottom right -5px;
+    margin-bottom: -30px;
+    padding-bottom: 100px;
+}
+body.bg-green #page {
+    background-color: #1DA5B0;
+    background-image: url(../img/bg/bg_vetrina_green.svg);
+    background-position: top -10px left -10px;
+    background-repeat: no-repeat;
+}
+.node--type-catalogo-prodotti-progetti-tecno.vetrina #page {
+    background-color: #1DA5B0;
+    background-image: url(../img/bg/bg_vetrina_green.svg);
+    background-position: top -10px left -10px;
+    background-repeat: no-repeat;
+}
+.header .navbar {background: transparent;}
+
+#block-mainmenuvetrinaimprese a {
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+}
+#block-mainmenuvetrinaimprese a:hover, #block-vetrina-aziende-headeruserlogin a:hover {color: #032675}
+#block-mainmenuvetrinaimprese a[title] {
+    background: #1BA4AF;
+}
+#block-mainmenuvetrinaimprese a.is-active {color: #032675}
+#block-mainmenuvetrinaimprese li:last-of-type a:hover {
+    color:#032675 ;
+}
+.node--type-catalogo-prodotti-progetti-tecno.vetrina #block-mainmenuvetrinaimprese a[title] {
+    background: #032675;
+}
+.bg-green #block-mainmenuvetrinaimprese a[title] {
+    background: #032675;
+}
+.bg-green #block-mainmenuvetrinaimprese  li:last-of-type a:hover {
+    color: #1BA4AF;
+}
+.featured_2 {
+    background: #B1C808;
+    clip-path:polygon(0 10%, 100% 0, 100% 100%, 0 94%);
+    padding: 5rem 0 10rem 0;
+
+}
+.featured_2 {
+
+    background-image: url(../img/bg/bg_vetrina-dati.png);
+    background-repeat: no-repeat;
+    background-position: bottom -60px right -30px;
+}
+.featured_3 {
+    background: #1DA5B0;
+    clip-path:polygon(0 0, 100% 4%, 100% 100%, 0 98%);
+    margin-top: -54px;
+    padding: 8rem 0 9rem;
+    margin-bottom: -90px;
+}
+.featured_3 {
+
+    background-image: url(../img/bg/bg_featured_3.png),url(../img/bg/bg_featured_3_left.png);
+    background-repeat: no-repeat;
+    background-position: bottom -100px right -80px, bottom left -5px;
+}
+.node--type-impresa .featured_2 .region-featured-bottom-second{
+    justify-content: baseline;/*text-align: center;*/
+}
+.node--type-impresa .main-content nav.tabs .nav-item a {background: #fff;}
+.node--type-catalogo-prodotti-progetti-tecno.vetrina .featured_2 {
+    background: #5E75AB;
+    clip-path: polygon(0 10%, 100% 0, 100% 92%, 0% 100%);
+    margin-bottom: -4.5rem;
+}
+
+/*
+* 2. Footer
+*/
+.site-footer {
+    background: #032675;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+.site-footer-content {
+    padding-top: 8rem;
+    color: white;
+}
+.site-footer {padding-bottom: 0;}
+.site-footer .nav {display: block}
+.site-footer .block {border: none;}
+.site-footer .block-menu {
+    margin-top: 55px;
+} 
+.site-footer .nav li a, .site-footer p.social {
+    font-family: 'graphieregular';
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+.site-footer .site-footer-content a:hover {color: #E7D72A;}
+.site-footer p.social {padding-left: 5px;}
+.site-footer__top p {margin-top: 0;}
+.site-footer .nav li a:before, .site-footer p.social:before {
+    content: "";
+    display: block;
+    width: 30px;
+    margin: 5px 0;
+    border-top: 2px solid #E7D72A;
+}
+.site-footer__top .content li a {
+    display: block;
+    border-bottom: none;
+    padding: 0.8em 2px 0.8em 20px;
+    text-indent:unset; 
+}
+.site-footer__top .content ul:not(.menu) {
+    padding-left: 0;
+}
+.site-footer__top .content ul:not(.menu) a {
+    padding: 0;
+    font-size: 20px;
+}
+#block-logocomunegenova {
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.3px;
+    line-height: 25px;
+    text-align: left;
+}
+#block-socialfooter {
+    margin-top:0;
+}
+.site_footer_mid {background: white;}
+.site_footer_mid .list-inline-item:not(:first-child) {
+    text-align: center;
+    padding-left: 2rem;
+}
+.site_footer_mid .list-inline-item:not(:last-child) {
+    border-right: 2px solid #717273;
+    padding-right: 2rem;
+}
+.site_footer_mid .list-inline-item {
+    margin:0!important;
+}
+.site_footer_mid img {
+    max-width: 100%;
+}
+.site_footer_bottom {
+    background: #E7D72F;
+    font-size: 15px;
+}
+.site_footer_bottom ul {margin-bottom:0}
+.site_footer_bottom ul.legal  a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #432C65;
+}
+.site_footer_bottom ul.legal  a:hover {color: #1BA4AF}
+/*
+* 3. Media Queries
+*/
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        justify-content: flex-end;
+    }
+    .region.region-footer-third {width: 30%}
+}
+@media (max-width: 769px) {
+    .view-management  #edit-views-fields-on-off-form {
+        display: block;
+    }
+    #navbar-top .region-top-header {width: 100%}
+    #navbar-top .container {
+        padding: 0;
+    }
+    #block-vetrina-aziende-headeruserlogin {
+        font-size:13px;
+    }
+    .node--type-impresa .social-impresa.text-end {
+        text-align: center!important;
+    }
+    .node--type-impresa .box-info {
+            margin-bottom: 2rem;
+    }
+    #page-wrapper, body.vetrina {overflow-x: hidden;}
+}
+
+#nova-accredita-enrollment-form #edit-field-tipo-di-impresa .form-check{
+    padding-bottom: 3px;
+}
+
+#nova-accredita-enrollment-form .redMandatory{
+    color:#ff0000;
+}
+#nova-accredita-enrollment-form #edit-field-certificazione-dati{
+    height: 50px;
+}
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)  
+    and (orientation: portrait)  {
+        #navbar-top .region-top-header {
+    width: 50%;
+}
+    }
+
+div#block-views-block-gestione-imprese-block-2 {
+    color: white !important;
+}
+
+body.page-node-29826 #content nav.tabs {
+    display: none;
+}
+
+#configuration-form {
+    color: white !important;
+}
+
+#configuration-form small {
+    color: #dddddd !important;
+}
+
+#configuration-form a {
+    color: #e7d72a !important;
+}
+
+#configuration-form a#processa-i-file {
+    color: white !important;
+    background: #0d6efd;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+#risultati-esecuzione-batch {
+    color: white !important;
+}

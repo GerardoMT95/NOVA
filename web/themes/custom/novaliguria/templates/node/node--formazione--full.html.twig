@@ -1,0 +1,102 @@
+
+{#{{ kint(node) }}#}
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+    'box',
+    'node--type-servizio',
+  ]
+%}
+
+{#    <div class="wrapper-breadcrumb text-center">
+        {{ content.field_pseudobreadcrumbs }}
+    </div>#}
+<article{{ attributes.addClass(classes) }}>
+    <div class="row">
+        <div{{ content_attributes.addClass('node__content', 'clearfix',' col-sm-7') }}>
+            <header>
+                {{ title_prefix }}
+
+                <h2{{ title_attributes.addClass('node__title','node_title_servizi') }}>
+                    {{ label }}
+                </h2>
+
+                {{ title_suffix }}
+            </header>
+            <div class="pe-5 content_service">
+                {% if node.field_tipo_di_erogazione_corso is not empty %}
+                    <div class="box_tax box_tax_service">
+                        {{ content.field_tipo_di_erogazione_corso.0 }}
+                    </div>
+                {% endif %}
+                {% if node.field_gratuito_pagamento is not empty %}
+                    <div class="box_tax box_tax_service">
+                        {{ content.field_gratuito_pagamento.0 }}
+                    </div>{% endif %}
+                     {% if node.field_gratuito_pagamento.1 is not empty %}
+                       <div class="box_tax box_tax_service">
+                        {{ content.field_gratuito_pagamento.1 }}
+                    </div>
+                    {% endif %}
+                
+                <div class="info">               
+                    {% if content.body is not empty %}
+                        {{ content.body }}
+                    {% endif %}
+                    <div class="info-detail">
+                        {% if node.field_data_di_apertura is not empty %}
+                            <img src="/themes/custom/novaliguria/img/news_calendar.svg" alt="calendario"/> <span>Dal</span>     {{ content.field_data_di_apertura.0 }}
+                        {% endif %}
+                        {% if node.field_data_di_chiusura is not empty %}
+                            <span>Al</span>   {{ content.field_data_di_chiusura.0 }}
+                        {% endif %}
+                        <div class="mt-2">
+                            {% if node.field_durata is not empty %}
+                                <i class="fas fa-clock"></i> Durata: {{ content.field_durata.0 }}
+                            {% endif %}
+                        </div>
+                         <div class="mt-2">
+                            {% if node.field_location is not empty %}
+                                <img src="/themes/custom/novaliguria/img/news_map-pin.svg" alt="pin mappa"/> {{ content.field_location.0 }}
+                            {% endif %}
+                        </div>
+                    </div>             
+                </div>
+
+            </div>
+        </div>
+        {#RIQUADRO #}
+        <div class="col-sm-5  box-info-wrapper d-flex align-items-start pt-5">
+            <div class="box box-info mt-5">
+                <h2 class="node_title_servizi d-none">
+                    {{ content.field_skateholder.0 }}
+                </h2>
+                <img src="{{ file_url(node.Owner.user_picture.0.entity.uri.value) }}" />
+
+                <ul class="list-unstyled list-custom">
+
+                    <li>
+                        {% if node.field_link_ is not empty %}
+                            <i class="fas fa-check"></i>    <a href="{{ content.field_link_.0 }}" target="_blank">{{ content.field_link_.0 }}</a>
+                        {% endif %}
+                    </li>
+               <li><i class="fas fa-check"></i>{{ drupal_view('scheda_stakeholder', 'block_1') }}</li>
+                <li><i class="fas fa-check"></i> <a href="/servizi-stakeholder/{{ node.getOwnerId() }}">Servizi</a> </li>
+                    <li><i class="fas fa-check"></i> <a href="/spazi-stakeholder/{{ node.getOwnerId() }}">Spazi</a> </li> 
+                    <li><i class="fas fa-check"></i> <a href="/formazione-stakeholder/{{ node.getOwnerId() }}">Proposta formativa</a> </li>
+                </ul>
+
+            </div>
+        </div>
+    </div><!--/row-->
+
+</article>
+

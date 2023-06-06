@@ -1,0 +1,35 @@
+nova_accredita.enrollment_form:
+  path: '/nova/richiesta-accreditamento'
+  defaults:
+    _form:  '\Drupal\nova_accredita\Form\EnrollmentForm'
+    _title: 'Compila la richiesta di accreditamento'
+  requirements:
+    _permission: 'access enrollment form'
+  options:
+    _custom_theme: 'nova_accredita'
+nova_accredita.configuration_form:
+  path: '/nova/form/configuration_form'
+  defaults:
+    _form: '\Drupal\nova_accredita\Form\ConfigurationForm'
+    _title: 'ConfigurationForm'
+  requirements:
+    # _access: 'TRUE'
+    _permission: 'administer users'
+  options:
+    _custom_theme: 'nova_accredita'  
+nova_accredita.company_import:
+  path: '/nova/company-import'
+  defaults:
+    _controller: '\Drupal\nova_accredita\Controller\CompanyImport::import'
+    _title: 'Startup compay import'
+  requirements:
+    _permission: 'administer content'
+  options:
+    _custom_theme: 'nova_accredita'   
+nova_accredita.autocomplete_comuni:
+  path: '/nova/autocomplete-comuni'
+  defaults:
+    _controller: '\Drupal\nova_accredita\Controller\Autocomplete::autocompleteComuni'
+    _title: 'Autocomplete comuni'
+  requirements:
+    _permission: 'access enrollment form'

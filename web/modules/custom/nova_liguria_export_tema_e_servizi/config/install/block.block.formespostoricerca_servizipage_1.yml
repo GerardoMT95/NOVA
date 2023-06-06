@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - views.view.ricerca_servizi
+  module:
+    - system
+    - views
+  theme:
+    - novaliguria
+id: formespostoricerca_servizipage_1
+theme: novaliguria
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:ricerca_servizi-page_1'
+settings:
+  id: 'views_exposed_filter_block:ricerca_servizi-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: 'Ricerca libera'
+visibility:
+  request_path:
+    id: request_path
+    pages: /trova-il-tuo-servizio
+    negate: false
+    context_mapping: {  }

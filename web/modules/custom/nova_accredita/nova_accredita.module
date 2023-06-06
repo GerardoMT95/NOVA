@@ -1,0 +1,388 @@
+<?php
+
+/**
+ *  example service use
+ */
+// function nova_accredita_preprocess_node(&$variables) {
+
+//   $data = \Drupal::service('nova_accredita.fiscal_code')->isPresent();
+//   var_dump($data);
+// }
+
+/**
+ * Implements hook_theme().
+ *
+ * Defines the theming capabilities provided by this module.
+ */
+function nova_accredita_theme($existing, $type, $theme, $path) {
+  return [
+    'nova_accredita_enrollment_form'  => [
+      'render element' => 'form',
+      'template' => 'nova--enrollment-form',
+    ],
+  ];
+}
+
+use Drupal\Component\Utility\Html;
+use Drupal\node\Entity\Node;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_mail().
+ *
+ * This hook defines a list of possible e-mail templates that this module can
+ * send. Each e-mail is given a unique identifier, or 'key'.
+ *
+ * $message comes in with some standard properties already set: 'to' address,
+ * 'from' address, and a set of default 'headers' from MailManager::mail(). The
+ * goal of hook_mail() is to set the message's 'subject' and 'body' properties,
+ * as well as make any adjustments to the headers that are necessary.
+ *
+ * The $params argument is an array which can hold any additional data required
+ * to build the mail subject and body; for example, user-entered form data, or
+ * some context information as to where the mail request came from.
+ *
+ * Note that hook_mail() is not actually a hook. It is only called for a single
+ * module, the module named in the first argument of MailManager::mail(). So
+ * it's a callback of a type, but not a hook.
+ */
+function nova_accredita_mail($key, &$message, $params) {
+  // Each message is associated with a language, which may or may not be the
+  // current user's selected language, depending on the type of e-mail being
+  // sent. This $options array is used later in the t() calls for subject
+  // and body to ensure the proper translation takes effect.
+  $options = [
+    'langcode' => $message['langcode'],
+  ];
+
+  switch ($key) {
+    // Send a simple message from the contact form.
+    case 'enrollment_message':
+      $from = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('E-mail sent from @site-name', ['@site-name' => $from], $options);
+      // Note that the message body is an array, not a string.
+      $account = \Drupal::currentUser();
+      $message['body'][] = t('@name sent you the following message:', ['@name' => $account->getAccountName()], $options);
+      // Because this is just user-entered text, we do not need to translate it.
+      // Since user-entered text may have unintentional HTML entities in it like
+      // '<' or '>', we need to make sure these entities are properly escaped,
+      // as the body will later be transformed from HTML to text, meaning
+      // that a normal use of '<' will result in truncation of the message.
+      $message['body'][] = Html::escape($params['message']);
+      break;
+  }
+}
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function nova_accredita_flagging_insert($entity) {
+  $session = \Drupal::request()->getSession();
+  if (!\Drupal::currentUser()->id()) {
+    $session->set('anonymous_session_id', $session->get('flag.session_id'));
+    $anonymous_session_id = $session->get('anonymous_session_id');
+   
+  }
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function nova_accredita_user_login($account) {
+  // Migrate entities flagged while anonymous to the user logging in.
+  $session = \Drupal::request()->getSession();
+  $anonymous_session_id = $session->get('anonymous_session_id');
+  if (empty($anonymous_session_id)) {
+    return;
+  }
+
+  $flag_service = \Drupal::service('flag');
+  $flag_entity = $flag_service->getFlagById('wishlist_servizi');
+
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $query = $entity_type_manager->getStorage('flagging')->getQuery();
+  $query->condition('session_id', $anonymous_session_id);
+  $ids = $query->execute();
+  $flaggings = $entity_type_manager->getStorage('flagging')->loadMultiple($ids);
+
+  foreach ($flaggings as $flagging) {
+    $node = $entity_type_manager->getStorage('node')->load($flagging->entity_id->value);
+
+    if (empty($node)) {
+      continue;
+    }
+
+    // Check if the logged in user has already flagged this item. If we've
+    // already flagged it already then delete the flag, otherwise migrate it.
+    if ($flag_entity->isFlagged($node, $account)) {
+      $flagging->delete();
+      continue;
+    }
+
+    $flagging->set('session_id', NULL);
+    $flagging->set('uid', $account->id());
+    $flagging->save();
+  }
+}
+
+/**
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @return void
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function nova_accredita_entity_update(Drupal\Core\Entity\EntityInterface $entity)
+{
+    if($entity->bundle() == 'impresa'){
+        //recupero i cf abilitati
+        $cf_abilitati = $entity->get('field_codici_fiscali_abilitati')->getValue();
+        $node_id = $entity->id();
+
+        //ELIMINO I DELEGATI CANCELLATI NEL NODO IMPRESA RIMUOVENDO ID DELL'IMPRESA NEL PROFILO UTENTE
+        $query = \Drupal::entityQuery('user');
+        $uids = $query->condition('field_id_impresa', $node_id)->execute();
+        if (!empty($uids)) {
+            foreach ($uids as $uid) {
+                $user = User::load($uid);
+                $cf_utente = $user->get('field_codice_fiscale')->getValue();
+
+                if (in_array_r($cf_utente, $cf_abilitati)) {
+                    continue; //Non devo aggiornare l'utente perchè il suo cf è abilitato (delegato valido)
+                }
+
+                //Aggiorno l'utente
+                $field_impresa = $user->get('field_impresa')->getValue();
+                $field_id_impresa = $user->get('field_id_impresa')->getValue();
+
+                $new_field_impresa = array();
+                $new_field_id_impresa = array();
+
+                foreach ($new_field_impresa as $impresa) {
+                    //se trovo id impresa allora non lo aggiungo nel nuovo field
+                    if ($impresa["target_id"] == $node_id) continue;
+                    //aggiungo nel nuovo field in quanto sono altre imprese
+                    $new_field_impresa[] = array(
+                        "target_id" => $node_id
+                    );
+                    $new_field_id_impresa[] = array(
+                        "value" => $node_id
+                    );
+                }
+                $user->set('field_impresa', $new_field_impresa);
+                $user->set('field_id_impresa', $new_field_id_impresa);
+
+                $user->save();
+            }
+        }
+
+        //AGGIUNGO I NUOVI DELEGATI INSERITI NEL NODO IMPRESA SALVANDO IDIMPRESA NEL PROFILO UTENTE
+        if(!empty($cf_abilitati)) {
+            foreach ($cf_abilitati as $item) {
+                $users = \Drupal::entityTypeManager()->getStorage('user')->loadByProperties(
+                    [
+                        'field_codice_fiscale' => $item
+                    ]
+                );
+
+                if (!empty($users)) {
+
+                    $save_new_company = true;
+                    foreach ($users as $user) {
+                        $new_field_impresa = $user->get('field_impresa')->getValue();
+                        $new_field_id_impresa = $user->get('field_id_impresa')->getValue();
+
+                        if(in_array_r($node_id, $new_field_impresa)){
+                            $save_new_company = false;
+                            break;
+                        }
+                    }
+
+                    if($save_new_company){
+
+                        /**
+                         * @var Drupal\Core\Logger\LoggerChannel $logger
+                         */
+//                        \Drupal::service('logger.factory')->get("php")->error("Salvataggio field_impresa $node_id");
+                        $new_field_impresa[] = array(
+                            "target_id" => $node_id
+                        );
+                        $user->set('field_impresa', $new_field_impresa);
+
+                        $new_field_id_impresa[] = array(
+                            "value" => $node_id
+                        );
+                        $user->set('field_id_impresa', $new_field_id_impresa);
+                        
+                        if (!$user->hasRole('impresa') && !$user->hasRole('amministratore_portale') && !$user->hasRole('administrator') && !$user->hasRole('content_admin') && !$user->hasRole('stakholder')) {
+                            \Drupal::logger('nova_accredita')->notice('Impresa update: Added role impresa to user ' . $user->id());
+                            $user->addRole('impresa');
+                        }
+                
+                        $user->save();
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/**
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @return void
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function nova_accredita_node_presave(Drupal\Core\Entity\EntityInterface $entity){
+
+    if($entity->bundle() == 'impresa') {
+        $node_owner_cf = '';
+        $cf_abilitati = $entity->get('field_codici_fiscali_abilitati')->getValue();
+        $stato_accreditamento = (int)$entity->get('field_stato_accreditamento')->getString();
+        //se sono nello stato accreditato (in automatico o meno) associo IL CF dell'owner del nodo nei CF abilitati
+        if ($stato_accreditamento == 718 || $stato_accreditamento == 721) {
+            $node_owner_cf = $entity->getOwner()->get('field_codice_fiscale')->getString();
+//            echo $node_owner_cf;
+        }
+
+        $add_cf = true;
+        if (!empty($cf_abilitati)) {
+            foreach ($cf_abilitati as $item) {
+                if ($node_owner_cf == $item['value']) {
+                    $add_cf = false;
+                    break;
+                }
+            }
+        }
+
+        if ($add_cf) {
+            $cf_abilitati[] = array(
+                "value" => $node_owner_cf
+            );
+            $entity->set('field_codici_fiscali_abilitati', $cf_abilitati);
+        }
+    }
+}
+
+/**
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @return void
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function nova_accredita_user_presave(Drupal\Core\Entity\EntityInterface $entity){
+
+    //recupero CF
+    $cf_utente = $entity->get('field_codice_fiscale')->getString();
+
+    if(!empty($cf_utente)) {
+
+//        $user = User::load($entity->id());
+
+        //recupero eventuali aziende associate
+        $aziende = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(
+            [
+                'type' => 'impresa',
+                'field_codici_fiscali_abilitati' => $cf_utente
+            ]
+        );
+
+        //dump($aziende);
+        if (!empty($aziende)) {
+            //ASSEGNO RUOLO IMPRESA ALL'UTENTE
+            //dump($entity);
+            $roles = $entity->get('roles')->getValue();
+            //dump($roles);
+            // (!$user->hasRole('impresa') && !$account->hasRole('amministratore_portale') && !$account->hasRole('administrator') && !$account->hasRole('content_admin') && !$account->hasRole('stakholder')) {
+
+            if (!in_array_r('impresa', $roles) && !in_array_r('amministratore_portale', $roles) && !in_array_r('administrator', $roles) && !in_array_r('content_admin', $roles) && !in_array_r('stakholder', $roles)) {
+                $roles[] = array(
+                    "target_id" => 'impresa'
+                );
+                $entity->set('roles', $roles);
+                \Drupal::logger('nova_accredita')->notice('User presave: Added role impresa to user: ' . $entity->id());
+            }
+            //dump($roles);
+            //exit();
+        }        
+
+        //ciclo le aziende
+        foreach($aziende as $key=>$item){
+            $node_id = $key;
+
+            $new_field_impresa = $entity->get('field_impresa')->getValue();
+            $new_field_id_impresa = $entity->get('field_id_impresa')->getValue();
+
+            //verifico che l'utente non sia già associato
+            if(!in_array_r($node_id, $new_field_impresa)){
+                $new_field_impresa[] = array(
+                    "target_id" => $node_id
+                );
+
+                $entity->set('field_impresa', $new_field_impresa);
+            }
+
+            if(!in_array_r($node_id, $new_field_id_impresa)) {
+                $new_field_id_impresa[] = array(
+                    "value" => $node_id
+                );
+
+                $entity->set('field_id_impresa', $new_field_id_impresa);
+            }
+        }
+//        $entity->save();
+//        exit;
+        //salva
+
+    }
+    //BRRFNC47L11D969F
+}
+
+function nova_accredita_node_insert(Node $node) {
+    if($node->bundle() == 'richiesta_nuovi_servizi' || $node->bundle() == 'richiesta' || $node->bundle() == 'avviso' || $node->bundle() == 'richiesta_spazio'){
+
+        $cf_impresa = $node->get('field_codice_fiscale_impresa')->getValue();
+        if(!empty($cf_impresa) && !empty($cf_impresa[0]['value'])){
+            save_cf_impresa_to_utente($cf_impresa[0]['value']);
+        }
+    }
+}
+
+/**
+ * @param $cf_impresa
+ * @return void
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function save_cf_impresa_to_utente($cf_impresa){
+    //recupero utente
+    $uid = \Drupal::currentUser()->id();
+    $current_user = User::load($uid);
+    //recupero cf azienda esistenti
+    $current_field_codice_fiscale_impresa_nov = $current_user->get('field_codice_fiscale_impresa_nov')->getValue();
+
+    //verifico se esiste già
+    if(!in_array_r($cf_impresa, $current_field_codice_fiscale_impresa_nov)){
+
+        //valorizzo e salvo
+        $current_field_codice_fiscale_impresa_nov[] = array(
+            "value" => $cf_impresa
+        );
+        $current_user->set('field_codice_fiscale_impresa_nov', $current_field_codice_fiscale_impresa_nov);
+        $current_user->save();
+    }
+}
+
+/**
+ * @param $needle
+ * @param array $haystack
+ * @param bool $strict
+ * @return bool
+ */
+function in_array_r($needle, array $haystack, bool $strict = false): bool
+{
+    foreach ($haystack as $item) {
+        if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+            return true;
+        }
+    }
+    return false;
+}

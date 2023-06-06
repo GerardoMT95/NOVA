@@ -1,0 +1,5 @@
+nova_workflow:
+  js:
+    js/nova-workflow.js: {}
+  dependencies:
+    - core/jquery

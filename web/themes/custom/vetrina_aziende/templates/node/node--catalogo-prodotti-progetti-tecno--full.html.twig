@@ -1,0 +1,139 @@
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix','node__content',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+    <div class="row">
+        <div class="col-sm-5 box-info-wrapper-progetti">
+            <div class="box-info box-info-progetti">
+                {% if node.field_tipologia_progetto is not empty %}
+                    <div class="tip">   
+                        {{ content.field_tipologia_progetto }}
+                        
+                    </div>
+                {% endif %}
+                <h1 class="node_title_progetto"> {{ label }}</h1>
+                <div class="mb-1">
+                    {% if node.field_immagine_catalogo is not empty %}
+                        <img src="{{ node.field_immagine_catalogo|file_uri|image_style('medium') }}" alt="immagine di {{ label.0 }}"/>
+                    {% endif %}   
+                </div>
+
+                {% if node.field_impresa_progetto is not empty %}
+                    <div class="line line-progetto mt-1">
+                  <b> IMPRESA:</b>  <a href="{{ url('entity.node.canonical', {'node': node.field_impresa_progetto.target_id}) }}">{{ node.field_impresa_progetto.entity.title.0.value }}</a>
+                    </div>
+                {% endif %}
+
+
+                {% if node.field_sito_web is not empty %}
+                    <div class="line line-progetto">
+                        <b> LINK:</b> <a href="{{ content.field_sito_web.0}}"> <em>{{ node.field_sito_web.value|replace({'https://': '','http://':''}) }}</em> </a>
+                    </div>
+                {% endif %}
+
+                {% if node.field_categoria_progetto is not empty %}
+                    <div class="line line-progetto">
+                        <b> TIPOLOGIA:</b> {{ content.field_categoria_progetto.0 }}                     
+                    </div>
+                {% endif %}
+                {% if node.field_settore_progetto is not empty %}
+                    <div class="line line-progetto">   
+                        <b> SETTORE:</b>
+                        {% for item in node.field_settore_progetto %}
+                            {{ item.entity.getName }}{% if not loop.last %},{% endif %}
+                        {% endfor %}
+{#                        {{ content.field_settore_progetto.0 }}#}
+                    </div>
+                {% endif %}
+                {% if node.field_settore_prodotto is not empty %}
+                    <div class="line line-progetto">
+                        <b> SETTORE:</b>
+                        {% for item in node.field_settore_prodotto %}
+                            {{ item.entity.getName }}{% if not loop.last %},{% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% if node.field_categoria_tecnolo is not empty %}
+                    <div class="line line-progetto">   
+                       <b> SETTORE:</b>
+                        {% for item in node.field_categoria_tecnolo %}
+                            {{ item.entity.getName }}{% if not loop.last %},{% endif %}
+                        {% endfor %}
+{#                        {{ content.field_categoria_tecnolo.0 }}#}
+                    </div>
+                {% endif %}
+                {% if node.field_durata_progetto is not empty %}
+                    <div class="line line-progetto mb-1">   
+                        <b>DURATA:</b>  {{ content.field_durata_progetto.0}}
+                    </div>
+                {% endif %}
+                {% if node.field_data_scadenza_progetto is not empty %}
+                    <div class="line line-progetto mb-1">   
+                       <b> DATA SCADENZA:</b>  {{ content.field_data_scadenza_progetto.0}}
+                    </div>
+                {% endif %}
+                {% if node.field_stato_progetto is not empty %}
+                    <div class="line line-progetto mb-1">   
+                     <b>   STATO:</b>  {{ content.field_stato_progetto.0}}
+                    </div>
+                {% endif %}
+                {% if node.field_brevetto.value %}
+                    <div class="line line-progetto">   
+                        <b> BREVETTATO </b>                   
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+        <div{{ content_attributes.addClass('col-sm-7') }}>
+            <div class="ms-5 me-5 mt-5 pt-1">
+                <div class="col-sm-10">
+                {# tab content #} 
+                <ul class="nav nav-tabs" id="TabImpresa" role="tablist">
+                    {% if node.body is not empty %}
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#descrizione-prodotto" type="button" role="tab" aria-controls="descrizione-prodotto" aria-selected="true">Descrizione</button>
+                        </li>
+                    {% endif %}
+                    {% if node.field_caratteristiche_tecniche is not empty %}
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="car-tab" data-bs-toggle="tab" data-bs-target="#caratteristiche-tecniche" type="button" role="tab" aria-controls="caratteristiche-tecniche" aria-selected="false">Caratteristiche Tecniche</button>
+                        </li>
+                    {% endif %}
+
+                </ul>
+                <div class="tab-content" id="TabContentImpresa">
+                    <div class="tab-pane fade active show" id="descrizione-prodotto" role="tabpanel" aria-labelledby="desc-tab">
+                        {% if node.body is not empty %}
+                            {{ content.body }}
+                        {% endif %}
+                    </div>
+
+                    <div class="tab-pane fade" id="caratteristiche-tecniche" role="tabpanel" aria-labelledby="car-tab">
+                        {% if node.field_caratteristiche_tecniche is not empty %}
+                            {{ content.field_caratteristiche_tecniche.0 }}
+
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-11 slide-node clearfix mt-5">
+            {% if node.field_galleria_immagini is not empty %}
+                {{ content.field_galleria_immagini }}
+            {% endif %}
+        </div>
+    </div>
+</article>

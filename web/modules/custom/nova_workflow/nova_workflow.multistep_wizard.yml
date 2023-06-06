@@ -1,0 +1,13 @@
+nova_workflow:
+  steps:
+    -
+      class: \Drupal\nova_workflow\Form\BuyBookStep\Greetings
+    -
+      id: book_attributes
+      class: \Drupal\nova_workflow\Form\BuyBookStep\BookAttributes
+    -
+      id: description
+      class: \Drupal\nova_workflow\Form\BuyBookStep\Description
+    -
+      id: graz
+      class: \Drupal\nova_workflow\Form\BuyBookStep\Congratulation

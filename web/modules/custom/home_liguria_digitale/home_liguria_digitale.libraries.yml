@@ -1,0 +1,10 @@
+home-liguria:
+  version: 1.x
+  css:
+    component:
+      css/home-liguria.css: { }
+  js:
+    js/home-liguria.js: { }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings

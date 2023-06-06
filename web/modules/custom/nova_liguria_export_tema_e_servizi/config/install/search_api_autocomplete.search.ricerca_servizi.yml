@@ -1,0 +1,41 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - search_api.index.index_servizi
+    - views.view.ricerca_servizi
+  module:
+    - views
+    - search_api_autocomplete
+id: ricerca_servizi
+label: 'Ricerca Servizi'
+index_id: index_servizi
+suggester_settings:
+  live_results:
+    fields:
+      - title
+    view_modes:
+      'entity:node':
+        servizio: ''
+    highlight:
+      enabled: false
+      field: ''
+suggester_weights:
+  live_results: 0
+suggester_limits:
+  live_results: 15
+search_settings:
+  'views:ricerca_servizi':
+    displays:
+      default: false
+      selected:
+        - default
+        - block_1
+        - page_1
+options:
+  limit: 10
+  min_length: 1
+  show_count: true
+  autosubmit: true
+  submit_button_selector: ':submit'
+  delay: null

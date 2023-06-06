@@ -1,0 +1,26 @@
+langcode: it
+status: false
+dependencies:
+  module:
+    - nova_workflow
+    - system
+  theme:
+    - novaliguria
+id: novaworkflowconfigurablewizard_4
+theme: novaliguria
+region: content
+weight: -8
+provider: null
+plugin: nova_wizard
+settings:
+  id: nova_wizard
+  label: 'Vuoi Innovarti? Scopri cosa fa per te'
+  provider: nova_workflow
+  label_display: visible
+  nova_workflow_tax_start_tid: '4'
+visibility:
+  request_path:
+    id: request_path
+    pages: /trova-il-tuo-servizio
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,24 @@
+langcode: it
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dd31ebf5-d5ab-43f7-af61-0d94bb6b5cab'
+  module:
+    - block_content
+  theme:
+    - novaliguria
+id: socialfooter
+theme: novaliguria
+region: footer_fourth
+weight: -12
+provider: null
+plugin: 'block_content:dd31ebf5-d5ab-43f7-af61-0d94bb6b5cab'
+settings:
+  id: 'block_content:dd31ebf5-d5ab-43f7-af61-0d94bb6b5cab'
+  label: 'Social footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

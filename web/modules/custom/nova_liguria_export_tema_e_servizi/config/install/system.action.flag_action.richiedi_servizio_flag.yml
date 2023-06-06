@@ -1,0 +1,14 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - flag.flag.richiedi_servizio
+  module:
+    - flag
+id: flag_action.richiedi_servizio_flag
+label: 'Flag this item'
+type: node
+plugin: 'flag_action:richiedi_servizio_flag'
+configuration:
+  flag_id: richiedi_servizio
+  flag_action: flag

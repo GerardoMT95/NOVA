@@ -1,0 +1,109 @@
+<?php
+
+// vocabolario da usare
+define('NOVA_VOCABULARY', 'categorie_servizi');
+
+// blocco vista risultati
+define('NOVA_VIEW_RESULT', 'nova_workflow');
+define('NOVA_VIEW_RESULT_DISPLAY', 'block_nova_wizard');
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_theme().
+ *
+ * Defines the theming capabilities provided by this module.
+ */
+function nova_workflow_theme($existing, $type, $theme, $path) {
+  return [
+    'nova_workflow_wizard_form'  => [
+      'render element' => 'form',
+      'template' => 'nova-workflow-wizard-form',
+    ],
+    'nova_workflow_pseudofield'  => [
+      'variables' => ['first_step' => null, 'second_step' => null],
+      'template' => 'nova-workflow-pseudofield',
+    ],
+    'nova_workflow_pseudobreadcrumb'  => [
+      'variables' => ['first_step' => null, 'second_step' => null],
+      'template' => 'nova-workflow-pseudobreadcrumb',
+    ],
+  ];
+}
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function nova_workflow_form_alter(&$form, FormStateInterface $form_state) {
+  // Ensure every 'id' attribute is unique when the same form appears more than
+  // once on the same page.
+
+  if ($form['#theme'] === 'nova_workflow_wizard_form') {
+    $form['#id'] = Html::getUniqueId($form['#id']);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function nova_workflow_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+
+  $pos = substr($variables['element']['#form_id'], 0, 25);
+  if ($pos === "nova_workflow_wizard_form") {
+    $suggestions[] = 'nova-workflow-wizard-form';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function nova_workflow_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#attributes']['class'])) {
+    $pos = substr($variables['element']['#attributes']['class'][0], 0, 5);
+    if ($pos === "step-") {
+      $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['element']['#type'] . '__nova_workflow';  // Notice the use of underscore
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function nova_workflow_entity_extra_field_info() {
+  $extra = [];
+
+  $extra['node']['servizio']['display']['field_pseudobreadcrumbs'] = [
+    'label' => t('Selected area and cluster (Nova Workflow module)'),
+    'description' => t('Nova Workflow pseudo field.'),
+    'weight' => 0,
+    'visible' => TRUE,
+  ];
+
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function nova_workflow_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($display->getComponent('field_pseudobreadcrumbs')) {
+    $session = \Drupal::request()->getSession();
+    $first_step = $session->get('nova.workflow.first_step');
+    $second_step = $session->get('nova.workflow.second_step');
+    $session->remove('nova.workflow.first_step');
+    $session->remove('nova.workflow.second_step');
+
+    $build['field_pseudobreadcrumbs'] = [
+      '#theme' => 'nova_workflow_pseudobreadcrumb',
+      '#first_step' => $first_step,
+      '#second_step' => $second_step,
+      '#cache' => [
+        'max-age' => 0,
+      ],
+    ];
+  }
+}

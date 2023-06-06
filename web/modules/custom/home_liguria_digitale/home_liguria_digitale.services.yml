@@ -1,0 +1,5 @@
+services:
+  theme.negotiator.home_liguria_digitale:
+    class: Drupal\home_liguria_digitale\Theme\ThemeNegotiator
+    tags:
+      - { name: theme_negotiator, priority: 100 }

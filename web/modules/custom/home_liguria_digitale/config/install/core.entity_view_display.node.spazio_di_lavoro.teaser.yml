@@ -1,0 +1,74 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.spazio_di_lavoro.field_cap
+    - field.field.node.spazio_di_lavoro.field_civico_interno
+    - field.field.node.spazio_di_lavoro.field_comune
+    - field.field.node.spazio_di_lavoro.field_condizione_di_utilizzo
+    - field.field.node.spazio_di_lavoro.field_coordinate_x_spazi
+    - field.field.node.spazio_di_lavoro.field_coordinate_y
+    - field.field.node.spazio_di_lavoro.field_costo
+    - field.field.node.spazio_di_lavoro.field_descrizione_spazio
+    - field.field.node.spazio_di_lavoro.field_destinatari
+    - field.field.node.spazio_di_lavoro.field_dimensione_mq
+    - field.field.node.spazio_di_lavoro.field_disponibilita_minima
+    - field.field.node.spazio_di_lavoro.field_gioni_disponibili
+    - field.field.node.spazio_di_lavoro.field_impresa
+    - field.field.node.spazio_di_lavoro.field_indirizzo
+    - field.field.node.spazio_di_lavoro.field_indirizzo_e_mail_di_contat
+    - field.field.node.spazio_di_lavoro.field_modalita_di_richiesta_del_
+    - field.field.node.spazio_di_lavoro.field_ndeg_posti_massimo
+    - field.field.node.spazio_di_lavoro.field_orari_spazio
+    - field.field.node.spazio_di_lavoro.field_presso_se_area_dislocata_p
+    - field.field.node.spazio_di_lavoro.field_pubblico_privato
+    - field.field.node.spazio_di_lavoro.field_sempre_disponibile
+    - field.field.node.spazio_di_lavoro.field_servizi_accessori
+    - field.field.node.spazio_di_lavoro.field_sigla
+    - field.field.node.spazio_di_lavoro.field_sito_web_spazio
+    - field.field.node.spazio_di_lavoro.field_specificare_se_altro_in_ti
+    - field.field.node.spazio_di_lavoro.field_telefono
+    - field.field.node.spazio_di_lavoro.field_tipologia
+    - node.type.spazio_di_lavoro
+  module:
+    - user
+id: node.spazio_di_lavoro.teaser
+targetEntityType: node
+bundle: spazio_di_lavoro
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_cap: true
+  field_civico_interno: true
+  field_comune: true
+  field_condizione_di_utilizzo: true
+  field_coordinate_x_spazi: true
+  field_coordinate_y: true
+  field_costo: true
+  field_descrizione_spazio: true
+  field_destinatari: true
+  field_dimensione_mq: true
+  field_disponibilita_minima: true
+  field_gioni_disponibili: true
+  field_impresa: true
+  field_indirizzo: true
+  field_indirizzo_e_mail_di_contat: true
+  field_modalita_di_richiesta_del_: true
+  field_ndeg_posti_massimo: true
+  field_orari_spazio: true
+  field_presso_se_area_dislocata_p: true
+  field_pubblico_privato: true
+  field_sempre_disponibile: true
+  field_servizi_accessori: true
+  field_sigla: true
+  field_sito_web_spazio: true
+  field_specificare_se_altro_in_ti: true
+  field_telefono: true
+  field_tipologia: true
+  langcode: true

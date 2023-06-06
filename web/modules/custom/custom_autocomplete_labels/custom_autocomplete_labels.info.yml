@@ -1,0 +1,11 @@
+name: 'Custom autocomplete labels'
+description: "For nova"
+package: Custom
+php: 7.4
+type: module
+core_version_requirement: ^8.7.7 || ^9
+dependencies:
+  - 'drupal:search_api_autocomplete'
+
+version: '1.0.0'
+

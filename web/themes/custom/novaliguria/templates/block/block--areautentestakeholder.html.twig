@@ -1,0 +1,102 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main content
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        <div{{ content_attributes.addClass('content') }}>
+                <div class="area-utenti">
+<h4>Anagrafica</h4>
+
+<div class="btn btn-success mb-3 me-1"><a href="/anagrafica-stakeholder">Scheda</a></div>
+
+<div class="btn btn-success mb-3 me-1"><a href="/user/*/edit" id="bottone-modifica-delegati-stakeholder">Delegati</a></div>
+
+<h4>Richieste</h4>
+<div class="admin-new">
+                    <div class="new-wrapper">
+                        <!--servizi-->
+                        {% set view = drupal_view_result('contatori_area_admin', 'block_4')|length %}
+                        {% if view > 0 %}
+                            {{ drupal_view('contatori_area_admin', 'block_4') }}
+                        {% endif %}
+                       <div class="btn btn-success mb-3 me-1"><a href="/richieste-servizi-stakeholder">Servizi</a></div>
+                    </div>
+
+           <div class="new-wrapper">
+                        <!--nuovi servizi-->
+                        {% set view = drupal_view_result('contatori_area_admin', 'block_6')|length %}
+                        {% if view > 0 %}
+                            {{ drupal_view('contatori_area_admin', 'block_6') }}
+                        {% endif %}
+<div class="btn btn-success mb-3 me-1"><a href="/richieste-nuovi-servizi-stakeholder">Nuovi Servizi</a></div>                        <!--/nuovi servizi-->
+                    </div>
+
+                    <!--nuovi spazi-->
+                    <div class="new-wrapper">
+                        {% set view = drupal_view_result('contatori_area_admin', 'block_5')|length %}
+                        {% if view > 0 %}
+                            {{ drupal_view('contatori_area_admin', 'block_5') }}
+                        {% endif %}
+                        <div class="btn btn-success mb-3 me-1"><a href="/richieste-spazi-stakeholder">Spazi</a></div>
+
+                    </div>
+</div>
+<h4>Servizi</h4>
+
+<div class="btn btn-success mb-3 me-1"><a href="/management-servizi-stakeholder">Servizi </a></div>
+
+<h4>Spazi</h4>
+
+<div class="btn btn-success mb-3 me-1"><a href="/management-spazi-stakeholder">Spazi</a></div>
+
+{#<h4>Magazine</h4>
+
+<div class="btn btn-success mb-3 me-1"><a href="/management-news-stakeholder">News</a></div>#}
+
+<h4>Manuale</h4>
+
+<div class="btn btn-success mb-3 me-1"><a href="/sites/default/files/2023-03/Manuale%20utente%20-%20NOVA_Area%20utente%20stakeholder.pdf" target="_blank">Download</a></div>
+</div>
+
+    {% endblock %}
+</div>

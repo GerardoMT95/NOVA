@@ -1,0 +1,14 @@
+{% if rows %}
+ 
+        {{ rows }}
+    {% elseif empty %}
+        {{ empty }}
+    
+{% endif %}
+  {% if footer %}
+    <div class="view-footer">
+      {{ footer }}
+    </div>
+  {% endif %}
+
+

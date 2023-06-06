@@ -1,0 +1,63 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.catalogo_prodotti_progetti_tecno.body
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_allegati
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_caratteristiche_tecniche
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_categoria_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_categoria_tecnolo
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_collaborazione_partners
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_data_scadenza_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_durata_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_id_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_immagine_catalogo
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_impresa_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_obbiettivi
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_progetto_origine
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_riferimenti
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_settore_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_sito_web
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_stato_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_tipologia_progetto
+    - field.field.node.catalogo_prodotti_progetti_tecno.field_valore_economico
+    - node.type.catalogo_prodotti_progetti_tecno
+  module:
+    - text
+    - user
+id: node.catalogo_prodotti_progetti_tecno.teaser
+targetEntityType: node
+bundle: catalogo_prodotti_progetti_tecno
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_allegati: true
+  field_caratteristiche_tecniche: true
+  field_categoria_progetto: true
+  field_categoria_tecnolo: true
+  field_collaborazione_partners: true
+  field_data_scadenza_progetto: true
+  field_durata_progetto: true
+  field_id_progetto: true
+  field_immagine_catalogo: true
+  field_impresa_progetto: true
+  field_obbiettivi: true
+  field_progetto_origine: true
+  field_riferimenti: true
+  field_settore_progetto: true
+  field_sito_web: true
+  field_stato_progetto: true
+  field_tipologia_progetto: true
+  field_valore_economico: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

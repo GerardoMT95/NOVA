@@ -1,0 +1,46 @@
+services:
+
+  ex81.ArticleController:
+    class: \Drupal\ex81\Controller\ArticleController
+    tags:
+      - { name: twig.extension }
+  ex81.ServiziController:
+    class: \Drupal\ex81\Controller\ServiziController
+    tags:
+      - { name: twig.extension }
+  ex81.BandiController:
+    class: \Drupal\ex81\Controller\BandiController
+    tags:
+      - { name: twig.extension }
+  ex81.SpaziController:
+    class: \Drupal\ex81\Controller\SpaziController
+    tags:
+      - { name: twig.extension }
+  ex81.ImpresaController:
+    class: \Drupal\ex81\Controller\ImpresaController
+    tags:
+      - { name: twig.extension }
+  ex81.StakeHolderController:
+    class: \Drupal\ex81\Controller\StakeHolderController
+    tags:
+      - { name: twig.extension }
+  ex81.UserController:
+    class: \Drupal\ex81\Controller\UserController
+    tags:
+      - { name: twig.extension }
+  ex81.RichiesteServiziController:
+    class: \Drupal\ex81\Controller\RichiesteServiziController
+    tags:
+      - { name: twig.extension }
+  ex81.RichiesteSpaziController:
+    class: \Drupal\ex81\Controller\RichiesteSpaziController
+    tags:
+      - { name: twig.extension }
+  ex81.RichiesteController:
+    class: \Drupal\ex81\Controller\RichiesteController
+    tags:
+      - { name: twig.extension }
+  ex81.CronController:
+    class: \Drupal\ex81\Controller\CronController
+    tags:
+      - { name: twig.extension }

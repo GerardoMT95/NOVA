@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria_progetto
+    - node.type.catalogo_prodotti_progetti_tecno
+    - taxonomy.vocabulary.tipologia_progetto
+id: node.catalogo_prodotti_progetti_tecno.field_categoria_progetto
+field_name: field_categoria_progetto
+entity_type: node
+bundle: catalogo_prodotti_progetti_tecno
+label: 'Tipologia progetto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipologia_progetto: tipologia_progetto
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

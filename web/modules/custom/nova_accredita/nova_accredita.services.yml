@@ -1,0 +1,16 @@
+services:
+  nova_accredita.fiscal_code:
+    class: Drupal\nova_accredita\Services\FiscalCodeService
+    arguments: ['@current_user']
+  nova_accredita.enrollment:
+    class: Drupal\nova_accredita\Services\EnrollmentService
+    arguments: []
+  nova_accredita.event_subscriber.user_sync:
+    class: Drupal\nova_accredita\EventSubscriber\UserSyncEventSubscriberNova
+    arguments: [ '@config.factory', '@entity_type.manager', '@typed_data_manager', '@email.validator', '@logger.channel.sirac_sso', '@messenger', '@string_translation' ]
+    tags:
+      - { name: event_subscriber }
+  theme.negotiator.nova_accredita:
+    class: Drupal\nova_accredita\Theme\ThemeNegotiator
+    tags:
+      - { name: theme_negotiator, priority: 100 }

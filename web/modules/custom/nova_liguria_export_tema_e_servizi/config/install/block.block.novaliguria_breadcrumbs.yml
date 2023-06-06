@@ -1,0 +1,19 @@
+langcode: it
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - novaliguria
+id: novaliguria_breadcrumbs
+theme: novaliguria
+region: header
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumb
+  provider: system
+  label_display: '0'
+visibility: {  }

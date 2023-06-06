@@ -1,0 +1,19 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - novaliguria
+id: novaliguria_help
+theme: novaliguria
+region: content
+weight: -14
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aiuto
+  provider: help
+  label_display: '0'
+visibility: {  }

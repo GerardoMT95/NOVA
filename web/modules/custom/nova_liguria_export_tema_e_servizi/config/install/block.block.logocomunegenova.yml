@@ -1,0 +1,24 @@
+langcode: it
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9ccfc5c3-efa8-4670-a170-047ec9c39d24'
+  module:
+    - block_content
+  theme:
+    - novaliguria
+id: logocomunegenova
+theme: novaliguria
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:9ccfc5c3-efa8-4670-a170-047ec9c39d24'
+settings:
+  id: 'block_content:9ccfc5c3-efa8-4670-a170-047ec9c39d24'
+  label: 'Logo Comune Genova'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

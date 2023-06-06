@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function custom_novavetrina_menu_local_tasks_alter(&$data, $route_name) {
+  // Change title for user profile's tabs.
+  foreach ($data['tabs'] as &$tabs) {
+    foreach ($tabs as &$tab) {
+      $route_name = $tab['#link']['url']->getRouteName();
+      if ($route_name == 'entity.user.canonical') {
+        $tab['#link']['title'] = t('I tuoi dati');
+      }
+      elseif ($route_name == 'entity.user.edit_form') {
+        $tab['#link']['title'] = t('Modifica i tuoi dati');
+      }
+    }
+  }
+}
+
+
+
+function custom_novavetrina_options_list_alter(array &$options, array $context) {
+  if ($context['fieldDefinition']->getName() === 'field_ragione_sociale') {
+    $options['_none'] = t('- Altra Impresa -');
+  }
+}
+
+/**
+ * Implements hook_query_alter().
+ */
+//function custom_novavetrina_query_alter(Drupal\Core\Database\Query\AlterableInterface $query) {
+//  // Very dirty way to detect our search queries.
+//  // Note: don't use the $query->__toString() since that actually "executes" the query.
+//  /** @var \Drupal\Core\Database\Driver\mysql\Select $query*/
+//  $needs_seed = FALSE;
+//  $tables = $query->getTables();
+//  foreach ($tables as $alias => $definition) {
+//    if ($definition['table'] === 'search_api_db_index_imprese') {
+//      $needs_seed = TRUE;
+//    }
+//  }
+//
+//  if ($needs_seed) {
+//    // Add random sorting with seed by manually calling the service.
+//    $options = [
+//      'id' => 'random_seed',
+//      'table' => 'views',
+//      'field' => 'random_seed',
+//      'relationship' => 'none',
+//      'group_type' => 'group',
+//      'admin_label' => NULL,
+//      'order' => 'ASC',
+//      'exposed' => NULL,
+//      'expose' => [
+//        'label' => NULL,
+//      ],
+//      'reuse_seed' => NULL,
+//      'user_seed_type' => 'same_per_user',
+//      'anonymous_session' => NULL,
+//      'reset_seed_int' => 0,
+//      'reset_seed_custom' => 3600, // time in seconds for the seed renewal.
+//      'plugin_id' => 'views_random_seed_random',
+//    ];
+//
+//    /* @var $random_sort \Drupal\views_random_seed\Plugin\views\sort\ViewsRandomSeedRandom */
+//    $seed = \Drupal::service('views_random_seed.seed_calculator')
+//      ->calculateSeed(
+//        $options,
+//        'vetrina_imprese_search', // This is not correct, but only important for cache tag naming.
+//        'block_1', // This is not correct, but only important for cache tag naming.
+//        \Drupal::database()->driver()
+//      );
+//
+//    $alias = $query->addExpression('rand(' . $seed . ')', 'random_order_field');
+//    $query->orderBy($alias);
+//  }
+//}
+//
+///**
+// * Implements hook_views_post_render().
+// *
+// * Add custom cache tag for our random seed.
+// */
+//function custom_novavetrina_views_post_render(\Drupal\views\ViewExecutable $view, &$output, \Drupal\views\Plugin\views\cache\CachePluginBase $cache) {
+//  if ($view->id() === 'vetrina_imprese_search') {
+//    // Because we have manually added the seed, we need to add the cache tag here.
+//    $output['#cache']['tags'][]= 'views_random_seed-vetrina_imprese_search-block_1';
+//  }
+//}

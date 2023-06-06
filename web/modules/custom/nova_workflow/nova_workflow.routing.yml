@@ -1,0 +1,15 @@
+# nova_workflow.ajax:
+#   path: '/nova-workflow-ajax/{block_machine_name}'
+#   defaults:
+#     _controller: '\Drupal\nova_workflow\Controller\NovaWorkflowController::loadBlock'
+#   methods:  [GET]
+#   requirements:
+#     _permission: 'access content'
+
+# nova_workflow.page:
+#   path: '/nova/multi-step-ajax-form'
+#   defaults:
+#     _form: '\Drupal\nova_workflow\Form\MultiStepWorkflowForm'
+#     _title: 'Scegli la tua area di interesse'
+#   requirements:
+#     _permission: 'access content'

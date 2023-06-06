@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: menu-utente
+label: 'Menu utente'
+description: ''
+locked: false

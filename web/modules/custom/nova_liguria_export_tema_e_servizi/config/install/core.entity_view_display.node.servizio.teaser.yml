@@ -1,0 +1,73 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.servizio.body
+    - field.field.node.servizio.field_area_di_competenza
+    - field.field.node.servizio.field_categorie_del_servizio
+    - field.field.node.servizio.field_coordinata_x_servizio
+    - field.field.node.servizio.field_coordinata_y_servizio
+    - field.field.node.servizio.field_data_fine
+    - field.field.node.servizio.field_data_inizio_
+    - field.field.node.servizio.field_id_servizio
+    - field.field.node.servizio.field_indirizzo_luogo_servizio
+    - field.field.node.servizio.field_link_esterno_al_servizio
+    - field.field.node.servizio.field_macroarea
+    - field.field.node.servizio.field_modalita_di_erogazione
+    - field.field.node.servizio.field_n_civico_ind_erogazione_de
+    - field.field.node.servizio.field_orari
+    - field.field.node.servizio.field_pacchetto
+    - field.field.node.servizio.field_riferimenti
+    - field.field.node.servizio.field_stakeholder
+    - field.field.node.servizio.field_tipo_servizio
+    - field.field.node.servizio.field_tipologia_di_erogazione
+    - field.field.node.servizio.field_tipologia_di_servizio
+    - node.type.servizio
+  module:
+    - text
+    - user
+id: node.servizio.teaser
+targetEntityType: node
+bundle: servizio
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  flag_wishlist_servizi:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_area_di_competenza: true
+  field_categorie_del_servizio: true
+  field_coordinata_x_servizio: true
+  field_coordinata_y_servizio: true
+  field_data_fine: true
+  field_data_inizio_: true
+  field_id_servizio: true
+  field_indirizzo_luogo_servizio: true
+  field_link_esterno_al_servizio: true
+  field_macroarea: true
+  field_modalita_di_erogazione: true
+  field_n_civico_ind_erogazione_de: true
+  field_orari: true
+  field_pacchetto: true
+  field_riferimenti: true
+  field_stakeholder: true
+  field_tipo_servizio: true
+  field_tipologia_di_erogazione: true
+  field_tipologia_di_servizio: true
+  langcode: true

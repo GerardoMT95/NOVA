@@ -1,0 +1,31 @@
+excluded:
+  - taxonomy.vocabulary.test_mio_vocabolario
+required:
+  - views.view.elenco_imprese_home
+  - views.view.gestione_bandi_new
+  - views.view.gestione_opportunity_
+  - views.view.gestione_spazi
+  - views.view.formazione_homepage
+  - views.view.gestione_news_homepage
+  - field.field.node.catalogo_prodotti_progetti_tecno.field_categoria_progetto
+  - field.field.node.spazio_di_lavoro.field_tipologia
+  - language.content_settings.taxonomy_term.tipologia_progetto
+  - language.content_settings.taxonomy_term.tipologia_spazio
+  - core.base_field_override.taxonomy_term.tipologia_progetto.changed
+  - core.base_field_override.taxonomy_term.tipologia_progetto.description
+  - core.base_field_override.taxonomy_term.tipologia_progetto.name
+  - core.base_field_override.taxonomy_term.tipologia_progetto.path
+  - core.base_field_override.taxonomy_term.tipologia_progetto.status
+  - core.base_field_override.taxonomy_term.tipologia_spazio.changed
+  - core.base_field_override.taxonomy_term.tipologia_spazio.description
+  - core.base_field_override.taxonomy_term.tipologia_spazio.name
+  - core.base_field_override.taxonomy_term.tipologia_spazio.path
+  - core.base_field_override.taxonomy_term.tipologia_spazio.status
+  - core.entity_form_display.node.catalogo_prodotti_progetti_tecno.default
+  - core.entity_form_display.node.spazio_di_lavoro.default
+  - core.entity_view_display.node.catalogo_prodotti_progetti_tecno.default
+  - core.entity_view_display.node.catalogo_prodotti_progetti_tecno.teaser
+  - core.entity_view_display.node.spazio_di_lavoro.default
+  - core.entity_view_display.node.spazio_di_lavoro.teaser
+  - taxonomy.vocabulary.tipologia_progetto
+  - taxonomy.vocabulary.tipologia_spazio

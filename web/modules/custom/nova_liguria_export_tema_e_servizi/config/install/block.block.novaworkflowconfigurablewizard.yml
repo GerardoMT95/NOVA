@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - nova_workflow
+  theme:
+    - templategmgnet
+id: novaworkflowconfigurablewizard
+theme: templategmgnet
+region: content
+weight: 0
+provider: null
+plugin: nova_wizard
+settings:
+  id: nova_wizard
+  label: 'Nova workflow: configurable wizard'
+  provider: nova_workflow
+  label_display: visible
+  nova_workflow_tax_start_tid: '1'
+visibility: {  }

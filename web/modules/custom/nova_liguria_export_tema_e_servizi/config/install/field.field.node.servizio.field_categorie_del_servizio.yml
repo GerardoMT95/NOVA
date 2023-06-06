@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorie_del_servizio
+    - node.type.servizio
+    - taxonomy.vocabulary.categorie_servizi
+id: node.servizio.field_categorie_del_servizio
+field_name: field_categorie_del_servizio
+entity_type: node
+bundle: servizio
+label: 'Categorie del Servizio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categorie_servizi: categorie_servizi
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

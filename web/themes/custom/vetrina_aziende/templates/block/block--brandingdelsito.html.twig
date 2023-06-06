@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% set attributes = attributes.addClass('site-branding') %}
+{% if site_logo or site_name %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="navbar-brand">
+        <div class="brand-logo">
+            <span class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44.847" height="38.568" viewBox="0 0 44.847 38.568">
+                <g id="Raggruppa_37179" data-name="Raggruppa 37179" transform="translate(268 48.567)">
+                    <path id="Tracciato_37728" data-name="Tracciato 37728" d="M616.6,59.241c0-10.907,8.844-18.129,18.645-18.129s18.719,7.221,18.719,18.129c0,10.834-8.917,18.055-18.719,18.055S616.6,70.075,616.6,59.241m26.235,0c0-4.716-3.389-8.033-7.589-8.033s-7.591,3.316-7.591,8.033a7.6,7.6,0,1,0,15.18,0" transform="translate(-883.6 -88.295)" fill="none" stroke="#fff" stroke-width="2"/>
+                    <path id="Tracciato_37731" data-name="Tracciato 37731" d="M627.824,58.555a8.556,8.556,0,0,1,13.324-7.086c2.416,1.634,9.4-2.2,9.4-6.116a5.125,5.125,0,1,1,3.473,4.854c-3.037-1.034-10.083,2.686-9.278,6.626a8.642,8.642,0,0,1,0,3.445c-.791,3.856,6.312,7.636,9.278,6.626a5.129,5.129,0,1,1-3.473,4.854c0-3.761-6.684-7.95-9.4-6.116a8.541,8.541,0,0,1-13.324-7.086" transform="translate(-884.524 -88.223)" fill="#fff" stroke="#fff" stroke-width="1" fill-rule="evenodd"/>
+                </g>
+            </svg>
+            </span>
+            <span class="logo-hover">   
+                <svg id="logo-hover" data-name="Raggruppa 37058" xmlns="http://www.w3.org/2000/svg" width="44.847" height="38.568" viewBox="0 0 72.951 62.366">
+                    <path id="Tracciato_37728" data-name="Tracciato 37728" d="M616.6,71.669c0-18.385,14.906-30.557,31.428-30.557s31.552,12.172,31.552,30.557c0,18.261-15.03,30.433-31.552,30.433S616.6,89.93,616.6,71.669m44.22,0c0-7.95-5.712-13.539-12.792-13.539s-12.8,5.59-12.8,13.539,5.715,13.415,12.8,13.415S660.82,79.62,660.82,71.669" transform="translate(-616.6 -39.736)" fill="#2c1d4c"/>
+                    <path id="Tracciato_37731" data-name="Tracciato 37731" d="M653.424,71.116a11.2,11.2,0,1,0-11.2,11.195,11.2,11.2,0,0,0,11.2-11.195m-25.6.008a14.421,14.421,0,0,1,22.459-11.945c4.072,2.755,15.842-3.7,15.842-10.308a8.638,8.638,0,1,1,5.854,8.182c-5.119-1.743-17,4.527-15.638,11.168a14.57,14.57,0,0,1,0,5.806c-1.333,6.5,10.639,12.871,15.638,11.168a8.646,8.646,0,1,1-5.854,8.182c0-6.34-11.266-13.4-15.842-10.308a14.4,14.4,0,0,1-22.459-11.945" transform="translate(-610.464 -40.222)" fill="#f3cd00" fill-rule="evenodd"/>
+                </svg>
+            </span>
+            <span class="text">Vai su Nova</span>
+        </div>
+        {# hide site name #}
+        {#    {{ site_name }}#}
+    </a>
+{% endif %}
+{% if site_slogan %}
+    <div class="d-inline-block align-top site-name-slogan d-none">
+        {{ site_slogan }}
+    </div>
+{% endif %}

@@ -1,0 +1,32 @@
+langcode: it
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d32666c2-a633-4405-ab35-2a9aca5e79c4'
+  module:
+    - block_content
+    - node
+  theme:
+    - novaliguria
+id: headerservizi
+theme: novaliguria
+region: content
+weight: -16
+provider: null
+plugin: 'block_content:d32666c2-a633-4405-ab35-2a9aca5e79c4'
+settings:
+  id: 'block_content:d32666c2-a633-4405-ab35-2a9aca5e79c4'
+  label: 'header servizi'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      servizio: servizio
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

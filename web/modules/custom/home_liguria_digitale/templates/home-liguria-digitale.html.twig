@@ -1,0 +1,233 @@
+<!-- Add you custom twig html here -->
+<div class="bg-video" style="background: linear-gradient(180deg, #0c081b 80%, #18a095 50%);">
+    <div id="homepage-header">
+        <div>
+            {#<video src="/sites/default/files/liguriadigitale-homepage/nova.mp4" class="d-block w-100" muted style="margin-top: -56px"></video>#}
+            <video src="/sites/default/files/liguriadigitale-homepage/nova.mp4" class="d-block w-100" autoplay loop muted style="margin-top: -56px"  aria-label="video di Nova"></video>
+            <!-- <img  src="/sites/default/files/liguriadigitale-homepage/space.svg" class="img-fluid" style="/* height: 1750px; object-fit: cover; object-position: top; margin-top: -150px;position: relative; z-index: -1;*/"/>  -->
+        </div>
+        <a href="#home" class="pulse_next_link pulse_anchor" style="color: rgb(255, 255, 255);">
+            <span class="pulse_next_arrow text-center"><span class="d-none">scorri alla prossima sezione</span><span class="fa fa-chevron-down fa-bounce bounce-i"></span></span>
+        </a>
+
+        <div class="homepage-header-container" id="home">
+            <div class="row">
+                <div class="row-titolo">
+                    <div class="titolo bg-yellow text-purple">
+                        <div>INDIVIDUA I SERVIZI PIÙ ADATTI ALLE TUE ESIGENZE</div>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage-header-content bg-white">
+                <div class="row">
+
+                    {# nuovi#}
+                    <div class="col-md-3 primo">
+                        <div class="servizio text-center pt-4 px-4">
+                            <h1 class="text-uppercase text-start">HAI UN IDEA?<br/>CREA UNA STARTUP</h1>
+                            <p class="text-start"></p>
+                            <div class="button aria-pressed">
+                                <i class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 72.951 62.366">
+                                        <use xlink:href="/sites/default/files/liguriadigitale-homepage/nova.svg#nova_0"></use>
+                                    </svg>
+                                </i>
+                                <span class="text-purple text-uppercase m-auto"><a href="/trova-il-tuo-servizio#wizard-1" style="color: #fff" aria-label="inizia a creare una startup">Inizia</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 secondo">
+                        <div class="servizio text-center pt-4 px-4">
+                            <h1 class="text-uppercase text-purple text-start">HAI UNA STARTUP?<br/>FAI CRESCERE LA TUA IMPRESA</h1>
+                            <p class="text-purple text-start"></p>
+                            <div class="button">
+                                <i class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 72.951 62.366">
+                                        <use xlink:href="/sites/default/files/liguriadigitale-homepage/nova.svg#nova_1"></use>
+                                    </svg>
+                                </i>
+                                <span class="text-purple text-uppercase m-auto"><a href="/trova-il-tuo-servizio#wizard-2" style="color: #2C1D4C">Inizia</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 terzo">
+                        <div class="servizio text-center pt-4 px-4">
+                            <h1 class="text-uppercase text-purple text-start">SEI UNA PMI INNOVATIVA?<br/>ESPANDI IL TUO BUSINESS</h1>
+                            <p class="text-purple text-start"></p>
+                            <div class="button">
+                                <i class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 72.951 62.366">
+                                        <use xlink:href="/sites/default/files/liguriadigitale-homepage/nova.svg#nova_2"></use>
+                                    </svg>
+                                </i>
+                                <span class="text-purple text-uppercase m-auto"><a href="/trova-il-tuo-servizio#wizard-3" style="color: #2C1D4C" aria-label="inizia a espandere il tuo business">Inizia</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 quarto">
+                        <div class="servizio text-center pt-4 px-4">
+                            <h1 class="text-uppercase text-start">VUOI INNOVARTI?<br/>SCOPRI COSA FA PER TE</h1>
+                            <p class="text-start"></p>
+                            <div class="button">
+                                <i class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 72.951 62.366">
+                                        <use xlink:href="/sites/default/files/liguriadigitale-homepage/nova.svg#nova_3"></use>
+                                    </svg>
+                                </i>
+                                <span class="text-purple text-uppercase m-auto"><a href="/trova-il-tuo-servizio#wizard-4" style="color: #2C1D4C" aria-label="inizia ad innovarti">Inizia</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="vetrina-imprese">
+        <div class="container">
+            <img src="/sites/default/files/liguriadigitale-homepage/bolla_gialla_grande.svg" alt="sfondo bolla gialla" class="img-fluid position-absolute" style="left: 27%;top: -22%;width: 2128px;z-index: -1;max-width: none;" />
+            <div class="col-12 text-center mt-5">
+                <div class="titolo bg-purple m-auto">
+                    <h2 class="color-white"> <a href='/vetrina-imprese' aria-label="vedi tutte le imprese"> {{ children.vetrina_imprese.titolo }} </a></h2>
+                </div>
+            </div>
+            <!-- <div class="col-12 text-center mt-1">
+              <div class="sottotitolo bg-green m-auto">
+                <h2 class="color-white"> {{ children.vetrina_imprese.sottotitolo }} </h2>
+              </div>
+            </div> -->
+            <div class="col-12 text-center">
+                <div class="descrizione m-auto">
+                    <h3 class="color-white"> {{ children.vetrina_imprese.descrizione }} </h3>
+                </div>
+                <div id="ppt-button-vetrina" class="btn-liguria bg-purple color-purple fw-bold">
+                    <a href="/nova/richiesta-accreditamento" class="color-white" style="text-decoration:none" aria-label="accredita la tua impresa">ACCREDITATI</a>
+                </div>
+            </div>
+            <div class="imprese mt-4 mb-4">
+                {{ children.vetrina_imprese.imprese }}
+            </div>
+            {#            <div class="dot-list" style="margin-top: 40px">#}
+            {#                <span class="dot bg-purple active" data-id="views-bootstrap-elenco-imprese-home-block-1" data-num="0"></span>#}
+            {#                <span class="dot bg-purple" data-id="views-bootstrap-elenco-imprese-home-block-1" data-num="1"></span>#}
+            {#                <span class="dot bg-purple" data-id="views-bootstrap-elenco-imprese-home-block-1" data-num="2"></span>#}
+            {#            </div>#}
+        </div>
+
+    </div> 
+</div>
+<!-- New bacheca aziende 16-05-22 -->
+<div class="container" id="bacheca-aziende-new">
+    <div class="row" id="row-bacheca-aziende-new">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div id="bacheca-aziende-1" class="h-100 box-home-azienda">
+                <div id="bacheca-aziede-la-bacheca" class="color-white"> LA BACHECA </div>
+                <div id="bacheca-aziede-delle-aziende" class="color-purple"> DELLE AZIENDE </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div id="bacheca-aziende-2" class="h-100 box-home-azienda">
+                {#slide annunci aziende#}
+                {{ drupal_view('bacheca','block_1') }}        
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div id="bacheca-aziende-3" class="h-100 box-home-azienda">
+                <div id="bacheca-aziede-titolo" class="color-white"> Sei<br/>un'impresa? </div>
+                <div id="bacheca-aziede-button-richiesta" class="bg-white color-purple fw-bold mt-3 px-3 button-azienda">
+                    <a href="/node/add/avviso?display=azienda" class="color-purple" aria-label="impresa fai la tua richiesta"> FAI LA TUA RICHIESTA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-comune" id="row-comune">
+    {{ drupal_view('blocco_comune_di_genova_homepage','block_1') }}
+</div>
+<div class="clearfix"></div>
+<div class="container" id="row-finanziamenti">
+    <div class="row">
+        <div class="titolo">FINANZIAMENTI</div>
+    </div>
+    <div id="row-content-finanziamenti">
+        <div class="row">
+            <div class="descrizione text-center mt-3 mb-3">Panoramica delle opportunità a supporto delle imprese</div>
+            {{ children.finanziamenti }}
+        </div>
+        {#            <div class="dot-list my-5">#}
+        {#                <span class="dot bg-purple active" data-id="views-bootstrap-gestione-bandi-new-block-1" data-num="0"></span>#}
+        {#                <span class="dot bg-purple" data-id="views-bootstrap-gestione-bandi-new-block-1" data-num="1"></span>#}
+        {#                <span class="dot bg-purple" data-id="views-bootstrap-gestione-bandi-new-block-1" data-num="2"></span>#}
+        {#            </div>#}
+        <div class="text-center">
+            <div id="ppt-button-0" class="btn-liguria bg-yellow color-purple fw-bold ppt-button button">
+                <a href="/finanziamenti" class="color-purple" style="text-decoration:none" aria-label="vedi tutti i finanziamenti">VEDI TUTTI</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div id="row-opportunita" class="position-relative">
+    <img id="palla-opportunita" src="/sites/default/files/liguriadigitale-homepage/bolla_gialla_piccola.svg" alt="sfondo bolla gialla piccola" class="img-fluid position-absolute" style="right: -340px; top: -150px; z-index: -1; width: 70%"/>
+    <div class="container">
+        <div class="titolo">{{ children.opportunita.titolo }}</div>
+        <div class="descrizione">{{ children.opportunita.descrizione }}</div>
+        <div class="contenuto">{{ children.opportunita.elenco }}</div>
+    </div>
+    {#            <div class="dot-list my-5">#}
+    {#                <span class="dot bg-yellow active" data-id="views-bootstrap-gestione-opportunity-block-1" data-num="0"></span>#}
+    {#                <span class="dot bg-yellow" data-id="views-bootstrap-gestione-opportunity-block-1" data-num="1"></span>#}
+    {#                <span class="dot bg-yellow" data-id="views-bootstrap-gestione-opportunity-block-1" data-num="2"></span>#}
+    {#            </div>#}
+    <div class="text-center mt-2">
+        <div id="ppt-button-1" class="btn-liguria bg-yellow color-purple fw-bold">
+            <a href="/marketing-territoriale" class="color-purple" style="text-decoration:none" aria-label="vedi le opportunità di marketing territoriale">VEDI TUTTI</a>
+        </div>
+    </div>
+</div>
+
+<div class="bg-purple">
+    <div id="row-spazi">      
+        <div class="container">
+            {{ drupal_view('spazi_homepage','block_1') }}
+        </div>
+    </div>
+    <div class="bg-yellow position-relative p-3" id="formazione">
+        <div id="row-formazione" class="container">
+            <div class="titolo-row text-center">
+                <div class="titolo">{{ children.formazione.titolo }}</div>
+                <div class="descrizione">{{ children.formazione.descrizione }}</div>
+            </div>
+            <div id="row-content-formazione">
+                <div class="row">
+                    {{ children.formazione.elenco }}
+                </div>
+
+                <div class="text-center">
+                    <div id="ppt-button-2" class="btn-liguria bg-yellow color-purple fw-bold">
+                        <a href="/formazione" class="color-purple" style="text-decoration:none" aria-label="vedi tutte le proposte formative">VEDI TUTTI</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-yellow row-news">
+        <div id="row-news" class="container">
+            <div class="titolo-row text-center">
+                <div class="titolo">{{ children.news.titolo }}</div>
+                <div class="descrizione">{{ children.news.descrizione }}</div>
+            </div>
+            <div class="row-content-formazione">
+                <div class="row">
+                    {{ children.news.elenco }}
+                </div>
+
+                <div class="text-center">
+                    <div id="ppt-button-3" class="btn-liguria bg-yellow color-purple fw-bold">
+                        <a href="/magazine" class="color-purple" style="text-decoration:none" aria-label="vedi tutti gli articoli del magazine">VEDI TUTTI</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

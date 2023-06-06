@@ -1,0 +1,261 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.spazio_di_lavoro.field_cap
+    - field.field.node.spazio_di_lavoro.field_civico_interno
+    - field.field.node.spazio_di_lavoro.field_comune
+    - field.field.node.spazio_di_lavoro.field_condizione_di_utilizzo
+    - field.field.node.spazio_di_lavoro.field_coordinate_x_spazi
+    - field.field.node.spazio_di_lavoro.field_coordinate_y
+    - field.field.node.spazio_di_lavoro.field_costo
+    - field.field.node.spazio_di_lavoro.field_descrizione_spazio
+    - field.field.node.spazio_di_lavoro.field_destinatari
+    - field.field.node.spazio_di_lavoro.field_dimensione_mq
+    - field.field.node.spazio_di_lavoro.field_disponibilita_minima
+    - field.field.node.spazio_di_lavoro.field_gioni_disponibili
+    - field.field.node.spazio_di_lavoro.field_impresa
+    - field.field.node.spazio_di_lavoro.field_indirizzo
+    - field.field.node.spazio_di_lavoro.field_indirizzo_e_mail_di_contat
+    - field.field.node.spazio_di_lavoro.field_modalita_di_richiesta_del_
+    - field.field.node.spazio_di_lavoro.field_ndeg_posti_massimo
+    - field.field.node.spazio_di_lavoro.field_orari_spazio
+    - field.field.node.spazio_di_lavoro.field_presso_se_area_dislocata_p
+    - field.field.node.spazio_di_lavoro.field_pubblico_privato
+    - field.field.node.spazio_di_lavoro.field_sempre_disponibile
+    - field.field.node.spazio_di_lavoro.field_servizi_accessori
+    - field.field.node.spazio_di_lavoro.field_sigla
+    - field.field.node.spazio_di_lavoro.field_sito_web_spazio
+    - field.field.node.spazio_di_lavoro.field_specificare_se_altro_in_ti
+    - field.field.node.spazio_di_lavoro.field_telefono
+    - field.field.node.spazio_di_lavoro.field_tipologia
+    - node.type.spazio_di_lavoro
+  module:
+    - options
+    - text
+    - user
+id: node.spazio_di_lavoro.default
+targetEntityType: node
+bundle: spazio_di_lavoro
+mode: default
+content:
+  field_cap:
+    weight: 121
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_civico_interno:
+    weight: 118
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_comune:
+    weight: 119
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_condizione_di_utilizzo:
+    weight: 127
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_coordinate_x_spazi:
+    weight: 122
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_coordinate_y:
+    weight: 123
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_costo:
+    weight: 111
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_descrizione_spazio:
+    weight: 125
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_destinatari:
+    weight: 126
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dimensione_mq:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_disponibilita_minima:
+    weight: 110
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_gioni_disponibili:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_impresa:
+    weight: 124
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_indirizzo:
+    weight: 117
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_indirizzo_e_mail_di_contat:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_modalita_di_richiesta_del_:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ndeg_posti_massimo:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_orari_spazio:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_presso_se_area_dislocata_p:
+    weight: 116
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pubblico_privato:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sempre_disponibile:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_servizi_accessori:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sigla:
+    weight: 120
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sito_web_spazio:
+    weight: 115
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_specificare_se_altro_in_ti:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_telefono:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tipologia:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

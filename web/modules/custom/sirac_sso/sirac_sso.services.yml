@@ -1,0 +1,12 @@
+services:
+  logger.channel.sirac_sso:
+    parent: logger.channel_base
+    arguments: ['sirac_sso']
+  sirac:
+    class: Drupal\sirac_sso\SiracService
+    arguments: ['@externalauth.externalauth', '@config.factory', '@entity_type.manager', '@logger.channel.sirac_sso', '@event_dispatcher', '@session']
+  sirac.event_subscriber.user_sync:
+    class: Drupal\sirac_sso\EventSubscriber\UserSyncEventSubscriber
+    arguments: ['@config.factory', '@entity_type.manager', '@typed_data_manager', '@email.validator', '@logger.channel.sirac_sso', '@messenger', '@string_translation']
+    tags:
+      - {name: event_subscriber}

@@ -1,0 +1,24 @@
+langcode: it
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:29348a1a-6b6d-4876-b777-419196f99a3c'
+  module:
+    - block_content
+  theme:
+    - novaliguria
+id: loghifooter
+theme: novaliguria
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:29348a1a-6b6d-4876-b777-419196f99a3c'
+settings:
+  id: 'block_content:29348a1a-6b6d-4876-b777-419196f99a3c'
+  label: 'Loghi footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

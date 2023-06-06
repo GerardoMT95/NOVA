@@ -1,0 +1,21 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipologia_progetto
+id: taxonomy_term.tipologia_progetto.status
+field_name: status
+entity_type: taxonomy_term
+bundle: tipologia_progetto
+label: Pubblicato
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

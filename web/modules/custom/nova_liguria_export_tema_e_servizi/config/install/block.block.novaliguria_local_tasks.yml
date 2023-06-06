@@ -1,0 +1,19 @@
+langcode: it
+status: true
+dependencies:
+  theme:
+    - novaliguria
+id: novaliguria_local_tasks
+theme: novaliguria
+region: content
+weight: -15
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Schede
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

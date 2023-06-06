@@ -1,0 +1,18 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_n_civico_ind_erogazione_de
+    - node.type.servizio
+id: node.servizio.field_n_civico_ind_erogazione_de
+field_name: field_n_civico_ind_erogazione_de
+entity_type: node
+bundle: servizio
+label: 'N. civico Ind. erogazione del servizio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

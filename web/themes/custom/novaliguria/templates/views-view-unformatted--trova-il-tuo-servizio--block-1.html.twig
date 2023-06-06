@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+{% if title %}
+    <h3>{{ title }}</h3>
+{% endif %}
+<div class="nav-content">
+    <ul class="nav nav-pills nav-servizi row">
+        {% for row in rows %}
+            <li class="col-sm-6 col-lg-3">
+                {{ row.content }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="tab-content">
+    <div class="tab-pane container fade" id="wizard-1">
+        {{ drupal_entity('block', 'novaliguria_novaworkflowconfigurablewizard', check_access=false) }}
+    </div>
+    <div class="tab-pane container fade" id="wizard-2">
+        {{ drupal_entity('block', 'novaworkflowconfigurablewizard_2', check_access=false) }}
+    </div>
+    <div class="tab-pane container fade" id="wizard-3">
+        {{ drupal_entity('block', 'novaworkflowconfigurablewizard_3', check_access=false) }}
+    </div>
+    <div class="tab-pane container fade" id="wizard-4">
+        {{ drupal_entity('block', 'novaworkflowconfigurablewizard_4', check_access=false) }}
+    </div>
+</div>

@@ -1,0 +1,132 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main content
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        <div{{ content_attributes.addClass('content') }}>
+            <div class="area-utenti">
+                <h4>Richieste</h4>
+                <div class="admin-new">
+                    <div class="new-wrapper">
+                        <!--servizi-->
+                        {% set view = drupal_view_result('contatori_area_admin', 'block_1')|length %}
+                        {% if view > 0 %}
+                            {{ drupal_view('contatori_area_admin', 'block_1') }}
+                        {% endif %}
+                        <div class="btn btn-success mb-3 me-1"><a href="/management-richieste-servizi">Servizi</a></div>
+                    </div>
+                    <!--/servizi-->
+                    <div class="new-wrapper">
+                        <!--nuovi servizi-->
+                        {% set view = drupal_view_result('contatori_area_admin', 'block_3')|length %}
+                        {% if view > 0 %}
+                            {{ drupal_view('contatori_area_admin', 'block_3') }}
+                        {% endif %}
+                        <div class="btn btn-success mb-3 me-1"><a href="/management-richieste-nuovi-servizi">Nuovi Servizi</a></div>
+                        <!--/nuovi servizi-->
+                    </div>
+                    <!--nuovi spazi-->
+                    <div class="new-wrapper">
+                        {% set view = drupal_view_result('contatori_area_admin', 'block_2')|length %}
+                        {% if view > 0 %}
+                            {{ drupal_view('contatori_area_admin', 'block_2') }}
+                        {% endif %}
+                        <div class="btn btn-success mb-3 me-1"><a href="/management-richieste-spazi">Spazi</a></div>
+                    </div>
+                </div>
+                <!--/nuovi spazi-->
+                <h4>Servizi</h4>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/ricerca-workflow">Ricerca</a></div>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/management-workflow">Gestione</a></div>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/management-servizi-admin">Assegnazione Massiva Servizi</a></div>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/track-servizi">Monitoraggio Attività</a></div>
+
+                <h4>Spazi</h4>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/management-spazi">Spazi</a></div>
+
+                <h4>Bacheca</h4>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/management-annunci">Annunci</a></div>
+
+                <h4>Finanziamenti</h4>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/management-bandi">Finanziamenti</a></div>
+
+                <h4>Marketing Territoriale</h4>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/management-opportunity">Marketing Territoriale</a></div>
+
+                <h4>Formazione</h4>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/management-formazione">Formazione</a></div>
+
+                <h4>Magazine</h4>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/management-magazine">News</a></div>
+
+                <h4>Prodotti/Servizi, Progetti e Tecnologie</h4>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/management-catalogo">Prodotti/Servizi, Progetti e Tecnologie</a></div>
+
+                <h4>Gestione Imprese</h4>
+                <div class="new-wrapper">
+                {% set view = drupal_view_result('contatori_area_admin', 'block_9')|length %}
+                {% if view > 0 %}
+                    {{ drupal_view('contatori_area_admin', 'block_9') }}
+                {% endif %}
+                <div class="btn btn-success mb-3 me-1"><a href="/management-imprese">Accreditamenti</a></div>
+            </div>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/nova/form/configuration_form">Batch</a></div>
+
+                <div class="btn btn-success mb-3 me-1"><a href="/node/29826">Visualizzazione Log Batch</a></div>
+            </div>
+
+        </div>
+    {% endblock %}
+</div>

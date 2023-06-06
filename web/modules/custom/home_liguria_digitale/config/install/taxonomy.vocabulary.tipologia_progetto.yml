@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+name: 'Tipologia Progetto'
+vid: tipologia_progetto
+description: ''
+weight: 0

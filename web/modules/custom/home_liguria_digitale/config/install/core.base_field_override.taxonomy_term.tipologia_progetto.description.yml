@@ -1,0 +1,19 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipologia_progetto
+  module:
+    - text
+id: taxonomy_term.tipologia_progetto.description
+field_name: description
+entity_type: taxonomy_term
+bundle: tipologia_progetto
+label: Descrizione
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
